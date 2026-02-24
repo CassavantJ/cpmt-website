@@ -1,0 +1,142 @@
+{
+  "services": [
+    {
+      "slug": "machine-sales",
+      "icon": "◆",
+      "title": "Machine Sales",
+      "desc": "New & pre-owned Mazak CNC machines. Expert consultation to match the right machine to your application.",
+      "color": "#C12033",
+      "tagline": "The right machine for every application",
+      "description": "As an authorized Mazak distributor, we offer the full range of Mazak CNC machine tools — from compact turning centers to large-capacity multi-tasking machines. Our sales team works closely with your engineering staff to evaluate your applications, recommend the ideal machine configuration, and ensure a smooth purchase process.",
+      "features": [
+        "Full Mazak product line — turning, milling, multi-tasking, 5-axis, and automation",
+        "New and certified pre-owned machines available",
+        "Application-based machine selection with engineering consultation",
+        "Demo cuts and test parts at our technology center",
+        "Trade-in evaluations on your existing equipment",
+        "Delivery coordination and installation support"
+      ],
+      "process": [
+        { "step": "Consultation", "detail": "We review your parts, materials, tolerances, and production volumes to understand your needs." },
+        { "step": "Recommendation", "detail": "Our team presents machine options with specifications, pricing, and ROI analysis." },
+        { "step": "Demo & Validation", "detail": "See your parts run on the recommended machine at our technology center." },
+        { "step": "Delivery & Install", "detail": "Coordinated delivery, rigging, installation, and power-up at your facility." }
+      ]
+    },
+    {
+      "slug": "turnkey-solutions",
+      "icon": "◇",
+      "title": "Turnkey Solutions",
+      "desc": "Complete packages: tooling, fixturing, programming, and training. Walk in, press cycle start.",
+      "color": "#1A6CFF",
+      "tagline": "Walk in. Press cycle start.",
+      "description": "A turnkey solution means your machine arrives ready to produce parts from day one. We handle everything — tooling selection, fixture design, CNC programming, process prove-out, and operator training. Your team walks up to the machine, loads a part, and presses cycle start.",
+      "features": [
+        "Complete tooling packages selected for your specific applications",
+        "Custom fixture design and manufacturing",
+        "CNC program development and optimization",
+        "Process prove-out with test cuts and cycle time verification",
+        "Operator and programmer training at your facility",
+        "Documentation package with setup sheets and tool lists"
+      ],
+      "process": [
+        { "step": "Part Analysis", "detail": "We study your drawings, materials, tolerances, and production requirements." },
+        { "step": "Solution Design", "detail": "Our engineers design the complete package — tooling, fixtures, programs, and process." },
+        { "step": "Prove-Out", "detail": "We run your parts, verify quality, and optimize cycle times before delivery." },
+        { "step": "Training & Handoff", "detail": "On-site training for your operators and programmers with full documentation." }
+      ]
+    },
+    {
+      "slug": "automation",
+      "icon": "○",
+      "title": "Automation",
+      "desc": "Robotic cells, pallet systems, bar feeders, and custom automation to maximize spindle uptime.",
+      "color": "#00C47D",
+      "tagline": "Maximize spindle uptime, minimize labor dependency",
+      "description": "Automation is the key to competitiveness in modern manufacturing. We design and integrate robotic loading cells, pallet pool systems, bar feeders, gantry loaders, and custom automation solutions that keep your machines running — even when your operators go home.",
+      "features": [
+        "Robotic machine tending cells with vision systems",
+        "Multi-pallet pool systems for horizontal and 5-axis machines",
+        "Bar feeder integration for turning centers",
+        "Gantry loaders for high-volume production",
+        "Conveyor and part handling systems",
+        "Lights-out manufacturing consultation and implementation"
+      ],
+      "process": [
+        { "step": "Assessment", "detail": "We evaluate your current workflow, part mix, and production goals." },
+        { "step": "System Design", "detail": "Our automation team designs the cell layout, robot programming, and integration plan." },
+        { "step": "Integration", "detail": "We install, program, and debug the complete automation system at your facility." },
+        { "step": "Optimization", "detail": "Ongoing support to fine-tune cycle times, uptime, and throughput." }
+      ]
+    },
+    {
+      "slug": "service-and-parts",
+      "icon": "□",
+      "title": "Service & Parts",
+      "desc": "Factory-trained technicians. 24/7 emergency support. Preventive maintenance programs.",
+      "color": "#FF8A00",
+      "tagline": "Keep your machines running at peak performance",
+      "description": "Downtime costs money. Our factory-trained service technicians are available 24/7 for emergency repairs, and our preventive maintenance programs help you avoid unplanned downtime altogether. We stock genuine Mazak parts and can diagnose issues remotely to get you back in production fast.",
+      "features": [
+        "Factory-trained and Mazak-certified service technicians",
+        "24/7 emergency service hotline",
+        "Preventive maintenance programs and service contracts",
+        "Genuine Mazak OEM replacement parts in stock",
+        "Remote diagnostics and troubleshooting support",
+        "Spindle repair and rebuild services"
+      ],
+      "process": [
+        { "step": "Contact Us", "detail": "Call our service hotline or submit a request online — 24/7 availability." },
+        { "step": "Diagnosis", "detail": "Remote troubleshooting or on-site visit to identify the issue quickly." },
+        { "step": "Repair", "detail": "Our technicians perform the repair using genuine OEM parts." },
+        { "step": "Follow-Up", "detail": "We verify machine performance and recommend preventive measures." }
+      ]
+    },
+    {
+      "slug": "engineering",
+      "icon": "△",
+      "title": "Engineering",
+      "desc": "Application engineering, process optimization, and custom solutions for complex manufacturing challenges.",
+      "color": "#8B5CF6",
+      "tagline": "Solving your toughest manufacturing challenges",
+      "description": "Our application engineers have deep expertise in metalcutting, tooling, fixturing, and CNC programming. Whether you're trying to reduce cycle times, improve surface finish, tackle a difficult material, or figure out how to machine a complex geometry — we can help.",
+      "features": [
+        "Application engineering for new and existing parts",
+        "Cycle time reduction and process optimization",
+        "Difficult material expertise (titanium, Inconel, hardened steel)",
+        "Complex geometry and 5-axis programming support",
+        "Tooling and workholding recommendations",
+        "Time studies and cost-per-part analysis"
+      ],
+      "process": [
+        { "step": "Challenge Review", "detail": "Share your part drawings, current process, and goals with our team." },
+        { "step": "Engineering Analysis", "detail": "We develop an optimized approach — toolpaths, tooling, speeds and feeds." },
+        { "step": "Validation", "detail": "Test cuts and process verification to confirm results." },
+        { "step": "Implementation", "detail": "We deploy the solution on your shop floor with operator support." }
+      ]
+    },
+    {
+      "slug": "financing",
+      "icon": "▽",
+      "title": "Financing",
+      "desc": "Flexible financing options, leasing programs, and trade-in evaluations to fit your capital budget.",
+      "color": "#EC4899",
+      "tagline": "Flexible options to fit your capital plan",
+      "description": "Investing in new CNC equipment is a major decision. We offer a range of financing and leasing options to help you acquire the technology you need without straining your capital budget. From traditional financing to operating leases and trade-in programs, we'll find the right structure for your business.",
+      "features": [
+        "Traditional equipment financing with competitive rates",
+        "Operating and capital lease programs",
+        "Deferred payment and seasonal payment structures",
+        "Trade-in evaluations on your existing equipment",
+        "Section 179 tax deduction guidance",
+        "Custom payment plans for multi-machine purchases"
+      ],
+      "process": [
+        { "step": "Consultation", "detail": "We discuss your budget, cash flow needs, and acquisition timeline." },
+        { "step": "Options Review", "detail": "Our team presents financing structures tailored to your situation." },
+        { "step": "Application", "detail": "Simple application process with fast credit decisions." },
+        { "step": "Acquisition", "detail": "Finalize terms and coordinate machine delivery." }
+      ]
+    }
+  ]
+}

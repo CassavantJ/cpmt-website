@@ -1,0 +1,381 @@
+import { useParams, Link } from "react-router-dom";
+import { useTheme } from "../contexts/ThemeContext";
+import serviceData from "../services.json";
+
+const ServiceDetailPage = () => {
+  const { t } = useTheme();
+  const { slug } = useParams();
+
+  const service = serviceData.services.find((s) => s.slug === slug);
+
+  if (!service) {
+    return (
+      <section style={{
+        padding: "200px clamp(24px, 5vw, 80px) 100px",
+        textAlign: "center",
+        maxWidth: 600,
+        margin: "0 auto",
+      }}>
+        <h1 style={{ fontSize: 48, fontWeight: 800, marginBottom: 16 }}>Service Not Found</h1>
+        <p style={{ color: t.textSecondary, fontSize: 16, marginBottom: 32 }}>
+          The service you're looking for doesn't exist or may have been removed.
+        </p>
+        <Link to="/services" className="cta-primary">
+          ← Back to All Services
+        </Link>
+      </section>
+    );
+  }
+
+  // Other services for the "Explore More" section
+  const otherServices = serviceData.services.filter((s) => s.slug !== slug);
+
+  return (
+    <>
+      {/* ==================== HERO ==================== */}
+      <section style={{
+        padding: "140px clamp(24px, 5vw, 80px) clamp(60px, 8vw, 100px)",
+        position: "relative",
+        overflow: "hidden",
+      }}>
+        {/* Background glow */}
+        <div style={{
+          position: "absolute",
+          top: "10%",
+          right: "20%",
+          width: 500,
+          height: 500,
+          borderRadius: "50%",
+          background: `radial-gradient(circle, ${service.color}12, transparent 70%)`,
+          pointerEvents: "none",
+        }} />
+
+        <div style={{ maxWidth: 1400, margin: "0 auto", position: "relative", zIndex: 1 }}>
+          {/* Breadcrumb */}
+          <nav style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+            marginBottom: 40,
+            fontSize: 13,
+            fontFamily: "'Space Mono', monospace",
+            animation: "fadeUp 0.6s ease-out 0.1s both",
+          }}>
+            <Link to="/services" style={{ color: t.textTertiary, textDecoration: "none" }}>
+              Services
+            </Link>
+            <span style={{ color: t.textTertiary }}>→</span>
+            <span style={{ color: service.color }}>{service.title}</span>
+          </nav>
+
+          <div style={{
+            display: "flex",
+            gap: "clamp(40px, 6vw, 80px)",
+            alignItems: "flex-start",
+            flexWrap: "wrap",
+            animation: "fadeUp 0.6s ease-out 0.2s both",
+          }}>
+            {/* Content */}
+            <div style={{ flex: "1 1 500px" }}>
+              {/* Icon */}
+              <div style={{
+                width: 64,
+                height: 64,
+                borderRadius: 14,
+                background: `${service.color}15`,
+                border: `1px solid ${service.color}30`,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: 28,
+                color: service.color,
+                marginBottom: 24,
+              }}>
+                {service.icon}
+              </div>
+
+              <h1 style={{
+                fontSize: "clamp(36px, 5vw, 56px)",
+                fontWeight: 900,
+                letterSpacing: -2,
+                lineHeight: 1.1,
+                marginBottom: 12,
+              }}>
+                {service.title}
+              </h1>
+
+              {service.tagline && (
+                <p style={{
+                  fontSize: 20,
+                  color: service.color,
+                  fontStyle: "italic",
+                  marginBottom: 24,
+                  lineHeight: 1.4,
+                  fontWeight: 500,
+                }}>
+                  {service.tagline}
+                </p>
+              )}
+
+              <p style={{
+                fontSize: 16,
+                color: t.textSecondary,
+                lineHeight: 1.8,
+                marginBottom: 36,
+                maxWidth: 640,
+              }}>
+                {service.description}
+              </p>
+
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                <Link to="/contact" className="cta-primary">
+                  Get Started →
+                </Link>
+                <Link to="/contact" className="cta-outline">
+                  Ask a Question
+                </Link>
+              </div>
+            </div>
+
+            {/* Quick stats / highlights sidebar */}
+            <div style={{
+              flex: "1 1 320px",
+              background: t.bgSection,
+              borderRadius: 16,
+              border: `1px solid ${t.borderPrimary}`,
+              padding: "clamp(24px, 3vw, 40px)",
+            }}>
+              <h3 style={{
+                fontSize: 16,
+                fontWeight: 700,
+                marginBottom: 20,
+                fontFamily: "'Space Mono', monospace",
+                letterSpacing: 1,
+                textTransform: "uppercase",
+                color: service.color,
+              }}>
+                What's Included
+              </h3>
+              <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                {service.features.map((feature) => (
+                  <div
+                    key={feature}
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      gap: 12,
+                    }}
+                  >
+                    <span style={{
+                      color: service.color,
+                      fontSize: 8,
+                      marginTop: 6,
+                      flexShrink: 0,
+                    }}>◆</span>
+                    <span style={{
+                      fontSize: 14,
+                      color: t.textSecondary,
+                      lineHeight: 1.5,
+                    }}>
+                      {feature}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== HOW IT WORKS ==================== */}
+      {service.process && service.process.length > 0 && (
+        <section style={{
+          padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
+          background: t.bgSection,
+        }}>
+          <div style={{ maxWidth: 1400, margin: "0 auto" }}>
+            <div style={{ textAlign: "center", marginBottom: 56 }}>
+              <div className="section-label">How It Works</div>
+              <h2 style={{
+                fontSize: "clamp(28px, 4vw, 44px)",
+                fontWeight: 800,
+                letterSpacing: -1.5,
+              }}>
+                Our <span style={{ color: service.color }}>Process</span>
+              </h2>
+            </div>
+
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
+              gap: 24,
+            }}>
+              {service.process.map((step, i) => (
+                <div
+                  key={step.step}
+                  style={{
+                    padding: "clamp(24px, 3vw, 36px)",
+                    borderRadius: 14,
+                    border: `1px solid ${t.borderPrimary}`,
+                    background: t.bgCard,
+                    position: "relative",
+                  }}
+                >
+                  <div style={{
+                    fontFamily: "'Space Mono', monospace",
+                    fontSize: 40,
+                    fontWeight: 700,
+                    color: `${service.color}20`,
+                    position: "absolute",
+                    top: 16,
+                    right: 20,
+                    lineHeight: 1,
+                  }}>
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+
+                  <div style={{
+                    width: 36,
+                    height: 36,
+                    borderRadius: 8,
+                    background: `${service.color}15`,
+                    border: `1px solid ${service.color}30`,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: 14,
+                    fontWeight: 700,
+                    color: service.color,
+                    fontFamily: "'Space Mono', monospace",
+                    marginBottom: 20,
+                  }}>
+                    {i + 1}
+                  </div>
+
+                  <h3 style={{
+                    fontSize: 18,
+                    fontWeight: 700,
+                    marginBottom: 8,
+                    letterSpacing: -0.3,
+                  }}>
+                    {step.step}
+                  </h3>
+                  <p style={{
+                    fontSize: 14,
+                    color: t.textTertiary,
+                    lineHeight: 1.7,
+                  }}>
+                    {step.detail}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ==================== EXPLORE MORE SERVICES ==================== */}
+      <section style={{
+        padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
+        maxWidth: 1400,
+        margin: "0 auto",
+      }}>
+        <h2 style={{
+          fontSize: "clamp(24px, 4vw, 36px)",
+          fontWeight: 800,
+          letterSpacing: -1,
+          marginBottom: 32,
+        }}>
+          Explore More <span style={{ color: "#C12033" }}>Services</span>
+        </h2>
+
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+          gap: 16,
+        }}>
+          {otherServices.map((svc) => (
+            <Link
+              key={svc.slug}
+              to={`/services/${svc.slug}`}
+              className="service-card"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <div style={{
+                width: 44,
+                height: 44,
+                borderRadius: 10,
+                background: `${svc.color}15`,
+                border: `1px solid ${svc.color}30`,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: 18,
+                color: svc.color,
+                marginBottom: 16,
+              }}>
+                {svc.icon}
+              </div>
+              <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 8, letterSpacing: -0.3 }}>
+                {svc.title}
+              </h3>
+              <p style={{ color: t.textTertiary, fontSize: 13, lineHeight: 1.6 }}>
+                {svc.desc}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ==================== BOTTOM CTA ==================== */}
+      <section style={{
+        padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
+        background: "linear-gradient(135deg, #C12033, #8E1825)",
+        position: "relative",
+        overflow: "hidden",
+      }}>
+        <div style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage: "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+        }} />
+        <div style={{
+          maxWidth: 700,
+          margin: "0 auto",
+          textAlign: "center",
+          position: "relative",
+          zIndex: 1,
+        }}>
+          <h2 style={{
+            fontSize: "clamp(24px, 4vw, 40px)",
+            fontWeight: 800,
+            letterSpacing: -1,
+            marginBottom: 16,
+          }}>
+            Ready to get started with {service.title}?
+          </h2>
+          <p style={{
+            fontSize: 16,
+            opacity: 0.85,
+            lineHeight: 1.7,
+            maxWidth: 520,
+            margin: "0 auto 32px",
+          }}>
+            Our team is ready to discuss your requirements and build a solution that fits your shop.
+          </p>
+          <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
+            <Link to="/contact" className="cta-primary" style={{ background: "#FAFAFA", color: "#09090B" }}>
+              Contact Us →
+            </Link>
+            <Link to="/services" className="cta-outline" style={{ borderColor: "rgba(255,255,255,0.4)" }}>
+              View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default ServiceDetailPage;
