@@ -329,8 +329,10 @@ const SupportPage = ({ isVisible }) => {
       }}>
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           gap: 24,
+          maxWidth: 1000,
+          margin: "0 auto",
         }}>
           {[
             { label: "24/7 Service Hotline", value: "1-800-555-1234", icon: "📞", sub: "Emergency & after-hours support" },

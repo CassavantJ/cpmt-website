@@ -36,13 +36,6 @@ const HomePage = ({ isVisible }) => {
     if (!categoryImages[m.category]) categoryImages[m.category] = m.image;
   });
 
-  const strengths = [
-    { icon: "◆", title: "Factory-Trained Technicians", desc: "Mazak-certified service engineers with deep machine knowledge" },
-    { icon: "◆", title: "24/7 Emergency Support", desc: "Round-the-clock hotline for critical breakdowns" },
-    { icon: "◆", title: "Turnkey Solutions", desc: "From machine selection to installation, tooling, and training" },
-    { icon: "◆", title: "Authorized Mazak Distributor", desc: "Direct access to genuine OEM parts, warranty, and support" },
-  ];
-
   const brands = ["Authorized Mazak Distributor", "Sales & Service", "Turnkey Solutions", "Automation", "Multi-Tasking", "5-Axis", "Turning", "Machining Centers"];
 
   const stats = [
@@ -680,91 +673,63 @@ const HomePage = ({ isVisible }) => {
                 style={{
                   textDecoration: "none",
                   color: "inherit",
+                  position: "relative",
+                  overflow: "hidden",
+                  padding: 0,
                   opacity: isVisible("services") ? 1 : 0,
                   transform: isVisible("services") ? "translateY(0)" : "translateY(30px)",
                   transition: `all 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.08}s`,
                 }}
               >
+                {/* Service image */}
                 <div style={{
-                  width: 48,
-                  height: 48,
-                  borderRadius: 10,
-                  background: `${svc.color}15`,
-                  border: `1px solid ${svc.color}30`,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 20,
-                  color: svc.color,
-                  marginBottom: 20,
-                  transition: "all 0.3s",
-                  transform: hoveredService === i ? "scale(1.1)" : "scale(1)",
+                  height: 160,
+                  overflow: "hidden",
+                  position: "relative",
                 }}>
-                  {svc.icon}
+                  <img
+                    src={svc.image}
+                    alt={svc.title}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      transition: "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+                      transform: hoveredService === i ? "scale(1.08)" : "scale(1)",
+                    }}
+                  />
+                  <div style={{
+                    position: "absolute",
+                    inset: 0,
+                    background: "linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.5) 100%)",
+                  }} />
                 </div>
-                <h3 style={{ fontSize: 20, fontWeight: 700, marginBottom: 10, letterSpacing: -0.3 }}>
-                  {svc.title}
-                </h3>
-                <p style={{ color: t.textTertiary, fontSize: 14, lineHeight: 1.7 }}>
-                  {svc.desc}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ==================== COMPANY STRENGTHS ==================== */}
-      <section style={{
-        padding: "clamp(60px, 8vw, 80px) clamp(24px, 5vw, 80px)",
-        background: t.bgSection,
-        borderTop: `1px solid ${t.borderDivider}`,
-        borderBottom: `1px solid ${t.borderDivider}`,
-      }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto" }}>
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
-            gap: 32,
-          }}>
-            {strengths.map((s) => (
-              <div key={s.title} style={{
-                display: "flex",
-                alignItems: "flex-start",
-                gap: 16,
-              }}>
-                <div style={{
-                  width: 40,
-                  height: 40,
-                  borderRadius: 10,
-                  background: "rgba(193,32,51,0.1)",
-                  border: "1px solid rgba(193,32,51,0.2)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "#C12033",
-                  fontSize: 14,
-                  flexShrink: 0,
-                }}>
-                  {s.icon}
-                </div>
-                <div>
+                {/* Content */}
+                <div style={{ padding: "20px 24px 24px" }}>
+                  <h3 style={{ fontSize: 20, fontWeight: 700, letterSpacing: -0.3, margin: "0 0 14px" }}>
+                    {svc.title}
+                  </h3>
+                  <p style={{ color: t.textTertiary, fontSize: 14, lineHeight: 1.7, margin: 0 }}>
+                    {svc.desc}
+                  </p>
                   <div style={{
-                    fontSize: 15,
-                    fontWeight: 700,
-                    marginBottom: 4,
-                  }}>
-                    {s.title}
-                  </div>
-                  <div style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 6,
+                    marginTop: 16,
                     fontSize: 13,
-                    color: t.textTertiary,
-                    lineHeight: 1.6,
+                    color: svc.color,
+                    fontWeight: 600,
                   }}>
-                    {s.desc}
+                    Learn More
+                    <span style={{
+                      transition: "transform 0.3s",
+                      transform: hoveredService === i ? "translateX(4px)" : "translateX(0)",
+                    }}>→</span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

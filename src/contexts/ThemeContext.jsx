@@ -19,7 +19,7 @@ export const ThemeProvider = ({ children }) => {
       borderPrimary: '#27272A', borderSecondary: '#3F3F46', borderDivider: '#1C1C20',
       navBgScroll: 'rgba(9,9,11,0.9)', mobileBg: '#09090BF0', scrollTrack: '#09090B',
       heroGrid: 'rgba(193,32,51,0.06)',
-      ctaGradient: 'linear-gradient(to bottom, transparent 0%, rgba(193,32,51,0.08) 100%)',
+      ctaGradient: 'linear-gradient(to bottom, transparent 0%, rgba(193,32,51,0.08) 40%, rgba(193,32,51,0.08) 60%, #0C0C0F 100%)',
       logo: '/images/CPMTLogoLight.svg',
     },
     light: {
@@ -28,7 +28,7 @@ export const ThemeProvider = ({ children }) => {
       borderPrimary: '#E4E4E7', borderSecondary: '#D4D4D8', borderDivider: '#E4E4E7',
       navBgScroll: 'rgba(255,255,255,0.9)', mobileBg: '#FFFFFFE8', scrollTrack: '#FFFFFF',
       heroGrid: 'rgba(193,32,51,0.03)',
-      ctaGradient: 'linear-gradient(to bottom, transparent 0%, rgba(193,32,51,0.12) 100%)',
+      ctaGradient: 'linear-gradient(to bottom, transparent 0%, rgba(193,32,51,0.05) 40%, rgba(193,32,51,0.05) 60%, #F4F4F5 100%)',
       logo: '/images/CPMTLogoDark.svg',
     },
   };

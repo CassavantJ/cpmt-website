@@ -258,6 +258,24 @@ const GlobalStyles = () => {
         }
       }
 
+      .process-timeline {
+        display: grid;
+        gap: 0;
+        position: relative;
+      }
+      .process-timeline .process-line {
+        display: block;
+      }
+      @media (max-width: 700px) {
+        .process-timeline {
+          grid-template-columns: 1fr !important;
+          gap: 32px;
+        }
+        .process-timeline .process-line {
+          display: none;
+        }
+      }
+
       .stat-block {
         text-align: center;
         padding: 32px;

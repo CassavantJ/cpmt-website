@@ -3,6 +3,7 @@
     {
       "slug": "machine-sales",
       "icon": "◆",
+      "image": "/images/services/machine-sales.png",
       "title": "Machine Sales",
       "desc": "New & pre-owned Mazak CNC machines. Expert consultation to match the right machine to your application.",
       "color": "#C12033",
@@ -26,9 +27,10 @@
     {
       "slug": "turnkey-solutions",
       "icon": "◇",
+      "image": "/images/services/turnkey-solutions.webp",
       "title": "Turnkey Solutions",
       "desc": "Complete packages: tooling, fixturing, programming, and training. Walk in, press cycle start.",
-      "color": "#1A6CFF",
+      "color": "#C12033",
       "tagline": "Walk in. Press cycle start.",
       "description": "A turnkey solution means your machine arrives ready to produce parts from day one. We handle everything — tooling selection, fixture design, CNC programming, process prove-out, and operator training. Your team walks up to the machine, loads a part, and presses cycle start.",
       "features": [
@@ -49,9 +51,10 @@
     {
       "slug": "automation",
       "icon": "○",
+      "image": "/images/services/automation.jpg",
       "title": "Automation",
       "desc": "Robotic cells, pallet systems, bar feeders, and custom automation to maximize spindle uptime.",
-      "color": "#00C47D",
+      "color": "#C12033",
       "tagline": "Maximize spindle uptime, minimize labor dependency",
       "description": "Automation is the key to competitiveness in modern manufacturing. We design and integrate robotic loading cells, pallet pool systems, bar feeders, gantry loaders, and custom automation solutions that keep your machines running — even when your operators go home.",
       "features": [
@@ -72,9 +75,10 @@
     {
       "slug": "service-and-parts",
       "icon": "□",
+      "image": "/images/services/service-and-parts.jpg",
       "title": "Service & Parts",
       "desc": "Factory-trained technicians. 24/7 emergency support. Preventive maintenance programs.",
-      "color": "#FF8A00",
+      "color": "#C12033",
       "tagline": "Keep your machines running at peak performance",
       "description": "Downtime costs money. Our factory-trained service technicians are available 24/7 for emergency repairs, and our preventive maintenance programs help you avoid unplanned downtime altogether. We stock genuine Mazak parts and can diagnose issues remotely to get you back in production fast.",
       "features": [
@@ -95,9 +99,10 @@
     {
       "slug": "engineering",
       "icon": "△",
+      "image": "/images/services/engineering.png",
       "title": "Engineering",
       "desc": "Application engineering, process optimization, and custom solutions for complex manufacturing challenges.",
-      "color": "#8B5CF6",
+      "color": "#C12033",
       "tagline": "Solving your toughest manufacturing challenges",
       "description": "Our application engineers have deep expertise in metalcutting, tooling, fixturing, and CNC programming. Whether you're trying to reduce cycle times, improve surface finish, tackle a difficult material, or figure out how to machine a complex geometry — we can help.",
       "features": [
@@ -118,9 +123,10 @@
     {
       "slug": "financing",
       "icon": "▽",
+      "image": "/images/services/financing.webp",
       "title": "Financing",
       "desc": "Flexible financing options, leasing programs, and trade-in evaluations to fit your capital budget.",
-      "color": "#EC4899",
+      "color": "#C12033",
       "tagline": "Flexible options to fit your capital plan",
       "description": "Investing in new CNC equipment is a major decision. We offer a range of financing and leasing options to help you acquire the technology you need without straining your capital budget. From traditional financing to operating leases and trade-in programs, we'll find the right structure for your business.",
       "features": [

@@ -6,25 +6,21 @@ const AboutPage = ({ isVisible }) => {
 
   const values = [
     {
-      icon: "◆",
       title: "Precision First",
       description: "Every machine we sell, every solution we engineer, and every service call we make is driven by an unwavering commitment to precision and quality.",
       color: "#C12033",
     },
     {
-      icon: "◆",
       title: "Customer Partnership",
       description: "We don't just sell machines — we build lasting partnerships. Your success on the shop floor is our success, and we're with you every step of the way.",
       color: "#1A6CFF",
     },
     {
-      icon: "◆",
       title: "Technical Excellence",
       description: "Our factory-trained engineers and technicians bring deep expertise to every project, from initial consultation through installation and ongoing support.",
       color: "#00C47D",
     },
     {
-      icon: "◆",
       title: "Continuous Innovation",
       description: "Manufacturing never stands still, and neither do we. We stay ahead of industry trends to bring you the latest in CNC technology and automation.",
       color: "#FF8A00",
@@ -247,21 +243,6 @@ const AboutPage = ({ isVisible }) => {
                   transition: `all 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.1}s`,
                 }}
               >
-                <div style={{
-                  width: 48,
-                  height: 48,
-                  borderRadius: 10,
-                  background: `${val.color}12`,
-                  border: `1px solid ${val.color}25`,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 16,
-                  color: val.color,
-                  marginBottom: 20,
-                }}>
-                  {val.icon}
-                </div>
                 <h3 style={{
                   fontSize: 20,
                   fontWeight: 700,
@@ -307,68 +288,80 @@ const AboutPage = ({ isVisible }) => {
           </div>
 
           <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
-            gap: 24,
+            position: "relative",
+            maxWidth: 800,
+            margin: "0 auto",
           }}>
+            {/* Vertical timeline line */}
+            <div style={{
+              position: "absolute",
+              left: 27,
+              top: 0,
+              bottom: 0,
+              width: 2,
+              background: `linear-gradient(to bottom, #C1203340, ${t.borderPrimary})`,
+            }} />
+
             {milestones.map((m, i) => (
               <div
                 key={m.year}
                 style={{
-                  padding: "clamp(24px, 3vw, 36px)",
-                  borderRadius: 14,
-                  border: `1px solid ${t.borderPrimary}`,
-                  background: t.bgCard,
-                  position: "relative",
+                  display: "flex",
+                  gap: 32,
+                  alignItems: "flex-start",
+                  marginBottom: i < milestones.length - 1 ? 48 : 0,
                   opacity: isVisible("story") ? 1 : 0,
                   transform: isVisible("story") ? "translateY(0)" : "translateY(30px)",
-                  transition: `all 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.1}s`,
+                  transition: `all 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.15}s`,
                 }}
               >
+                {/* Timeline dot */}
                 <div style={{
-                  fontFamily: "'Space Mono', monospace",
-                  fontSize: 40,
-                  fontWeight: 700,
-                  color: `#C1203320`,
-                  position: "absolute",
-                  top: 16,
-                  right: 20,
-                  lineHeight: 1,
-                }}>
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-                <div style={{
-                  width: 36,
-                  height: 36,
-                  borderRadius: 8,
-                  background: "#C1203315",
-                  border: "1px solid #C1203330",
+                  width: 56,
+                  height: 56,
+                  borderRadius: "50%",
+                  background: t.bgCard,
+                  border: `2px solid #C12033`,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: 14,
+                  fontSize: 18,
                   fontWeight: 700,
                   color: "#C12033",
                   fontFamily: "'Space Mono', monospace",
-                  marginBottom: 20,
+                  flexShrink: 0,
+                  boxShadow: `0 0 0 6px ${t.bgSection}`,
+                  position: "relative",
+                  zIndex: 1,
                 }}>
-                  {i + 1}
+                  {String(i + 1).padStart(2, "0")}
                 </div>
-                <h3 style={{
-                  fontSize: 18,
-                  fontWeight: 700,
-                  marginBottom: 8,
-                  letterSpacing: -0.3,
+
+                {/* Content card */}
+                <div style={{
+                  flex: 1,
+                  padding: "clamp(20px, 3vw, 32px)",
+                  borderRadius: 14,
+                  border: `1px solid ${t.borderPrimary}`,
+                  background: t.bgCard,
                 }}>
-                  {m.year}
-                </h3>
-                <p style={{
-                  fontSize: 14,
-                  color: t.textTertiary,
-                  lineHeight: 1.7,
-                }}>
-                  {m.detail}
-                </p>
+                  <h3 style={{
+                    fontSize: 20,
+                    fontWeight: 700,
+                    marginBottom: 8,
+                    letterSpacing: -0.3,
+                  }}>
+                    {m.year}
+                  </h3>
+                  <p style={{
+                    fontSize: 14,
+                    color: t.textTertiary,
+                    lineHeight: 1.7,
+                    margin: 0,
+                  }}>
+                    {m.detail}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

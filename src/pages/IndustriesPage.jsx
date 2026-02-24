@@ -11,7 +11,7 @@ const IndustriesPage = ({ isVisible }) => {
       name: "Aerospace",
       icon: "✈",
       stat: "AS9100",
-      image: "/images/industries/aerospace.webp",
+      image: "/images/industries/aerospace.png",
       description: "From turbine blades to structural components, aerospace manufacturing demands extreme precision and traceability. Our Mazak multi-tasking and 5-axis machines deliver the tight tolerances and complex geometries required for flight-critical parts.",
       highlights: ["AS9100 certified workflows", "5-axis simultaneous machining", "Complex alloy expertise (titanium, Inconel)", "Full traceability & documentation"],
     },
@@ -19,7 +19,7 @@ const IndustriesPage = ({ isVisible }) => {
       name: "Automotive",
       icon: "🏎",
       stat: "IATF 16949",
-      image: "/images/industries/automotive.webp",
+      image: "/images/industries/automotive.png",
       description: "High-volume production with zero-defect expectations. Whether you're machining engine blocks, transmission housings, or EV components, our turning and machining centers deliver the cycle times and consistency automotive suppliers demand.",
       highlights: ["IATF 16949 compliance support", "High-volume production cells", "Automated loading & unloading", "Statistical process control"],
     },
@@ -27,7 +27,7 @@ const IndustriesPage = ({ isVisible }) => {
       name: "Medical",
       icon: "⚕",
       stat: "ISO 13485",
-      image: "/images/industries/medical.webp",
+      image: "/images/industries/medical.png",
       description: "Implants, surgical instruments, and diagnostic equipment require surfaces and tolerances that leave no margin for error. Our precision machining solutions meet the stringent demands of the medical device industry.",
       highlights: ["ISO 13485 compatible processes", "Micro-machining capabilities", "Biocompatible material expertise", "Cleanroom-ready surface finishes"],
     },
@@ -35,7 +35,7 @@ const IndustriesPage = ({ isVisible }) => {
       name: "Defense & Government",
       icon: "🛡",
       stat: "ITAR",
-      image: "/images/industries/defense.webp",
+      image: "/images/industries/defense.png",
       description: "Mission-critical components for land, sea, and air platforms. Our machines handle the hard metals, complex geometries, and security requirements that defense contractors face every day.",
       highlights: ["ITAR registered & compliant", "Hard metal machining", "Large-envelope 5-axis capability", "Secure supply chain support"],
     },
@@ -43,7 +43,7 @@ const IndustriesPage = ({ isVisible }) => {
       name: "Energy & Oil/Gas",
       icon: "⚡",
       stat: "API",
-      image: "/images/industries/energy.webp",
+      image: "/images/industries/energy.png",
       description: "From downhole tools to turbine components, the energy sector requires machines that can handle large parts, tough materials, and 24/7 production schedules. Our heavy-duty turning and milling solutions are built for the job.",
       highlights: ["API standard compliance", "Large-part turning capacity", "Heavy-duty cutting performance", "Automation for lights-out operation"],
     },
@@ -51,7 +51,7 @@ const IndustriesPage = ({ isVisible }) => {
       name: "General Manufacturing",
       icon: "🏭",
       stat: "ISO 9001",
-      image: "/images/industries/general.webp",
+      image: "/images/industries/general.png",
       description: "Job shops and contract manufacturers need versatility, quick changeovers, and reliable uptime. Our full range of Mazak machining centers and turning centers helps general manufacturers stay competitive and profitable.",
       highlights: ["ISO 9001 quality systems", "Quick-change tooling solutions", "Flexible automation options", "Training & application support"],
     },
@@ -156,26 +156,32 @@ const IndustriesPage = ({ isVisible }) => {
                   flexWrap: "wrap",
                 }}
               >
-                {/* Image placeholder */}
+                {/* Industry image */}
                 <div style={{
                   flex: "1 1 340px",
                   minHeight: 260,
                   borderRadius: 12,
-                  background: `linear-gradient(135deg, ${ind.name === "Aerospace" ? "#1a1a2e" : ind.name === "Automotive" ? "#1a2e1a" : ind.name === "Medical" ? "#1a2e2e" : ind.name === "Defense & Government" ? "#2e1a1a" : ind.name === "Energy & Oil/Gas" ? "#2e2e1a" : "#1a1a1a"}, ${t.bgSection})`,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
                   overflow: "hidden",
                   position: "relative",
                 }}>
+                  <img
+                    src={ind.image}
+                    alt={ind.name}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      minHeight: 260,
+                      objectFit: "cover",
+                      display: "block",
+                      transition: "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+                      transform: isHovered ? "scale(1.06)" : "scale(1)",
+                    }}
+                  />
                   <div style={{
-                    fontSize: 64,
-                    opacity: 0.6,
-                    transform: isHovered ? "scale(1.1)" : "scale(1)",
-                    transition: "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
-                  }}>
-                    {ind.icon}
-                  </div>
+                    position: "absolute",
+                    inset: 0,
+                    background: "linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.4) 100%)",
+                  }} />
                   <div style={{
                     position: "absolute",
                     bottom: 16,
@@ -188,6 +194,7 @@ const IndustriesPage = ({ isVisible }) => {
                     background: `${t.bgCard}dd`,
                     padding: "4px 12px",
                     borderRadius: 6,
+                    backdropFilter: "blur(8px)",
                   }}>
                     {ind.stat}
                   </div>

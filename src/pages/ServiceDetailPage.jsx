@@ -68,6 +68,33 @@ const ServiceDetailPage = () => {
             <span style={{ color: service.color }}>{service.title}</span>
           </nav>
 
+          {/* Service hero image */}
+          {service.image && (
+            <div style={{
+              borderRadius: 16,
+              overflow: "hidden",
+              marginBottom: 48,
+              position: "relative",
+              animation: "fadeUp 0.6s ease-out 0.15s both",
+            }}>
+              <img
+                src={service.image}
+                alt={service.title}
+                style={{
+                  width: "100%",
+                  maxHeight: 480,
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+              <div style={{
+                position: "absolute",
+                inset: 0,
+                background: "linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.3) 100%)",
+              }} />
+            </div>
+          )}
+
           <div style={{
             display: "flex",
             gap: "clamp(40px, 6vw, 80px)",
@@ -77,23 +104,6 @@ const ServiceDetailPage = () => {
           }}>
             {/* Content */}
             <div style={{ flex: "1 1 500px" }}>
-              {/* Icon */}
-              <div style={{
-                width: 64,
-                height: 64,
-                borderRadius: 14,
-                background: `${service.color}15`,
-                border: `1px solid ${service.color}30`,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: 28,
-                color: service.color,
-                marginBottom: 24,
-              }}>
-                {service.icon}
-              </div>
-
               <h1 style={{
                 fontSize: "clamp(36px, 5vw, 56px)",
                 fontWeight: 900,
@@ -193,7 +203,7 @@ const ServiceDetailPage = () => {
           padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
           background: t.bgSection,
         }}>
-          <div style={{ maxWidth: 1400, margin: "0 auto" }}>
+          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: 56 }}>
               <div className="section-label">How It Works</div>
               <h2 style={{
@@ -203,67 +213,75 @@ const ServiceDetailPage = () => {
               }}>
                 Our <span style={{ color: service.color }}>Process</span>
               </h2>
+              <p style={{ color: t.textTertiary, maxWidth: 500, margin: "16px auto 0", fontSize: 15, lineHeight: 1.7 }}>
+                A proven approach from start to finish.
+              </p>
             </div>
 
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
-              gap: 24,
-            }}>
+            <div
+              className="process-timeline"
+              style={{
+                gridTemplateColumns: `repeat(${service.process.length}, 1fr)`,
+              }}
+            >
+              {/* Connecting line */}
+              <div className="process-line" style={{
+                position: "absolute",
+                top: 28,
+                left: "calc(12.5% + 20px)",
+                right: "calc(12.5% + 20px)",
+                height: 2,
+                background: `linear-gradient(90deg, ${service.color}40, ${service.color}20)`,
+                zIndex: 0,
+              }} />
+
               {service.process.map((step, i) => (
                 <div
                   key={step.step}
                   style={{
-                    padding: "clamp(24px, 3vw, 36px)",
-                    borderRadius: 14,
-                    border: `1px solid ${t.borderPrimary}`,
-                    background: t.bgCard,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    textAlign: "center",
                     position: "relative",
+                    zIndex: 1,
+                    padding: "0 12px",
                   }}
                 >
+                  {/* Step number circle */}
                   <div style={{
-                    fontFamily: "'Space Mono', monospace",
-                    fontSize: 40,
-                    fontWeight: 700,
-                    color: `${service.color}20`,
-                    position: "absolute",
-                    top: 16,
-                    right: 20,
-                    lineHeight: 1,
-                  }}>
-                    {String(i + 1).padStart(2, "0")}
-                  </div>
-
-                  <div style={{
-                    width: 36,
-                    height: 36,
-                    borderRadius: 8,
-                    background: `${service.color}15`,
-                    border: `1px solid ${service.color}30`,
+                    width: 56,
+                    height: 56,
+                    borderRadius: "50%",
+                    background: t.bgCard,
+                    border: `2px solid ${service.color}`,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: 14,
+                    fontSize: 20,
                     fontWeight: 700,
                     color: service.color,
                     fontFamily: "'Space Mono', monospace",
-                    marginBottom: 20,
+                    marginBottom: 24,
+                    boxShadow: `0 0 0 6px ${t.bgSection}`,
                   }}>
                     {i + 1}
                   </div>
 
                   <h3 style={{
-                    fontSize: 18,
+                    fontSize: 17,
                     fontWeight: 700,
-                    marginBottom: 8,
+                    marginBottom: 10,
                     letterSpacing: -0.3,
                   }}>
                     {step.step}
                   </h3>
                   <p style={{
-                    fontSize: 14,
+                    fontSize: 13,
                     color: t.textTertiary,
                     lineHeight: 1.7,
+                    maxWidth: 220,
+                    margin: 0,
                   }}>
                     {step.detail}
                   </p>
@@ -299,29 +317,25 @@ const ServiceDetailPage = () => {
               key={svc.slug}
               to={`/services/${svc.slug}`}
               className="service-card"
-              style={{ textDecoration: "none", color: "inherit" }}
+              style={{ textDecoration: "none", color: "inherit", overflow: "hidden", padding: 0 }}
             >
-              <div style={{
-                width: 44,
-                height: 44,
-                borderRadius: 10,
-                background: `${svc.color}15`,
-                border: `1px solid ${svc.color}30`,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: 18,
-                color: svc.color,
-                marginBottom: 16,
-              }}>
-                {svc.icon}
+              {svc.image && (
+                <div style={{ height: 120, overflow: "hidden" }}>
+                  <img
+                    src={svc.image}
+                    alt={svc.title}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                </div>
+              )}
+              <div style={{ padding: "16px 20px 20px" }}>
+                <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 8, letterSpacing: -0.3 }}>
+                  {svc.title}
+                </h3>
+                <p style={{ color: t.textTertiary, fontSize: 13, lineHeight: 1.6, margin: 0 }}>
+                  {svc.desc}
+                </p>
               </div>
-              <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 8, letterSpacing: -0.3 }}>
-                {svc.title}
-              </h3>
-              <p style={{ color: t.textTertiary, fontSize: 13, lineHeight: 1.6 }}>
-                {svc.desc}
-              </p>
             </Link>
           ))}
         </div>

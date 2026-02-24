@@ -41,7 +41,6 @@ const Footer = () => {
 
   return (
     <footer style={{
-      borderTop: `1px solid ${t.borderDivider}`,
       padding: "60px clamp(24px, 5vw, 80px) 32px",
       background: t.bgSection,
     }}>
