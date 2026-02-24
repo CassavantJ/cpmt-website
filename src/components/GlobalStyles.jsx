@@ -237,6 +237,27 @@ const GlobalStyles = () => {
         background: ${t.bgCardHover};
       }
 
+      .category-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .category-grid .category-card:nth-child(1),
+      .category-grid .category-card:nth-child(2) {
+        grid-column: span 1;
+      }
+
+      @media (max-width: 900px) {
+        .category-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 560px) {
+        .category-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
       .stat-block {
         text-align: center;
         padding: 32px;

@@ -392,35 +392,29 @@ const MachineDetailPage = () => {
 
       {/* ==================== BOTTOM CTA ==================== */}
       <section style={{
-        padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
-        background: "linear-gradient(135deg, #C12033, #8E1825)",
-        position: "relative",
-        overflow: "hidden",
+        padding: "clamp(80px, 10vw, 120px) clamp(24px, 5vw, 80px)",
+        background: t.ctaGradient,
       }}>
-        <div style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }} />
         <div style={{
           maxWidth: 700,
           margin: "0 auto",
           textAlign: "center",
-          position: "relative",
-          zIndex: 1,
         }}>
+          <div className="section-label">
+            Get Started
+          </div>
           <h2 style={{
             fontSize: "clamp(24px, 4vw, 40px)",
             fontWeight: 800,
             letterSpacing: -1,
             marginBottom: 16,
           }}>
-            Ready to add a {machine.name} to your shop?
+            Ready to add a {machine.name} to your{" "}
+            <span style={{ color: "#C12033" }}>shop?</span>
           </h2>
           <p style={{
             fontSize: 16,
-            opacity: 0.85,
+            color: t.textSecondary,
             lineHeight: 1.7,
             maxWidth: 520,
             margin: "0 auto 32px",
@@ -428,10 +422,10 @@ const MachineDetailPage = () => {
             Our team can help you configure the right machine, tooling, and automation for your application.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link to="/contact" className="cta-primary" style={{ background: "#FAFAFA", color: "#09090B" }}>
+            <Link to="/contact" className="cta-primary">
               Get a Quote →
             </Link>
-            <Link to="/machines" className="cta-outline" style={{ borderColor: "rgba(255,255,255,0.4)" }}>
+            <Link to="/machines" className="cta-outline">
               View All Machines
             </Link>
           </div>

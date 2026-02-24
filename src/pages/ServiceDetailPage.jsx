@@ -329,35 +329,29 @@ const ServiceDetailPage = () => {
 
       {/* ==================== BOTTOM CTA ==================== */}
       <section style={{
-        padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
-        background: "linear-gradient(135deg, #C12033, #8E1825)",
-        position: "relative",
-        overflow: "hidden",
+        padding: "clamp(80px, 10vw, 120px) clamp(24px, 5vw, 80px)",
+        background: t.ctaGradient,
       }}>
-        <div style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }} />
         <div style={{
           maxWidth: 700,
           margin: "0 auto",
           textAlign: "center",
-          position: "relative",
-          zIndex: 1,
         }}>
+          <div className="section-label">
+            Get Started
+          </div>
           <h2 style={{
             fontSize: "clamp(24px, 4vw, 40px)",
             fontWeight: 800,
             letterSpacing: -1,
             marginBottom: 16,
           }}>
-            Ready to get started with {service.title}?
+            Ready to get started with{" "}
+            <span style={{ color: "#C12033" }}>{service.title}?</span>
           </h2>
           <p style={{
             fontSize: 16,
-            opacity: 0.85,
+            color: t.textSecondary,
             lineHeight: 1.7,
             maxWidth: 520,
             margin: "0 auto 32px",
@@ -365,10 +359,10 @@ const ServiceDetailPage = () => {
             Our team is ready to discuss your requirements and build a solution that fits your shop.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-            <Link to="/contact" className="cta-primary" style={{ background: "#FAFAFA", color: "#09090B" }}>
+            <Link to="/contact" className="cta-primary">
               Contact Us →
             </Link>
-            <Link to="/services" className="cta-outline" style={{ borderColor: "rgba(255,255,255,0.4)" }}>
+            <Link to="/services" className="cta-outline">
               View All Services
             </Link>
           </div>

@@ -80,8 +80,8 @@ const Navigation = () => {
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      background: scrollY > 50 ? t.navBgScroll : "transparent",
-      backdropFilter: scrollY > 50 ? "blur(20px)" : "none",
+      background: scrollY > 50 ? t.navBgScroll : isHome ? "rgba(0,0,0,0.4)" : "transparent",
+      backdropFilter: scrollY > 50 ? "blur(20px)" : isHome ? "blur(12px)" : "none",
       borderBottom: scrollY > 50 ? `1px solid ${t.borderPrimary}` : "1px solid transparent",
       transition: "all 0.4s",
     }}>

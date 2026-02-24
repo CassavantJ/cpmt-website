@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../contexts/ThemeContext";
 import machineData from "../machines.json";
@@ -9,9 +9,39 @@ const HomePage = ({ isVisible }) => {
   const manufacturers = machineData.manufacturers || {};
   const [hoveredMachine, setHoveredMachine] = useState(null);
   const [hoveredService, setHoveredService] = useState(null);
+  const [hoveredCategory, setHoveredCategory] = useState(null);
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const heroImages = [
+    "/images/hero-bg-1.png",
+    "/images/hero-bg-2.png",
+    "/images/hero-bg-3.png",
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % heroImages.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
 
   const machines = machineData.machines.slice(0, 6);
   const services = serviceData.services;
+  const categories = machineData.categories.filter(c => c.id !== "all");
+  const featuredMachine = machineData.machines[0]; // INTEGREX i NEO
+
+  // Get a representative machine image for each category
+  const categoryImages = {};
+  machineData.machines.forEach((m) => {
+    if (!categoryImages[m.category]) categoryImages[m.category] = m.image;
+  });
+
+  const strengths = [
+    { icon: "◆", title: "Factory-Trained Technicians", desc: "Mazak-certified service engineers with deep machine knowledge" },
+    { icon: "◆", title: "24/7 Emergency Support", desc: "Round-the-clock hotline for critical breakdowns" },
+    { icon: "◆", title: "Turnkey Solutions", desc: "From machine selection to installation, tooling, and training" },
+    { icon: "◆", title: "Authorized Mazak Distributor", desc: "Direct access to genuine OEM parts, warranty, and support" },
+  ];
 
   const brands = ["Authorized Mazak Distributor", "Sales & Service", "Turnkey Solutions", "Automation", "Multi-Tasking", "5-Axis", "Turning", "Machining Centers"];
 
@@ -27,6 +57,7 @@ const HomePage = ({ isVisible }) => {
       {/* ==================== HERO ==================== */}
       <section style={{
         position: "relative",
+        zIndex: 0,
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
@@ -34,7 +65,31 @@ const HomePage = ({ isVisible }) => {
         overflow: "hidden",
         padding: "120px 48px 80px",
       }}>
-        <div className="hero-grid" />
+        {/* Slideshow background images */}
+        {heroImages.map((img, i) => (
+          <div
+            key={img}
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundImage: `url('${img}')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              opacity: activeSlide === i ? 1 : 0,
+              transition: "opacity 1.5s ease-in-out",
+            }}
+          />
+        ))}
+
+        {/* Dark overlay for text readability */}
+        <div style={{
+          position: "absolute",
+          inset: 0,
+          background: "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.8) 100%)",
+        }} />
+
+        <div className="hero-grid" style={{ opacity: 0.4 }} />
 
         <div style={{
           position: "absolute",
@@ -43,7 +98,7 @@ const HomePage = ({ isVisible }) => {
           width: 500,
           height: 500,
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(232,55,42,0.12), transparent 70%)",
+          background: "radial-gradient(circle, rgba(232,55,42,0.15), transparent 70%)",
           animation: "heroGlow 6s ease-in-out infinite",
           pointerEvents: "none",
         }} />
@@ -54,7 +109,7 @@ const HomePage = ({ isVisible }) => {
           width: 400,
           height: 400,
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(26,108,255,0.08), transparent 70%)",
+          background: "radial-gradient(circle, rgba(26,108,255,0.1), transparent 70%)",
           animation: "heroGlow 8s ease-in-out infinite 2s",
           pointerEvents: "none",
         }} />
@@ -69,16 +124,16 @@ const HomePage = ({ isVisible }) => {
             marginBottom: 16,
           }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <div style={{ height: 1, width: 32, background: t.borderSecondary }} />
-              <img src={t.logo} alt="CPMT" style={{ height: 28, width: "auto", opacity: 0.7 }} />
-              <div style={{ height: 1, width: 32, background: t.borderSecondary }} />
+              <div style={{ height: 1, width: 32, background: "rgba(255,255,255,0.3)" }} />
+              <img src="/images/CPMTLogoLight.svg" alt="CPMT" style={{ height: 28, width: "auto", opacity: 0.85 }} />
+              <div style={{ height: 1, width: 32, background: "rgba(255,255,255,0.3)" }} />
             </div>
             <span style={{
               fontFamily: "'Space Mono', monospace",
               fontSize: 10,
               letterSpacing: 3,
               textTransform: "uppercase",
-              color: "#C12033",
+              color: "#E8475A",
             }}>
               Cassavant Precision Machine Tools
             </span>
@@ -91,6 +146,7 @@ const HomePage = ({ isVisible }) => {
             letterSpacing: "-3px",
             marginBottom: 28,
             animation: "fadeUp 0.8s ease-out 0.4s both",
+            color: "#FAFAFA",
           }}>
             Precision{" "}
             <span style={{
@@ -108,7 +164,7 @@ const HomePage = ({ isVisible }) => {
 
           <p style={{
             fontSize: "clamp(16px, 2vw, 20px)",
-            color: t.textSecondary,
+            color: "rgba(255,255,255,0.7)",
             lineHeight: 1.7,
             maxWidth: 600,
             margin: "0 auto 44px",
@@ -127,7 +183,10 @@ const HomePage = ({ isVisible }) => {
             <Link to="/machines" className="cta-primary">
               Explore Machines →
             </Link>
-            <Link to="/contact" className="cta-outline">
+            <Link to="/contact" className="cta-outline" style={{
+              borderColor: "rgba(255,255,255,0.3)",
+              color: "#FAFAFA",
+            }}>
               Get a Quote
             </Link>
           </div>
@@ -151,10 +210,36 @@ const HomePage = ({ isVisible }) => {
                 }}>
                   {s.value}
                 </div>
-                <div style={{ fontSize: 13, color: t.textTertiary, letterSpacing: 1, textTransform: "uppercase", fontFamily: "'Space Mono', monospace" }}>
+                <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", letterSpacing: 1, textTransform: "uppercase", fontFamily: "'Space Mono', monospace" }}>
                   {s.label}
                 </div>
               </div>
+            ))}
+          </div>
+
+          {/* Slide indicators */}
+          <div style={{
+            display: "flex",
+            gap: 10,
+            justifyContent: "center",
+            marginTop: 40,
+            animation: "fadeUp 0.8s ease-out 1.2s both",
+          }}>
+            {heroImages.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveSlide(i)}
+                style={{
+                  width: activeSlide === i ? 28 : 8,
+                  height: 8,
+                  borderRadius: 4,
+                  border: "none",
+                  background: activeSlide === i ? "#C12033" : "rgba(255,255,255,0.35)",
+                  cursor: "pointer",
+                  transition: "all 0.4s ease",
+                  padding: 0,
+                }}
+              />
             ))}
           </div>
         </div>
@@ -186,6 +271,155 @@ const HomePage = ({ isVisible }) => {
                 <span style={{ color: "#C12033", fontSize: 8 }}>◆</span>
               </span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== MACHINE CATEGORIES ==================== */}
+      <section id="categories" data-animate style={{
+        padding: "clamp(40px, 5vw, 64px) clamp(24px, 5vw, 80px)",
+        maxWidth: 1400,
+        margin: "0 auto",
+      }}>
+        <div style={{
+          opacity: isVisible("categories") ? 1 : 0,
+          transform: isVisible("categories") ? "translateY(0)" : "translateY(40px)",
+          transition: "all 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
+        }}>
+          <div style={{ textAlign: "center", marginBottom: 32 }}>
+            <div className="section-label">Machine Categories</div>
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 800, letterSpacing: -1.5 }}>
+              Find Your <span style={{ color: "#C12033" }}>Machine</span>
+            </h2>
+            <p style={{ color: t.textTertiary, maxWidth: 500, margin: "12px auto 0", fontSize: 14, lineHeight: 1.6 }}>
+              Browse our full lineup by category — from multi-tasking powerhouses to precision turning centers.
+            </p>
+          </div>
+          <div className="category-grid">
+            {categories.map((cat, i) => {
+              const count = machineData.machines.filter(m => m.category === cat.id).length;
+              const categoryDescs = {
+                multitasking: "Turn, mill, and drill in a single setup — eliminate multiple operations.",
+                "5axis": "Simultaneous 5-axis contouring for the most complex geometries.",
+                turning: "High-speed, high-precision CNC turning for production efficiency.",
+                vertical: "Rigid vertical machining centers for mold, die, and general machining.",
+                horizontal: "High-volume horizontal machining with pallet changers and automation.",
+              };
+              return (
+                <Link
+                  to={`/machines?category=${cat.id}`}
+                  key={cat.id}
+                  className="category-card"
+                  onMouseEnter={() => setHoveredCategory(i)}
+                  onMouseLeave={() => setHoveredCategory(null)}
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                    position: "relative",
+                    borderRadius: 16,
+                    border: `1px solid ${hoveredCategory === i ? "rgba(193,32,51,0.3)" : t.borderPrimary}`,
+                    background: t.bgCard,
+                    overflow: "hidden",
+                    display: "flex",
+                    flexDirection: "column",
+                    transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+                    transform: hoveredCategory === i ? "translateY(-6px)" : "translateY(0)",
+                    boxShadow: hoveredCategory === i
+                      ? "0 12px 40px rgba(193,32,51,0.12), 0 4px 12px rgba(0,0,0,0.08)"
+                      : "0 2px 8px rgba(0,0,0,0.04)",
+                    opacity: isVisible("categories") ? 1 : 0,
+                    animationDelay: `${i * 0.08}s`,
+                  }}
+                >
+                  {/* Top accent line */}
+                  <div style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    height: 3,
+                    background: "linear-gradient(90deg, #C12033, #E8475A)",
+                    opacity: hoveredCategory === i ? 1 : 0,
+                    transition: "opacity 0.3s",
+                  }} />
+
+                  {/* Machine image area */}
+                  <div style={{
+                    height: 130,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px 16px 4px",
+                    position: "relative",
+                  }}>
+                    <div style={{
+                      position: "absolute",
+                      inset: 0,
+                      background: `radial-gradient(circle at 50% 80%, rgba(193,32,51,${hoveredCategory === i ? "0.06" : "0.02"}), transparent 70%)`,
+                      transition: "all 0.4s",
+                    }} />
+                    <img
+                      src={categoryImages[cat.id]}
+                      alt={cat.label}
+                      style={{
+                        maxHeight: 105,
+                        maxWidth: "90%",
+                        objectFit: "contain",
+                        transition: "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+                        transform: hoveredCategory === i ? "scale(1.1)" : "scale(1)",
+                        filter: hoveredCategory === i ? "drop-shadow(0 8px 16px rgba(0,0,0,0.15))" : "none",
+                      }}
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div style={{ padding: "8px 20px 18px", flex: 1, display: "flex", flexDirection: "column" }}>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
+                      <h3 style={{ fontSize: 18, fontWeight: 700, letterSpacing: -0.3, margin: 0 }}>
+                        {cat.label}
+                      </h3>
+                      <span style={{
+                        fontSize: 11,
+                        fontFamily: "'Space Mono', monospace",
+                        color: "#C12033",
+                        background: "rgba(193,32,51,0.08)",
+                        padding: "3px 10px",
+                        borderRadius: 20,
+                        fontWeight: 600,
+                      }}>
+                        {count} {count === 1 ? "model" : "models"}
+                      </span>
+                    </div>
+                    <p style={{
+                      fontSize: 13,
+                      color: t.textTertiary,
+                      lineHeight: 1.6,
+                      margin: 0,
+                      flex: 1,
+                    }}>
+                      {categoryDescs[cat.id]}
+                    </p>
+                    <div style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 6,
+                      marginTop: 12,
+                      fontSize: 13,
+                      fontWeight: 600,
+                      color: hoveredCategory === i ? "#C12033" : t.textTertiary,
+                      transition: "color 0.3s",
+                    }}>
+                      Explore category
+                      <span style={{
+                        transition: "transform 0.3s",
+                        transform: hoveredCategory === i ? "translateX(4px)" : "translateX(0)",
+                        fontSize: 16,
+                      }}>→</span>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -310,6 +544,105 @@ const HomePage = ({ isVisible }) => {
         </div>
       </section>
 
+      {/* ==================== FEATURED MACHINE ==================== */}
+      <section style={{
+        padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
+        background: t.bgSection,
+      }}>
+        <div style={{ maxWidth: 1400, margin: "0 auto" }}>
+          <div style={{
+            display: "flex",
+            gap: "clamp(32px, 5vw, 64px)",
+            alignItems: "center",
+            flexWrap: "wrap",
+          }}>
+            <div style={{
+              flex: "1 1 400px",
+              minHeight: 400,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: 24,
+            }}>
+              <img
+                src={featuredMachine.image}
+                alt={featuredMachine.name}
+                style={{ maxWidth: "100%", maxHeight: 460, objectFit: "contain" }}
+              />
+            </div>
+            <div style={{ flex: "1 1 400px" }}>
+              <div className="section-label">Featured Machine</div>
+              <div style={{
+                fontSize: 11,
+                color: "#C12033",
+                fontFamily: "'Space Mono', monospace",
+                letterSpacing: 2,
+                textTransform: "uppercase",
+                marginBottom: 8,
+              }}>
+                {featuredMachine.type}
+              </div>
+              <h2 style={{
+                fontSize: "clamp(28px, 4vw, 44px)",
+                fontWeight: 800,
+                letterSpacing: -1.5,
+                marginBottom: 12,
+              }}>
+                {featuredMachine.name}
+              </h2>
+              {featuredMachine.tagline && (
+                <p style={{
+                  fontSize: 16,
+                  color: t.textSecondary,
+                  fontStyle: "italic",
+                  marginBottom: 16,
+                }}>
+                  {featuredMachine.tagline}
+                </p>
+              )}
+              <p style={{
+                fontSize: 14,
+                color: t.textTertiary,
+                lineHeight: 1.7,
+                marginBottom: 24,
+              }}>
+                {featuredMachine.description}
+              </p>
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 28 }}>
+                <div style={{
+                  padding: "6px 14px",
+                  background: t.bgTag,
+                  borderRadius: 6,
+                  fontSize: 12,
+                  fontFamily: "'Space Mono', monospace",
+                  color: t.textSecondary,
+                }}>
+                  {featuredMachine.specs}
+                </div>
+                <div style={{
+                  padding: "6px 14px",
+                  background: t.bgTag,
+                  borderRadius: 6,
+                  fontSize: 12,
+                  fontFamily: "'Space Mono', monospace",
+                  color: t.textSecondary,
+                }}>
+                  {featuredMachine.speed}
+                </div>
+              </div>
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                <Link to={`/machines/${featuredMachine.manufacturer.toLowerCase()}/${featuredMachine.slug}`} className="cta-primary">
+                  View Specifications →
+                </Link>
+                <Link to="/contact" className="cta-outline">
+                  Request a Quote
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ==================== SERVICES ==================== */}
       <section id="services" data-animate style={{
         padding: "clamp(80px, 10vw, 140px) clamp(24px, 5vw, 80px)",
@@ -381,11 +714,66 @@ const HomePage = ({ isVisible }) => {
         </div>
       </section>
 
+      {/* ==================== COMPANY STRENGTHS ==================== */}
+      <section style={{
+        padding: "clamp(60px, 8vw, 80px) clamp(24px, 5vw, 80px)",
+        background: t.bgSection,
+        borderTop: `1px solid ${t.borderDivider}`,
+        borderBottom: `1px solid ${t.borderDivider}`,
+      }}>
+        <div style={{ maxWidth: 1400, margin: "0 auto" }}>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
+            gap: 32,
+          }}>
+            {strengths.map((s) => (
+              <div key={s.title} style={{
+                display: "flex",
+                alignItems: "flex-start",
+                gap: 16,
+              }}>
+                <div style={{
+                  width: 40,
+                  height: 40,
+                  borderRadius: 10,
+                  background: "rgba(193,32,51,0.1)",
+                  border: "1px solid rgba(193,32,51,0.2)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#C12033",
+                  fontSize: 14,
+                  flexShrink: 0,
+                }}>
+                  {s.icon}
+                </div>
+                <div>
+                  <div style={{
+                    fontSize: 15,
+                    fontWeight: 700,
+                    marginBottom: 4,
+                  }}>
+                    {s.title}
+                  </div>
+                  <div style={{
+                    fontSize: 13,
+                    color: t.textTertiary,
+                    lineHeight: 1.6,
+                  }}>
+                    {s.desc}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ==================== CTA / ABOUT BAND ==================== */}
       <section id="about" data-animate style={{
         padding: "clamp(80px, 10vw, 120px) clamp(24px, 5vw, 80px)",
-        borderTop: `1px solid ${t.borderDivider}`,
-        borderBottom: `1px solid ${t.borderDivider}`,
+        background: t.ctaGradient,
       }}>
         <div style={{
           maxWidth: 900,

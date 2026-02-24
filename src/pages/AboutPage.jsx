@@ -445,7 +445,7 @@ const AboutPage = ({ isVisible }) => {
       {/* ==================== BOTTOM CTA ==================== */}
       <section style={{
         padding: "clamp(80px, 10vw, 120px) clamp(24px, 5vw, 80px)",
-        borderTop: `1px solid ${t.borderDivider}`,
+        background: t.ctaGradient,
       }}>
         <div style={{
           maxWidth: 700,
