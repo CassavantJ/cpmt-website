@@ -42,7 +42,7 @@ const MachineDetailPage = () => {
       {/* ==================== BREADCRUMB + HERO ==================== */}
       <section style={{
         padding: "120px clamp(24px, 5vw, 80px) 0",
-        maxWidth: 1400,
+        maxWidth: 1600,
         margin: "0 auto",
       }}>
         {/* Breadcrumb */}
@@ -109,7 +109,7 @@ const MachineDetailPage = () => {
             </div>
 
             <h1 style={{
-              fontSize: "clamp(32px, 5vw, 52px)",
+              fontSize: "clamp(34px, 5vw, 56px)",
               fontWeight: 900,
               letterSpacing: -2,
               lineHeight: 1.1,
@@ -143,7 +143,7 @@ const MachineDetailPage = () => {
             )}
 
             <p style={{
-              fontSize: 15,
+              fontSize: 16,
               color: t.textSecondary,
               lineHeight: 1.8,
               marginBottom: 32,
@@ -191,7 +191,7 @@ const MachineDetailPage = () => {
       {/* ==================== FEATURES + SPECIFICATIONS ==================== */}
       <section style={{
         padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
-        maxWidth: 1400,
+        maxWidth: 1600,
         margin: "0 auto",
       }}>
         <div style={{
@@ -299,12 +299,12 @@ const MachineDetailPage = () => {
       {related.length > 0 && (
         <section style={{
           padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
-          maxWidth: 1400,
+          maxWidth: 1600,
           margin: "0 auto",
           borderTop: `1px solid ${t.borderDivider}`,
         }}>
           <h2 style={{
-            fontSize: "clamp(24px, 4vw, 36px)",
+            fontSize: "clamp(26px, 4vw, 40px)",
             fontWeight: 800,
             letterSpacing: -1,
             marginBottom: 32,
@@ -396,7 +396,7 @@ const MachineDetailPage = () => {
         background: t.ctaGradient,
       }}>
         <div style={{
-          maxWidth: 700,
+          maxWidth: 800,
           margin: "0 auto",
           textAlign: "center",
         }}>
@@ -404,7 +404,7 @@ const MachineDetailPage = () => {
             Get Started
           </div>
           <h2 style={{
-            fontSize: "clamp(24px, 4vw, 40px)",
+            fontSize: "clamp(26px, 4vw, 44px)",
             fontWeight: 800,
             letterSpacing: -1,
             marginBottom: 16,
@@ -413,10 +413,10 @@ const MachineDetailPage = () => {
             <span style={{ color: "#C12033" }}>shop?</span>
           </h2>
           <p style={{
-            fontSize: 16,
+            fontSize: 17,
             color: t.textSecondary,
             lineHeight: 1.7,
-            maxWidth: 520,
+            maxWidth: 560,
             margin: "0 auto 32px",
           }}>
             Our team can help you configure the right machine, tooling, and automation for your application.

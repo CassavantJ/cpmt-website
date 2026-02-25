@@ -64,7 +64,7 @@ const GlobalStyles = () => {
         position: relative;
         color: ${t.textSecondary};
         text-decoration: none;
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 500;
         letter-spacing: 1.5px;
         text-transform: uppercase;
@@ -102,7 +102,7 @@ const GlobalStyles = () => {
         background: ${t.bgCard};
         border: 1px solid ${t.borderPrimary};
         border-radius: 12px;
-        padding: 28px;
+        padding: 32px;
         transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         cursor: pointer;
         position: relative;
@@ -142,13 +142,13 @@ const GlobalStyles = () => {
       }
 
       .cat-btn {
-        padding: 10px 24px;
+        padding: 12px 28px;
         border-radius: 100px;
         border: 1px solid ${t.borderPrimary};
         background: transparent;
         color: ${t.textSecondary};
         font-family: 'Space Mono', monospace;
-        font-size: 12px;
+        font-size: 13px;
         letter-spacing: 1px;
         text-transform: uppercase;
         cursor: pointer;
@@ -165,13 +165,13 @@ const GlobalStyles = () => {
         display: inline-flex;
         align-items: center;
         gap: 12px;
-        padding: 16px 36px;
+        padding: 18px 40px;
         background: #C12033;
         color: #FAFAFA;
         border: none;
         border-radius: 8px;
         font-family: 'Outfit', sans-serif;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 600;
         letter-spacing: 0.5px;
         cursor: pointer;
@@ -184,13 +184,13 @@ const GlobalStyles = () => {
         display: inline-flex;
         align-items: center;
         gap: 12px;
-        padding: 16px 36px;
+        padding: 18px 40px;
         background: transparent;
         color: ${t.textPrimary};
         border: 1px solid ${t.borderSecondary};
         border-radius: 8px;
         font-family: 'Outfit', sans-serif;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 600;
         letter-spacing: 0.5px;
         cursor: pointer;
@@ -207,7 +207,7 @@ const GlobalStyles = () => {
         border-radius: 8px;
         color: ${t.textPrimary};
         font-family: 'Outfit', sans-serif;
-        font-size: 15px;
+        font-size: 16px;
         transition: border-color 0.3s;
         outline: none;
       }
@@ -258,6 +258,43 @@ const GlobalStyles = () => {
         }
       }
 
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: 1100px) {
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+      }
+      @media (max-width: 700px) {
+        .services-grid {
+          grid-template-columns: 1fr !important;
+        }
+      }
+
+      .support-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 700px) {
+        .support-grid {
+          grid-template-columns: 1fr !important;
+        }
+      }
+
+      .machines-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: 1100px) {
+        .machines-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+      }
+      @media (max-width: 700px) {
+        .machines-grid {
+          grid-template-columns: 1fr !important;
+        }
+      }
+
       .process-timeline {
         display: grid;
         gap: 0;
@@ -290,7 +327,7 @@ const GlobalStyles = () => {
 
       .section-label {
         font-family: 'Space Mono', monospace;
-        font-size: 11px;
+        font-size: 12px;
         letter-spacing: 3px;
         text-transform: uppercase;
         color: #C12033;
@@ -316,14 +353,19 @@ const GlobalStyles = () => {
       }
 
       @media (max-width: 768px) {
-        .hamburger { display: flex; }
+        .hamburger { display: flex; position: relative; z-index: 1002; }
         .desktop-nav { display: none !important; }
         .mobile-menu {
           position: fixed;
-          inset: 0;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100vw;
+          height: 100vh;
           background: ${t.mobileBg};
           backdrop-filter: blur(20px);
-          z-index: 1000;
+          z-index: 1001;
           display: flex;
           flex-direction: column;
           align-items: center;

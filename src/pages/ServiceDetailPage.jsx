@@ -50,7 +50,7 @@ const ServiceDetailPage = () => {
           pointerEvents: "none",
         }} />
 
-        <div style={{ maxWidth: 1400, margin: "0 auto", position: "relative", zIndex: 1 }}>
+        <div style={{ maxWidth: 1600, margin: "0 auto", position: "relative", zIndex: 1 }}>
           {/* Breadcrumb */}
           <nav style={{
             display: "flex",
@@ -105,7 +105,7 @@ const ServiceDetailPage = () => {
             {/* Content */}
             <div style={{ flex: "1 1 500px" }}>
               <h1 style={{
-                fontSize: "clamp(36px, 5vw, 56px)",
+                fontSize: "clamp(38px, 5vw, 60px)",
                 fontWeight: 900,
                 letterSpacing: -2,
                 lineHeight: 1.1,
@@ -128,11 +128,11 @@ const ServiceDetailPage = () => {
               )}
 
               <p style={{
-                fontSize: 16,
+                fontSize: 17,
                 color: t.textSecondary,
                 lineHeight: 1.8,
                 marginBottom: 36,
-                maxWidth: 640,
+                maxWidth: 680,
               }}>
                 {service.description}
               </p>
@@ -203,17 +203,17 @@ const ServiceDetailPage = () => {
           padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
           background: t.bgSection,
         }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div style={{ maxWidth: 1300, margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: 56 }}>
               <div className="section-label">How It Works</div>
               <h2 style={{
-                fontSize: "clamp(28px, 4vw, 44px)",
+                fontSize: "clamp(30px, 4vw, 48px)",
                 fontWeight: 800,
                 letterSpacing: -1.5,
               }}>
                 Our <span style={{ color: service.color }}>Process</span>
               </h2>
-              <p style={{ color: t.textTertiary, maxWidth: 500, margin: "16px auto 0", fontSize: 15, lineHeight: 1.7 }}>
+              <p style={{ color: t.textTertiary, maxWidth: 540, margin: "16px auto 0", fontSize: 16, lineHeight: 1.7 }}>
                 A proven approach from start to finish.
               </p>
             </div>
@@ -295,11 +295,11 @@ const ServiceDetailPage = () => {
       {/* ==================== EXPLORE MORE SERVICES ==================== */}
       <section style={{
         padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
-        maxWidth: 1400,
+        maxWidth: 1600,
         margin: "0 auto",
       }}>
         <h2 style={{
-          fontSize: "clamp(24px, 4vw, 36px)",
+          fontSize: "clamp(26px, 4vw, 40px)",
           fontWeight: 800,
           letterSpacing: -1,
           marginBottom: 32,
@@ -347,7 +347,7 @@ const ServiceDetailPage = () => {
         background: t.ctaGradient,
       }}>
         <div style={{
-          maxWidth: 700,
+          maxWidth: 800,
           margin: "0 auto",
           textAlign: "center",
         }}>
@@ -355,7 +355,7 @@ const ServiceDetailPage = () => {
             Get Started
           </div>
           <h2 style={{
-            fontSize: "clamp(24px, 4vw, 40px)",
+            fontSize: "clamp(26px, 4vw, 44px)",
             fontWeight: 800,
             letterSpacing: -1,
             marginBottom: 16,
@@ -364,10 +364,10 @@ const ServiceDetailPage = () => {
             <span style={{ color: "#C12033" }}>{service.title}?</span>
           </h2>
           <p style={{
-            fontSize: 16,
+            fontSize: 17,
             color: t.textSecondary,
             lineHeight: 1.7,
-            maxWidth: 520,
+            maxWidth: 560,
             margin: "0 auto 32px",
           }}>
             Our team is ready to discuss your requirements and build a solution that fits your shop.

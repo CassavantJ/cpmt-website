@@ -44,7 +44,7 @@ const Footer = () => {
       padding: "60px clamp(24px, 5vw, 80px) 32px",
       background: t.bgSection,
     }}>
-      <div style={{ maxWidth: 1400, margin: "0 auto" }}>
+      <div style={{ maxWidth: 1600, margin: "0 auto" }}>
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
@@ -57,7 +57,7 @@ const Footer = () => {
                 <img src={t.logo} alt="CPMT" style={{ height: 36, width: "auto" }} />
               </Link>
             </div>
-            <p style={{ color: t.textMuted, fontSize: 13, lineHeight: 1.7, maxWidth: 250 }}>
+            <p style={{ color: t.textMuted, fontSize: 14, lineHeight: 1.7, maxWidth: 280 }}>
               Your authorized Mazak distributor for CNC machine tools, automation, and manufacturing solutions.
             </p>
           </div>
@@ -82,8 +82,8 @@ const Footer = () => {
                     display: "block",
                     color: t.textMuted,
                     textDecoration: "none",
-                    fontSize: 14,
-                    padding: "5px 0",
+                    fontSize: 15,
+                    padding: "6px 0",
                     transition: "color 0.2s",
                   }}
                   onMouseOver={(e) => e.target.style.color = t.textPrimary}

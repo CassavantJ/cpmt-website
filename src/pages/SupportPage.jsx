@@ -10,6 +10,7 @@ const SupportPage = ({ isVisible }) => {
     {
       icon: "🔧",
       title: "Machine Servicing",
+      image: "/images/support/machine-servicing.jpeg",
       description: "When your machines need service, our factory-trained Mazak technicians provide fast response times and expert diagnostics. We minimize your downtime so you can get back to production.",
       features: [
         "Factory-trained Mazak service engineers",
@@ -24,6 +25,7 @@ const SupportPage = ({ isVisible }) => {
     {
       icon: "⚙",
       title: "Parts & Accessories",
+      image: "/images/support/parts-accessories.png",
       description: "We stock genuine Mazak OEM parts for fast delivery. Critical parts orders placed before noon ship same day, keeping your machines running with the right components.",
       features: [
         "Genuine Mazak OEM parts",
@@ -33,11 +35,12 @@ const SupportPage = ({ isVisible }) => {
       ],
       cta: "Order Parts",
       ctaLink: "/contact",
-      color: "#1A6CFF",
+      color: "#C12033",
     },
     {
       icon: "🛡",
       title: "Preventive Maintenance",
+      image: "/images/support/preventive-maintenance.jpg",
       description: "Avoid unplanned downtime with custom preventive maintenance programs. Our technicians create a tailored schedule based on your machines, run time, and production demands.",
       features: [
         "Custom PM schedules per machine",
@@ -47,11 +50,12 @@ const SupportPage = ({ isVisible }) => {
       ],
       cta: "Schedule PM",
       ctaLink: "/contact",
-      color: "#00C47D",
+      color: "#C12033",
     },
     {
       icon: "📋",
       title: "Warranty Registration",
+      image: "/images/support/warranty-registration.webp",
       description: "Register your new Mazak machine to activate your warranty coverage. Quick and easy process that ensures you're protected from day one.",
       features: [
         "Fast online registration process",
@@ -61,7 +65,7 @@ const SupportPage = ({ isVisible }) => {
       ],
       cta: "Register Machine",
       ctaLink: "/contact",
-      color: "#FF8A00",
+      color: "#C12033",
     },
   ];
 
@@ -91,12 +95,12 @@ const SupportPage = ({ isVisible }) => {
           pointerEvents: "none",
         }} />
 
-        <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
           <div className="section-label" style={{ animation: "fadeUp 0.8s ease-out 0.2s both" }}>
             Customer Support
           </div>
           <h1 style={{
-            fontSize: "clamp(36px, 6vw, 64px)",
+            fontSize: "clamp(38px, 6vw, 68px)",
             fontWeight: 900,
             letterSpacing: -2,
             lineHeight: 1.1,
@@ -115,7 +119,7 @@ const SupportPage = ({ isVisible }) => {
             </span>
           </h1>
           <p style={{
-            fontSize: "clamp(15px, 2vw, 18px)",
+            fontSize: "clamp(16px, 2vw, 20px)",
             color: t.textSecondary,
             lineHeight: 1.7,
             maxWidth: 620,
@@ -144,7 +148,7 @@ const SupportPage = ({ isVisible }) => {
       {/* ==================== SUPPORT CATEGORIES ==================== */}
       <section id="support" data-animate style={{
         padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
-        maxWidth: 1400,
+        maxWidth: 1600,
         margin: "0 auto",
       }}>
         <div style={{
@@ -152,9 +156,9 @@ const SupportPage = ({ isVisible }) => {
           transform: isVisible("support") ? "translateY(0)" : "translateY(40px)",
           transition: "all 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
         }}>
-          <div style={{
+          <div className="support-grid" style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
+            gridTemplateColumns: "repeat(2, 1fr)",
             gap: 24,
           }}>
             {supportCategories.map((cat, i) => (
@@ -163,95 +167,104 @@ const SupportPage = ({ isVisible }) => {
                 onMouseEnter={() => setHoveredCard(i)}
                 onMouseLeave={() => setHoveredCard(null)}
                 style={{
-                  padding: "clamp(28px, 3vw, 40px)",
                   borderRadius: 16,
                   border: `1px solid ${t.borderPrimary}`,
                   background: t.bgCard,
                   transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
                   boxShadow: hoveredCard === i ? "0 8px 32px rgba(0,0,0,0.08)" : "none",
+                  transform: hoveredCard === i ? "translateY(-4px)" : "translateY(0)",
                   display: "flex",
                   flexDirection: "column",
+                  overflow: "hidden",
                   opacity: isVisible("support") ? 1 : 0,
-                  transform: isVisible("support") ? "translateY(0)" : "translateY(30px)",
                   transitionDelay: `${i * 0.1}s`,
                 }}
               >
-                {/* Icon */}
+                {/* Image */}
                 <div style={{
-                  width: 56,
-                  height: 56,
-                  borderRadius: 12,
-                  background: `${cat.color}12`,
-                  border: `1px solid ${cat.color}25`,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 26,
-                  marginBottom: 24,
-                  transition: "transform 0.3s",
-                  transform: hoveredCard === i ? "scale(1.08)" : "scale(1)",
+                  height: 260,
+                  overflow: "hidden",
+                  position: "relative",
                 }}>
-                  {cat.icon}
+                  <img
+                    src={cat.image}
+                    alt={cat.title}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      transition: "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+                      transform: hoveredCard === i ? "scale(1.06)" : "scale(1)",
+                    }}
+                  />
+                  <div style={{
+                    position: "absolute",
+                    inset: 0,
+                    background: "linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.5) 100%)",
+                  }} />
                 </div>
 
-                {/* Title */}
-                <h3 style={{
-                  fontSize: 22,
-                  fontWeight: 700,
-                  letterSpacing: -0.5,
-                  marginBottom: 12,
-                }}>
-                  {cat.title}
-                </h3>
+                {/* Content */}
+                <div style={{ padding: "24px 28px 28px", display: "flex", flexDirection: "column", flex: 1 }}>
+                  {/* Title */}
+                  <h3 style={{
+                    fontSize: 22,
+                    fontWeight: 700,
+                    letterSpacing: -0.5,
+                    marginBottom: 10,
+                  }}>
+                    {cat.title}
+                  </h3>
 
-                {/* Description */}
-                <p style={{
-                  color: t.textSecondary,
-                  fontSize: 14,
-                  lineHeight: 1.7,
-                  marginBottom: 24,
-                }}>
-                  {cat.description}
-                </p>
+                  {/* Description */}
+                  <p style={{
+                    color: t.textSecondary,
+                    fontSize: 14,
+                    lineHeight: 1.7,
+                    marginBottom: 20,
+                  }}>
+                    {cat.description}
+                  </p>
 
-                {/* Features */}
-                <ul style={{
-                  listStyle: "none",
-                  padding: 0,
-                  margin: "0 0 28px 0",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 10,
-                  flex: 1,
-                }}>
-                  {cat.features.map((f) => (
-                    <li key={f} style={{
+                  {/* Features */}
+                  <ul style={{
+                    listStyle: "none",
+                    padding: 0,
+                    margin: "0 0 24px 0",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 10,
+                    flex: 1,
+                  }}>
+                    {cat.features.map((f) => (
+                      <li key={f} style={{
+                        fontSize: 13,
+                        color: t.textTertiary,
+                        display: "flex",
+                        alignItems: "flex-start",
+                        gap: 10,
+                      }}>
+                        <span style={{ color: cat.color, fontSize: 8, marginTop: 5, flexShrink: 0 }}>◆</span>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* CTA */}
+                  <Link
+                    to={cat.ctaLink}
+                    className="cta-outline"
+                    style={{
                       fontSize: 13,
-                      color: t.textTertiary,
-                      display: "flex",
-                      alignItems: "flex-start",
-                      gap: 10,
-                    }}>
-                      <span style={{ color: cat.color, fontSize: 8, marginTop: 5, flexShrink: 0 }}>◆</span>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* CTA */}
-                <Link
-                  to={cat.ctaLink}
-                  className="cta-outline"
-                  style={{
-                    fontSize: 13,
-                    padding: "10px 24px",
-                    textAlign: "center",
-                    borderColor: cat.color,
-                    color: cat.color,
-                  }}
-                >
-                  {cat.cta} →
-                </Link>
+                      padding: "10px 24px",
+                      textAlign: "center",
+                      borderColor: cat.color,
+                      color: cat.color,
+                    }}
+                  >
+                    {cat.cta} →
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -263,11 +276,11 @@ const SupportPage = ({ isVisible }) => {
         padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
         background: t.bgSection,
       }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto" }}>
-          <div style={{ marginBottom: 40 }}>
+        <div style={{ maxWidth: 1600, margin: "0 auto" }}>
+          <div style={{ marginBottom: 40, textAlign: "center" }}>
             <div className="section-label">Quick Access</div>
             <h2 style={{
-              fontSize: "clamp(28px, 4vw, 40px)",
+              fontSize: "clamp(30px, 4vw, 44px)",
               fontWeight: 800,
               letterSpacing: -1.5,
             }}>
@@ -277,8 +290,10 @@ const SupportPage = ({ isVisible }) => {
 
           <div style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+            gridTemplateColumns: "repeat(2, 1fr)",
             gap: 16,
+            maxWidth: 800,
+            margin: "0 auto",
           }}>
             {quickLinks.map((link, i) => (
               <Link
@@ -324,14 +339,14 @@ const SupportPage = ({ isVisible }) => {
       {/* ==================== CONTACT INFO BAND ==================== */}
       <section style={{
         padding: "clamp(60px, 8vw, 80px) clamp(24px, 5vw, 80px)",
-        maxWidth: 1400,
+        maxWidth: 1600,
         margin: "0 auto",
       }}>
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           gap: 24,
-          maxWidth: 1000,
+          maxWidth: 1100,
           margin: "0 auto",
         }}>
           {[
@@ -381,7 +396,7 @@ const SupportPage = ({ isVisible }) => {
         background: t.ctaGradient,
       }}>
         <div style={{
-          maxWidth: 700,
+          maxWidth: 800,
           margin: "0 auto",
           textAlign: "center",
         }}>
@@ -389,7 +404,7 @@ const SupportPage = ({ isVisible }) => {
             We've Got Your Back
           </div>
           <h2 style={{
-            fontSize: "clamp(24px, 4vw, 40px)",
+            fontSize: "clamp(26px, 4vw, 44px)",
             fontWeight: 800,
             letterSpacing: -1,
             marginBottom: 16,
@@ -398,10 +413,10 @@ const SupportPage = ({ isVisible }) => {
             <span style={{ color: "#C12033" }}>right now?</span>
           </h2>
           <p style={{
-            fontSize: 16,
+            fontSize: 17,
             color: t.textSecondary,
             lineHeight: 1.7,
-            maxWidth: 520,
+            maxWidth: 560,
             margin: "0 auto 32px",
           }}>
             Whether it's an emergency breakdown or a scheduled maintenance visit, our team is ready to help. Contact us anytime.

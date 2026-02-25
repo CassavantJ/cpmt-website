@@ -8,7 +8,7 @@ const ContactPage = ({ isVisible }) => {
   return (
     <section id="contact" data-animate style={{
       padding: "140px clamp(24px, 5vw, 80px) clamp(80px, 10vw, 140px)",
-      maxWidth: 1400,
+      maxWidth: 1600,
       margin: "0 auto",
     }}>
       <div style={{
@@ -23,11 +23,11 @@ const ContactPage = ({ isVisible }) => {
         }}>
           <div>
             <div className="section-label">Get In Touch</div>
-            <h2 style={{ fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 800, letterSpacing: -2, marginBottom: 20 }}>
+            <h2 style={{ fontSize: "clamp(34px, 5vw, 52px)", fontWeight: 800, letterSpacing: -2, marginBottom: 20 }}>
               Let's Find Your<br />
               <span style={{ color: "#C12033" }}>Next Machine</span>
             </h2>
-            <p style={{ color: t.textTertiary, fontSize: 15, lineHeight: 1.7, marginBottom: 40 }}>
+            <p style={{ color: t.textTertiary, fontSize: 16, lineHeight: 1.7, marginBottom: 40 }}>
               Whether you're quoting a single machine or outfitting an entire facility, our team is ready to help.
             </p>
 
@@ -53,7 +53,7 @@ const ContactPage = ({ isVisible }) => {
                   </div>
                   <div>
                     <div style={{ fontSize: 12, color: t.textTertiary, fontFamily: "'Space Mono', monospace", letterSpacing: 1, textTransform: "uppercase" }}>{info.label}</div>
-                    <div style={{ fontSize: 16, fontWeight: 600 }}>{info.value}</div>
+                    <div style={{ fontSize: 17, fontWeight: 600 }}>{info.value}</div>
                   </div>
                 </div>
               ))}

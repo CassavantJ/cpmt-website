@@ -62,12 +62,12 @@ const AboutPage = ({ isVisible }) => {
           pointerEvents: "none",
         }} />
 
-        <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
           <div className="section-label" style={{ animation: "fadeUp 0.8s ease-out 0.2s both" }}>
             About Us
           </div>
           <h1 style={{
-            fontSize: "clamp(36px, 6vw, 64px)",
+            fontSize: "clamp(38px, 6vw, 68px)",
             fontWeight: 900,
             letterSpacing: -2,
             lineHeight: 1.1,
@@ -86,7 +86,7 @@ const AboutPage = ({ isVisible }) => {
             </span>
           </h1>
           <p style={{
-            fontSize: "clamp(15px, 2vw, 18px)",
+            fontSize: "clamp(16px, 2vw, 20px)",
             color: t.textSecondary,
             lineHeight: 1.7,
             maxWidth: 620,
@@ -118,7 +118,7 @@ const AboutPage = ({ isVisible }) => {
         background: t.bgSection,
       }}>
         <div style={{
-          maxWidth: 1400,
+          maxWidth: 1600,
           margin: "0 auto",
           opacity: isVisible("mission") ? 1 : 0,
           transform: isVisible("mission") ? "translateY(0)" : "translateY(40px)",
@@ -133,7 +133,7 @@ const AboutPage = ({ isVisible }) => {
             <div style={{ flex: "1 1 400px" }}>
               <div className="section-label">Our Mission</div>
               <h2 style={{
-                fontSize: "clamp(28px, 4vw, 44px)",
+                fontSize: "clamp(30px, 4vw, 48px)",
                 fontWeight: 800,
                 letterSpacing: -1.5,
                 lineHeight: 1.15,
@@ -143,7 +143,7 @@ const AboutPage = ({ isVisible }) => {
                 <span style={{ color: "#C12033" }}>Build Better</span>
               </h2>
               <p style={{
-                fontSize: 16,
+                fontSize: 17,
                 color: t.textSecondary,
                 lineHeight: 1.8,
                 marginBottom: 20,
@@ -151,7 +151,7 @@ const AboutPage = ({ isVisible }) => {
                 At Cassavant Precision Machine Tools, we believe that exceptional manufacturing starts with the right partner. We go beyond selling machines — we deliver complete solutions that help your shop run faster, cut more accurately, and grow more profitably.
               </p>
               <p style={{
-                fontSize: 16,
+                fontSize: 17,
                 color: t.textSecondary,
                 lineHeight: 1.8,
               }}>
@@ -206,7 +206,7 @@ const AboutPage = ({ isVisible }) => {
       {/* ==================== VALUES ==================== */}
       <section id="values" data-animate style={{
         padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
-        maxWidth: 1400,
+        maxWidth: 1600,
         margin: "0 auto",
       }}>
         <div style={{
@@ -217,7 +217,7 @@ const AboutPage = ({ isVisible }) => {
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <div className="section-label">What Drives Us</div>
             <h2 style={{
-              fontSize: "clamp(28px, 4vw, 44px)",
+              fontSize: "clamp(30px, 4vw, 48px)",
               fontWeight: 800,
               letterSpacing: -1.5,
             }}>
@@ -253,7 +253,7 @@ const AboutPage = ({ isVisible }) => {
                 </h3>
                 <p style={{
                   color: t.textSecondary,
-                  fontSize: 14,
+                  fontSize: 15,
                   lineHeight: 1.7,
                 }}>
                   {val.description}
@@ -270,7 +270,7 @@ const AboutPage = ({ isVisible }) => {
         background: t.bgSection,
       }}>
         <div style={{
-          maxWidth: 1400,
+          maxWidth: 1600,
           margin: "0 auto",
           opacity: isVisible("story") ? 1 : 0,
           transform: isVisible("story") ? "translateY(0)" : "translateY(40px)",
@@ -279,7 +279,7 @@ const AboutPage = ({ isVisible }) => {
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <div className="section-label">Our Journey</div>
             <h2 style={{
-              fontSize: "clamp(28px, 4vw, 44px)",
+              fontSize: "clamp(30px, 4vw, 48px)",
               fontWeight: 800,
               letterSpacing: -1.5,
             }}>
@@ -289,7 +289,7 @@ const AboutPage = ({ isVisible }) => {
 
           <div style={{
             position: "relative",
-            maxWidth: 800,
+            maxWidth: 900,
             margin: "0 auto",
           }}>
             {/* Vertical timeline line */}
@@ -371,7 +371,7 @@ const AboutPage = ({ isVisible }) => {
       {/* ==================== WHY CHOOSE US ==================== */}
       <section id="strengths" data-animate style={{
         padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
-        maxWidth: 1400,
+        maxWidth: 1600,
         margin: "0 auto",
       }}>
         <div style={{
@@ -382,7 +382,7 @@ const AboutPage = ({ isVisible }) => {
           <div style={{ marginBottom: 48 }}>
             <div className="section-label">Why CPMT</div>
             <h2 style={{
-              fontSize: "clamp(28px, 4vw, 44px)",
+              fontSize: "clamp(30px, 4vw, 48px)",
               fontWeight: 800,
               letterSpacing: -1.5,
             }}>
@@ -441,7 +441,7 @@ const AboutPage = ({ isVisible }) => {
         background: t.ctaGradient,
       }}>
         <div style={{
-          maxWidth: 700,
+          maxWidth: 800,
           margin: "0 auto",
           textAlign: "center",
         }}>
@@ -449,7 +449,7 @@ const AboutPage = ({ isVisible }) => {
             Let's Work Together
           </div>
           <h2 style={{
-            fontSize: "clamp(24px, 4vw, 40px)",
+            fontSize: "clamp(26px, 4vw, 44px)",
             fontWeight: 800,
             letterSpacing: -1,
             marginBottom: 16,
@@ -458,10 +458,10 @@ const AboutPage = ({ isVisible }) => {
             <span style={{ color: "#C12033" }}>manufacturing?</span>
           </h2>
           <p style={{
-            fontSize: 16,
+            fontSize: 17,
             color: t.textSecondary,
             lineHeight: 1.7,
-            maxWidth: 520,
+            maxWidth: 560,
             margin: "0 auto 32px",
           }}>
             Whether you're looking for a new machine, need service on your existing equipment, or want to explore automation — our team is here to help.

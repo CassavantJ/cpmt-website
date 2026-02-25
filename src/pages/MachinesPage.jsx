@@ -1,12 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useTheme } from "../contexts/ThemeContext";
 import machineData from "../machines.json";
 
 const MachinesPage = ({ isVisible }) => {
   const { isDark, t } = useTheme();
   const manufacturers = machineData.manufacturers || {};
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [searchParams] = useSearchParams();
+  const initialCategory = searchParams.get("category") || "all";
+  const [activeCategory, setActiveCategory] = useState(initialCategory);
   const [activeManufacturer, setActiveManufacturer] = useState("all");
   const [hoveredMachine, setHoveredMachine] = useState(null);
 
@@ -22,7 +24,7 @@ const MachinesPage = ({ isVisible }) => {
   return (
     <section id="machines" data-animate style={{
       padding: "140px clamp(24px, 5vw, 80px) clamp(80px, 10vw, 140px)",
-      maxWidth: 1400,
+      maxWidth: 1600,
       margin: "0 auto",
     }}>
       <div style={{
@@ -32,11 +34,11 @@ const MachinesPage = ({ isVisible }) => {
       }}>
         <div className="section-label">Our Inventory</div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: 24, marginBottom: 48 }}>
-          <h2 style={{ fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 800, letterSpacing: -2, lineHeight: 1.1 }}>
+          <h2 style={{ fontSize: "clamp(34px, 5vw, 56px)", fontWeight: 800, letterSpacing: -2, lineHeight: 1.1 }}>
             CNC Machine<br />
             <span style={{ color: "#C12033" }}>Tools</span>
           </h2>
-          <p style={{ color: t.textTertiary, maxWidth: 400, fontSize: 15, lineHeight: 1.7 }}>
+          <p style={{ color: t.textTertiary, maxWidth: 440, fontSize: 16, lineHeight: 1.7 }}>
             Explore our full range of Mazak machining centers, turning centers, multi-tasking machines, and automation solutions.
           </p>
         </div>
@@ -83,9 +85,9 @@ const MachinesPage = ({ isVisible }) => {
         </div>
 
         {/* Machine grid */}
-        <div style={{
+        <div className="machines-grid" style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))",
+          gridTemplateColumns: "repeat(3, 1fr)",
           gap: 20,
         }}>
           {filteredMachines.map((machine, i) => (
@@ -128,7 +130,7 @@ const MachinesPage = ({ isVisible }) => {
                     )}
                   </div>
                 </div>
-                <img src={machine.image} alt={machine.name} style={{ width: 120, height: 120, objectFit: "contain", borderRadius: 8, opacity: 0.9 }} />
+                <img src={machine.image} alt={machine.name} style={{ width: 150, height: 150, objectFit: "contain", borderRadius: 8, opacity: 0.9 }} />
               </div>
 
               <div style={{ display: "flex", gap: 16, marginBottom: 20 }}>

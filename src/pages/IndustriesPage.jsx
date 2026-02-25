@@ -78,12 +78,12 @@ const IndustriesPage = ({ isVisible }) => {
           pointerEvents: "none",
         }} />
 
-        <div style={{ maxWidth: 800, margin: "0 auto", position: "relative", zIndex: 1 }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div className="section-label" style={{ animation: "fadeUp 0.8s ease-out 0.2s both" }}>
             Industries We Serve
           </div>
           <h1 style={{
-            fontSize: "clamp(36px, 6vw, 64px)",
+            fontSize: "clamp(38px, 6vw, 68px)",
             fontWeight: 900,
             letterSpacing: -2,
             lineHeight: 1.1,
@@ -102,7 +102,7 @@ const IndustriesPage = ({ isVisible }) => {
             </span>
           </h1>
           <p style={{
-            fontSize: "clamp(15px, 2vw, 18px)",
+            fontSize: "clamp(16px, 2vw, 20px)",
             color: t.textSecondary,
             lineHeight: 1.7,
             maxWidth: 620,
@@ -121,7 +121,7 @@ const IndustriesPage = ({ isVisible }) => {
 
       {/* ==================== INDUSTRY SECTIONS ==================== */}
       <section id="industries" data-animate style={{
-        maxWidth: 1400,
+        maxWidth: 1600,
         margin: "0 auto",
         padding: "0 clamp(24px, 5vw, 80px) clamp(80px, 10vw, 140px)",
       }}>
@@ -213,7 +213,7 @@ const IndustriesPage = ({ isVisible }) => {
                     {ind.stat}
                   </div>
                   <h2 style={{
-                    fontSize: "clamp(24px, 3vw, 36px)",
+                    fontSize: "clamp(26px, 3vw, 40px)",
                     fontWeight: 800,
                     letterSpacing: -1,
                     marginBottom: 16,
@@ -223,7 +223,7 @@ const IndustriesPage = ({ isVisible }) => {
                   </h2>
                   <p style={{
                     color: t.textSecondary,
-                    fontSize: 15,
+                    fontSize: 16,
                     lineHeight: 1.8,
                     marginBottom: 24,
                   }}>
@@ -272,7 +272,7 @@ const IndustriesPage = ({ isVisible }) => {
         background: t.ctaGradient,
       }}>
         <div style={{
-          maxWidth: 800,
+          maxWidth: 900,
           margin: "0 auto",
           textAlign: "center",
         }}>
@@ -280,7 +280,7 @@ const IndustriesPage = ({ isVisible }) => {
             Your Industry, Our Expertise
           </div>
           <h2 style={{
-            fontSize: "clamp(28px, 5vw, 48px)",
+            fontSize: "clamp(30px, 5vw, 52px)",
             fontWeight: 800,
             letterSpacing: -1.5,
             lineHeight: 1.15,
@@ -290,7 +290,7 @@ const IndustriesPage = ({ isVisible }) => {
             <span style={{ color: "#C12033" }}>We can help.</span>
           </h2>
           <p style={{
-            fontSize: 17,
+            fontSize: 18,
             color: t.textSecondary,
             lineHeight: 1.7,
             maxWidth: 580,

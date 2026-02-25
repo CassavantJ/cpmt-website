@@ -15,7 +15,7 @@ const ServicesPage = ({ isVisible }) => {
       background: t.bgSection,
     }}>
       <div style={{
-        maxWidth: 1400,
+        maxWidth: 1600,
         margin: "0 auto",
         opacity: isVisible("services") ? 1 : 0,
         transform: isVisible("services") ? "translateY(0)" : "translateY(40px)",
@@ -23,17 +23,17 @@ const ServicesPage = ({ isVisible }) => {
       }}>
         <div style={{ textAlign: "center", marginBottom: 64 }}>
           <div className="section-label">What We Do</div>
-          <h2 style={{ fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 800, letterSpacing: -2 }}>
+          <h2 style={{ fontSize: "clamp(34px, 5vw, 56px)", fontWeight: 800, letterSpacing: -2 }}>
             End-to-End <span style={{ color: "#C12033" }}>Solutions</span>
           </h2>
-          <p style={{ color: t.textTertiary, maxWidth: 500, margin: "16px auto 0", fontSize: 15, lineHeight: 1.7 }}>
+          <p style={{ color: t.textTertiary, maxWidth: 540, margin: "16px auto 0", fontSize: 16, lineHeight: 1.7 }}>
             From initial consultation to ongoing support — we're your partner through every step of the manufacturing process.
           </p>
         </div>
 
-        <div style={{
+        <div className="services-grid" style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(380px, 1fr))",
+          gridTemplateColumns: "repeat(3, 1fr)",
           gap: 20,
         }}>
           {services.map((svc, i) => (
@@ -56,7 +56,7 @@ const ServicesPage = ({ isVisible }) => {
             >
               {/* Service image */}
               <div style={{
-                height: 180,
+                height: 200,
                 overflow: "hidden",
                 position: "relative",
               }}>

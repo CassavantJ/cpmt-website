@@ -75,7 +75,7 @@ const Navigation = () => {
       left: 0,
       right: 0,
       zIndex: 999,
-      padding: "0 48px",
+      padding: "0 clamp(16px, 4vw, 48px)",
       height: 72,
       display: "flex",
       alignItems: "center",

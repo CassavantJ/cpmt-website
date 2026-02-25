@@ -25,7 +25,22 @@ const HomePage = ({ isVisible }) => {
     return () => clearInterval(timer);
   }, []);
 
-  const machines = machineData.machines.slice(0, 6);
+  // Pick at least one machine from each category, then fill remaining slots
+  const machines = (() => {
+    const allMachines = machineData.machines;
+    const cats = [...new Set(allMachines.map(m => m.category))];
+    const picked = [];
+    const usedSlugs = new Set();
+    cats.forEach(cat => {
+      const match = allMachines.find(m => m.category === cat);
+      if (match) { picked.push(match); usedSlugs.add(match.slug); }
+    });
+    for (const m of allMachines) {
+      if (picked.length >= 6) break;
+      if (!usedSlugs.has(m.slug)) { picked.push(m); usedSlugs.add(m.slug); }
+    }
+    return picked.slice(0, 6);
+  })();
   const services = serviceData.services;
   const categories = machineData.categories.filter(c => c.id !== "all");
   const featuredMachine = machineData.machines[0]; // INTEGREX i NEO
@@ -107,7 +122,7 @@ const HomePage = ({ isVisible }) => {
           pointerEvents: "none",
         }} />
 
-        <div style={{ textAlign: "center", maxWidth: 900, position: "relative", zIndex: 1 }}>
+        <div style={{ textAlign: "center", maxWidth: 1000, position: "relative", zIndex: 1 }}>
           <div style={{
             display: "flex",
             flexDirection: "column",
@@ -133,7 +148,7 @@ const HomePage = ({ isVisible }) => {
           </div>
 
           <h1 style={{
-            fontSize: "clamp(42px, 7vw, 88px)",
+            fontSize: "clamp(44px, 7vw, 92px)",
             fontWeight: 900,
             lineHeight: 1.02,
             letterSpacing: "-3px",
@@ -156,7 +171,7 @@ const HomePage = ({ isVisible }) => {
           </h1>
 
           <p style={{
-            fontSize: "clamp(16px, 2vw, 20px)",
+            fontSize: "clamp(17px, 2vw, 21px)",
             color: "rgba(255,255,255,0.7)",
             lineHeight: 1.7,
             maxWidth: 600,
@@ -196,7 +211,7 @@ const HomePage = ({ isVisible }) => {
               <div key={i} className="stat-block">
                 <div style={{
                   fontFamily: "'Space Mono', monospace",
-                  fontSize: "clamp(28px, 4vw, 40px)",
+                  fontSize: "clamp(30px, 4vw, 44px)",
                   fontWeight: 700,
                   color: "#C12033",
                   marginBottom: 4,
@@ -271,7 +286,7 @@ const HomePage = ({ isVisible }) => {
       {/* ==================== MACHINE CATEGORIES ==================== */}
       <section id="categories" data-animate style={{
         padding: "clamp(40px, 5vw, 64px) clamp(24px, 5vw, 80px)",
-        maxWidth: 1400,
+        maxWidth: 1600,
         margin: "0 auto",
       }}>
         <div style={{
@@ -281,7 +296,7 @@ const HomePage = ({ isVisible }) => {
         }}>
           <div style={{ textAlign: "center", marginBottom: 32 }}>
             <div className="section-label">Machine Categories</div>
-            <h2 style={{ fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 800, letterSpacing: -1.5 }}>
+            <h2 style={{ fontSize: "clamp(30px, 4vw, 44px)", fontWeight: 800, letterSpacing: -1.5 }}>
               Find Your <span style={{ color: "#C12033" }}>Machine</span>
             </h2>
             <p style={{ color: t.textTertiary, maxWidth: 500, margin: "12px auto 0", fontSize: 14, lineHeight: 1.6 }}>
@@ -420,7 +435,7 @@ const HomePage = ({ isVisible }) => {
       {/* ==================== MACHINES PREVIEW ==================== */}
       <section id="machines" data-animate style={{
         padding: "clamp(80px, 10vw, 140px) clamp(24px, 5vw, 80px)",
-        maxWidth: 1400,
+        maxWidth: 1600,
         margin: "0 auto",
       }}>
         <div style={{
@@ -430,7 +445,7 @@ const HomePage = ({ isVisible }) => {
         }}>
           <div className="section-label">Our Inventory</div>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: 24, marginBottom: 48 }}>
-            <h2 style={{ fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 800, letterSpacing: -2, lineHeight: 1.1 }}>
+            <h2 style={{ fontSize: "clamp(34px, 5vw, 56px)", fontWeight: 800, letterSpacing: -2, lineHeight: 1.1 }}>
               CNC Machine<br />
               <span style={{ color: "#C12033" }}>Tools</span>
             </h2>
@@ -439,9 +454,9 @@ const HomePage = ({ isVisible }) => {
             </p>
           </div>
 
-          <div style={{
+          <div className="machines-grid" style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))",
+            gridTemplateColumns: "repeat(3, 1fr)",
             gap: 20,
           }}>
             {machines.map((machine, i) => (
@@ -484,7 +499,7 @@ const HomePage = ({ isVisible }) => {
                       )}
                     </div>
                   </div>
-                  <img src={machine.image} alt={machine.name} style={{ width: 120, height: 120, objectFit: "contain", borderRadius: 8, opacity: 0.9 }} />
+                  <img src={machine.image} alt={machine.name} style={{ width: 150, height: 150, objectFit: "contain", borderRadius: 8, opacity: 0.9 }} />
                 </div>
 
                 <div style={{ display: "flex", gap: 16, marginBottom: 20 }}>
@@ -542,7 +557,7 @@ const HomePage = ({ isVisible }) => {
         padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
         background: t.bgSection,
       }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto" }}>
+        <div style={{ maxWidth: 1600, margin: "0 auto" }}>
           <div style={{
             display: "flex",
             gap: "clamp(32px, 5vw, 64px)",
@@ -576,7 +591,7 @@ const HomePage = ({ isVisible }) => {
                 {featuredMachine.type}
               </div>
               <h2 style={{
-                fontSize: "clamp(28px, 4vw, 44px)",
+                fontSize: "clamp(30px, 4vw, 48px)",
                 fontWeight: 800,
                 letterSpacing: -1.5,
                 marginBottom: 12,
@@ -642,7 +657,7 @@ const HomePage = ({ isVisible }) => {
         background: t.bgSection,
       }}>
         <div style={{
-          maxWidth: 1400,
+          maxWidth: 1600,
           margin: "0 auto",
           opacity: isVisible("services") ? 1 : 0,
           transform: isVisible("services") ? "translateY(0)" : "translateY(40px)",
@@ -650,7 +665,7 @@ const HomePage = ({ isVisible }) => {
         }}>
           <div style={{ textAlign: "center", marginBottom: 64 }}>
             <div className="section-label">What We Do</div>
-            <h2 style={{ fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 800, letterSpacing: -2 }}>
+            <h2 style={{ fontSize: "clamp(34px, 5vw, 56px)", fontWeight: 800, letterSpacing: -2 }}>
               End-to-End <span style={{ color: "#C12033" }}>Solutions</span>
             </h2>
             <p style={{ color: t.textTertiary, maxWidth: 500, margin: "16px auto 0", fontSize: 15, lineHeight: 1.7 }}>
@@ -658,9 +673,9 @@ const HomePage = ({ isVisible }) => {
             </p>
           </div>
 
-          <div style={{
+          <div className="services-grid" style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(380px, 1fr))",
+            gridTemplateColumns: "repeat(3, 1fr)",
             gap: 20,
           }}>
             {services.map((svc, i) => (
@@ -683,7 +698,7 @@ const HomePage = ({ isVisible }) => {
               >
                 {/* Service image */}
                 <div style={{
-                  height: 160,
+                  height: 200,
                   overflow: "hidden",
                   position: "relative",
                 }}>
@@ -741,7 +756,7 @@ const HomePage = ({ isVisible }) => {
         background: t.ctaGradient,
       }}>
         <div style={{
-          maxWidth: 900,
+          maxWidth: 1000,
           margin: "0 auto",
           textAlign: "center",
           opacity: isVisible("about") ? 1 : 0,
@@ -751,11 +766,11 @@ const HomePage = ({ isVisible }) => {
           <div className="section-label">
             Precision Without Compromise
           </div>
-          <h2 style={{ fontSize: "clamp(28px, 5vw, 48px)", fontWeight: 800, letterSpacing: -1.5, lineHeight: 1.15, marginBottom: 20 }}>
+          <h2 style={{ fontSize: "clamp(32px, 5vw, 56px)", fontWeight: 800, letterSpacing: -1.5, lineHeight: 1.15, marginBottom: 20 }}>
             Your manufacturing success is{" "}
             <span style={{ color: "#C12033" }}>our mission.</span>
           </h2>
-          <p style={{ fontSize: 17, color: t.textSecondary, lineHeight: 1.7, maxWidth: 640, margin: "0 auto 36px" }}>
+          <p style={{ fontSize: 18, color: t.textSecondary, lineHeight: 1.7, maxWidth: 640, margin: "0 auto 36px" }}>
             Partnering with machine shops, job shops, aerospace manufacturers, and production facilities. Factory-trained technicians. Dedicated application engineers. A brand you can trust.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
