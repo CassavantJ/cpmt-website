@@ -45,28 +45,6 @@
       }
     },
     {
-      "name": "MEGA TURN 900",
-      "slug": "mega-turn-900",
-      "manufacturer": "Mazak",
-      "category": "turning",
-      "type": "Vertical CNC Lathe",
-      "specs": "Φ500-1650mm dia",
-      "speed": "1,600 RPM",
-      "image": "/images/machines/mega-turn-900.webp",
-      "tagline": "Vertical turning for large, heavy workpieces",
-      "description": "The MEGA TURN 900 is a vertical turning center built for large-diameter, heavy parts. Its vertical spindle orientation uses gravity to support the workpiece, making it ideal for large rings, flanges, and disc-shaped components.",
-      "features": ["Vertical spindle orientation", "Large swing capacity", "Heavy workpiece support", "Optional live tooling"],
-      "specifications": {
-        "Max Turning Diameter": "Φ500–1,650mm",
-        "Max Turning Height": "Up to 950mm",
-        "Spindle Speed": "1,600 RPM",
-        "Table Diameter": "Φ900mm",
-        "Max Workpiece Weight": "Up to 3,000kg",
-        "Turret Stations": "12",
-        "CNC Control": "MAZATROL SmoothAi"
-      }
-    },
-    {
       "name": "HQR NEO",
       "slug": "hqr-neo",
       "manufacturer": "Mazak",
@@ -85,6 +63,133 @@
         "Number of Spindles": "2",
         "Number of Turrets": "Up to 3",
         "Live Tooling": "Yes",
+        "CNC Control": "MAZATROL SmoothAi"
+      }
+    },
+    {
+      "name": "SYNCREX 25/8",
+      "slug": "syncrex-25-8",
+      "manufacturer": "Mazak",
+      "category": "swiss",
+      "type": "Swiss-Type Turning Center",
+      "specs": "Φ25mm bar capacity",
+      "speed": "10,000 RPM",
+      "image": "/images/machines/syncrex-25-8.webp",
+      "tagline": "Mid-range Swiss-type for precision small parts",
+      "description": "The SYNCREX 25/8 is an 8-axis Swiss-type production turning machine built for high-speed production of small, precise parts up to 25mm (1\") diameter. Its HDCC base construction delivers 10% more rigidity than cast iron with 80% less vibration, resulting in superior surface finishes and 30% longer tool life.",
+      "features": ["8-axis configuration with 5 spindle motors", "HDCC one-piece base casting", "Removable guide bushing adapter", "Mazak Auto Tool Setter"],
+      "specifications": {
+        "Bar Capacity": "Φ25mm (1\")",
+        "Main Spindle Speed": "10,000 RPM",
+        "Number of Axes": "8",
+        "Tool Capacity": "33 tools",
+        "Guide Bushing": "Removable adapter",
+        "CNC Control": "MAZATROL SmoothSt"
+      }
+    },
+    {
+      "name": "SYNCREX 32/9",
+      "slug": "syncrex-32-9",
+      "manufacturer": "Mazak",
+      "category": "swiss",
+      "type": "Swiss-Type Turning Center",
+      "specs": "Φ32mm bar capacity",
+      "speed": "8,000 RPM",
+      "image": "/images/machines/syncrex-32-9.webp",
+      "tagline": "Full-featured Swiss-type for larger bar work",
+      "description": "The SYNCREX 32/9 delivers maximum flexibility with its 9-axis configuration and 32mm (1.25\") bar capacity. Designed for complex parts requiring simultaneous front and back machining, it's ideal for medical, aerospace, and automotive components that demand tight tolerances and high throughput.",
+      "features": ["9-axis configuration for maximum flexibility", "Full front and back simultaneous machining", "HDCC base for superior rigidity", "Mazak Swiss Setup Assist (MSSA)"],
+      "specifications": {
+        "Bar Capacity": "Φ32mm (1.25\")",
+        "Main Spindle Speed": "8,000 RPM",
+        "Number of Axes": "9",
+        "Tool Capacity": "39 tools",
+        "Guide Bushing": "Removable adapter",
+        "CNC Control": "MAZATROL SmoothSt"
+      }
+    },
+    {
+      "name": "SYNCREX 38/9X",
+      "slug": "syncrex-38-9x",
+      "manufacturer": "Mazak",
+      "category": "swiss",
+      "type": "Swiss-Type 5-Axis Turning Center",
+      "specs": "5-Axis, Φ38mm bar capacity",
+      "speed": "8,000 RPM",
+      "image": "/images/machines/syncrex-38-9x.webp",
+      "tagline": "5-axis Swiss-type for the most complex small parts",
+      "description": "The SYNCREX 38/9X is the most capable model in the SYNCREX lineup, combining 5-axis machining with the largest bar capacity at 38mm (1.5\"). Its advanced axis configuration enables complex geometries and off-angle features in a single setup, eliminating secondary operations for the most demanding Swiss-type applications.",
+      "features": ["5-axis simultaneous machining", "Largest SYNCREX bar capacity", "Mazak Turning Chip Control (MTCC)", "15\" touch-panel SmoothSt CNC"],
+      "specifications": {
+        "Bar Capacity": "Φ38mm (1.5\")",
+        "Main Spindle Speed": "8,000 RPM",
+        "Number of Axes": "5-Axis (9X config)",
+        "Tool Capacity": "39 tools",
+        "Guide Bushing": "Removable adapter",
+        "CNC Control": "MAZATROL SmoothSt"
+      }
+    },
+    {
+      "name": "MEGA TURN 500M",
+      "slug": "mega-turn-500m",
+      "manufacturer": "Mazak",
+      "category": "verticalturning",
+      "type": "Vertical Turning Center",
+      "specs": "Milling, Φ500mm dia",
+      "speed": "800 RPM",
+      "image": "/images/machines/mega-turn-500m.webp",
+      "tagline": "Compact vertical turning with integrated milling",
+      "description": "The MEGA TURN 500M combines vertical turning with milling capability in a compact footprint. Its traveling column design provides a large machining area while the 12-position drum turret and optional automatic tool changer enable complex part processing in a single setup.",
+      "features": ["Integrated milling capability", "12-position drum turret", "Traveling column design", "Optional automatic tool changer"],
+      "specifications": {
+        "Max Machining Diameter": "Φ500mm (19.69\")",
+        "Max Machining Height": "462mm (18.19\")",
+        "Chuck Size": "12\"–18\"",
+        "Turret Stations": "12",
+        "Milling": "Yes",
+        "CNC Control": "MAZATROL SmoothAi"
+      }
+    },
+    {
+      "name": "MEGA TURN 900",
+      "slug": "mega-turn-900",
+      "manufacturer": "Mazak",
+      "category": "verticalturning",
+      "type": "Vertical Turning Center",
+      "specs": "Φ920mm dia, 2-Pallet Option",
+      "speed": "500 RPM",
+      "image": "/images/machines/mega-turn-900.webp",
+      "tagline": "Heavy-duty vertical turning for large workpieces",
+      "description": "The MEGA TURN 900 is a heavy-duty vertical turning center built for large-diameter, heavy parts up to 6,614 lbs. Its vertical spindle orientation uses gravity to support the workpiece, and an optional 2-pallet changer enables reduced setup time and long continuous machining.",
+      "features": ["Optional 2-pallet changer", "30 kW spindle output", "3,655 N·m max torque", "Mirror-image configuration available"],
+      "specifications": {
+        "Max Machining Diameter": "Φ920mm (36.22\")",
+        "Max Machining Height": "800mm (31.5\")",
+        "Chuck Size": "21\"–36\"",
+        "Spindle Output": "30 kW (40 HP)",
+        "Max Torque": "3,655 N·m (2,696 ft·lbs)",
+        "Max Workpiece Weight": "3,000 kg (6,614 lbs)",
+        "CNC Control": "MAZATROL SmoothAi"
+      }
+    },
+    {
+      "name": "MEGA TURN 1600",
+      "slug": "mega-turn-1600",
+      "manufacturer": "Mazak",
+      "category": "verticalturning",
+      "type": "Vertical Turning Center",
+      "specs": "Milling, Φ1650mm dia",
+      "speed": "250 RPM",
+      "image": "/images/machines/mega-turn-1600.webp",
+      "tagline": "Maximum capacity vertical turning for the largest parts",
+      "description": "The MEGA TURN 1600 is the largest in the lineup, handling workpieces up to 1,650mm (65\") in diameter. Its massive machining envelope with integrated milling capability makes it the go-to solution for aerospace, energy, and heavy industry components that other machines simply can't accommodate.",
+      "features": ["Largest machining envelope in the series", "Integrated milling capability", "Traveling column design", "12-position drum turret"],
+      "specifications": {
+        "Max Machining Diameter": "Φ1,650mm (64.96\")",
+        "Max Machining Height": "900mm (35.43\")",
+        "Chuck Size": "Φ1,250–1,500mm (49\"–59\")",
+        "Turret Stations": "12",
+        "Milling": "Yes",
         "CNC Control": "MAZATROL SmoothAi"
       }
     },
@@ -373,6 +478,132 @@
         "Tool Magazine": "Up to 72 tools",
         "CNC Control": "MAZATROL SmoothEz"
       }
+    },
+    {
+      "name": "OPTIPLEX NEO",
+      "slug": "optiplex-neo",
+      "manufacturer": "Mazak",
+      "category": "2dlaser",
+      "type": "2D Fiber Laser",
+      "specs": "4–20 kW, 5' × 10' / 6.5' × 13.5'",
+      "speed": "Up to 20 kW",
+      "image": "/images/machines/optiplex-neo.webp",
+      "tagline": "Versatile fiber laser for thin and thick material",
+      "description": "The OPTIPLEX NEO is Mazak's most versatile 2D fiber laser, available in power options from 4 kW to 20 kW. It excels at high-speed cutting of thin sheet and high-quality cutting of thick plate, making it the go-to machine for shops that process a wide range of material types and thicknesses.",
+      "features": ["Wide power range (4–20 kW)", "High-speed thin sheet cutting", "Thick plate quality cutting", "Multiple table size options"],
+      "specifications": {
+        "Laser Type": "Fiber",
+        "Laser Power": "4.0 / 7.0 / 10.0 / 15.0 / 20.0 kW",
+        "Max Sheet Size": "5' × 10' or 6.5' × 13.5'",
+        "Max Cutting Width": "60\" or 80\"",
+        "Max Cutting Length": "120\" or 162\"",
+        "CNC Control": "MAZATROL PreviewG"
+      }
+    },
+    {
+      "name": "OPTIPLEX HP",
+      "slug": "optiplex-hp",
+      "manufacturer": "Mazak",
+      "category": "2dlaser",
+      "type": "High Power 2D Fiber Laser",
+      "specs": "20–30 kW, Thick Material",
+      "speed": "Up to 30 kW",
+      "image": "/images/machines/optiplex-hp.webp",
+      "tagline": "Maximum power for the thickest material",
+      "description": "The OPTIPLEX HP delivers up to 30 kW of fiber laser power for high-quality cutting of the thickest plate material. When your production demands maximum cutting speed and the ability to process thick mild steel, stainless, and aluminum, the HP is the answer.",
+      "features": ["Up to 30 kW laser power", "High-quality thick plate cutting", "High-speed processing", "Large format cutting area"],
+      "specifications": {
+        "Laser Type": "Fiber",
+        "Laser Power": "20.0 / 30.0 kW",
+        "Max Sheet Size": "5' × 10' or 6.5' × 13.5'",
+        "Max Cutting Width": "60\" or 80\"",
+        "Max Cutting Length": "120\" or 162\"",
+        "CNC Control": "MAZATROL PreviewG"
+      }
+    },
+    {
+      "name": "OPTIPLEX Ez",
+      "slug": "optiplex-ez",
+      "manufacturer": "Mazak",
+      "category": "2dlaser",
+      "type": "2D Fiber Laser",
+      "specs": "4–6 kW, Cost-Performance",
+      "speed": "Up to 6 kW",
+      "image": "/images/machines/optiplex-ez.webp",
+      "tagline": "Cost-effective fiber laser for everyday cutting",
+      "description": "The OPTIPLEX Ez delivers reliable fiber laser cutting performance at an accessible price point. Available in 4 kW and 6 kW configurations, it's an ideal entry point for shops transitioning from CO2 to fiber laser technology or adding laser cutting capacity.",
+      "features": ["Cost-performance fiber laser", "4 kW and 6 kW options", "Easy operation", "Multiple table size options"],
+      "specifications": {
+        "Laser Type": "Fiber",
+        "Laser Power": "4.0 / 6.0 kW",
+        "Max Sheet Size": "5' × 10' or 6.5' × 13.5'",
+        "Max Cutting Width": "60\" or 80\"",
+        "Max Cutting Length": "120\" or 162\"",
+        "CNC Control": "MAZATROL PreviewG"
+      }
+    },
+    {
+      "name": "FG-400 NEO",
+      "slug": "fg-400-neo",
+      "manufacturer": "Mazak",
+      "category": "3dlaser",
+      "type": "3D Fiber Laser",
+      "specs": "4 kW, Φ406mm Round, 8m Length",
+      "speed": "4 kW",
+      "image": "/images/machines/fg-400-neo.webp",
+      "tagline": "3D laser for large pipes and structural material",
+      "description": "The FG-400 NEO is a 3D fiber laser designed for cutting long pipes and structural material up to 406mm (16\") round and 305mm (12\") square. With workpiece lengths up to 15m, it handles the large structural components used in construction, infrastructure, and heavy fabrication.",
+      "features": ["Large pipe capacity (Φ16\")", "Workpiece length up to 15m", "Round and square profiles", "4 kW fiber laser"],
+      "specifications": {
+        "Laser Type": "Fiber",
+        "Laser Power": "4.0 kW",
+        "Max Cutting Size (Round)": "Φ406mm (16\")",
+        "Max Cutting Size (Square)": "305 × 305mm (12\" × 12\")",
+        "Max Workpiece Length": "8,080mm (318\"), optional 15,180mm (597\")",
+        "CNC Control": "MAZATROL PreviewG"
+      }
+    },
+    {
+      "name": "FT-150 NEO",
+      "slug": "ft-150-neo",
+      "manufacturer": "Mazak",
+      "category": "3dlaser",
+      "type": "Tube & Pipe Fiber Laser",
+      "specs": "3 kW, Φ152mm Round, High-Speed",
+      "speed": "3 kW",
+      "image": "/images/machines/ft-150-neo.webp",
+      "tagline": "High-speed tube and pipe laser cutting",
+      "description": "The FT-150 NEO is a high-speed tube and pipe fiber laser optimized for fast processing of smaller diameter material up to 152mm (6\") round. Its high-speed cutting capability and compact design make it ideal for high-volume tube fabrication in furniture, automotive, and architectural applications.",
+      "features": ["High-speed tube cutting", "Compact footprint", "Round and square profiles", "3 kW fiber laser"],
+      "specifications": {
+        "Laser Type": "Fiber",
+        "Laser Power": "3.0 kW",
+        "Max Cutting Size (Round)": "Φ152mm (6\")",
+        "Max Cutting Size (Square)": "125 × 125mm (4.92\" × 4.92\")",
+        "Max Workpiece Length": "6,500mm (256\"), optional 8,000mm (315\")",
+        "CNC Control": "MAZATROL PreviewG"
+      }
+    },
+    {
+      "name": "FT-250",
+      "slug": "ft-250",
+      "manufacturer": "Mazak",
+      "category": "3dlaser",
+      "type": "Tube & Pipe Fiber Laser",
+      "specs": "6 kW, Φ254mm Round, High-Speed",
+      "speed": "6 kW",
+      "image": "/images/machines/ft-250.webp",
+      "tagline": "High-power tube laser for larger diameter material",
+      "description": "The FT-250 steps up to 6 kW laser power and larger tube capacity up to 254mm (10\") round, handling a wider range of tube and structural profiles at production speeds. Multiple length options accommodate both standard and oversized material.",
+      "features": ["6 kW high-power fiber laser", "Large tube capacity (Φ10\")", "Multiple length options up to 12m", "Round and square profiles"],
+      "specifications": {
+        "Laser Type": "Fiber",
+        "Laser Power": "6.0 kW",
+        "Max Cutting Size (Round)": "Φ152mm (6\") or Φ254mm (10\")",
+        "Max Cutting Size (Square)": "152 × 152mm (6\") or 203 × 203mm (8\")",
+        "Max Workpiece Length": "6,477mm (255\"), optional up to 11,989mm (472\")",
+        "CNC Control": "MAZATROL PreviewG"
+      }
     }
   ],
   "manufacturers": {
@@ -384,9 +615,13 @@
   "categories": [
     { "id": "all", "label": "All Machines" },
     { "id": "turning", "label": "Turning" },
+    { "id": "swiss", "label": "Swiss" },
+    { "id": "verticalturning", "label": "Vertical Turning" },
     { "id": "vertical", "label": "Vertical" },
     { "id": "horizontal", "label": "Horizontal" },
     { "id": "5axis", "label": "5-Axis" },
-    { "id": "multitasking", "label": "Multi-Tasking" }
+    { "id": "multitasking", "label": "Multi-Tasking" },
+    { "id": "2dlaser", "label": "2D Laser" },
+    { "id": "3dlaser", "label": "3D Laser" }
   ]
 }

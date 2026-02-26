@@ -78,7 +78,7 @@ const ServiceDetailPage = () => {
               animation: "fadeUp 0.6s ease-out 0.15s both",
             }}>
               <img
-                src={service.image}
+                src={service.detailImage || service.image}
                 alt={service.title}
                 style={{
                   width: "100%",

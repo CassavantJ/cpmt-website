@@ -123,25 +123,26 @@
     {
       "slug": "financing",
       "icon": "▽",
-      "image": "/images/services/financing.webp",
+      "image": "/images/services/financing.jpg",
+      "detailImage": "/images/services/financing2.webp",
       "title": "Financing",
-      "desc": "Flexible financing options, leasing programs, and trade-in evaluations to fit your capital budget.",
+      "desc": "Flexible, competitive financing through Mazak Capital Equipment Financing (MCEF) — quick approvals, leasing, loans, and customized programs.",
       "color": "#C12033",
-      "tagline": "Flexible options to fit your capital plan",
-      "description": "Investing in new CNC equipment is a major decision. We offer a range of financing and leasing options to help you acquire the technology you need without straining your capital budget. From traditional financing to operating leases and trade-in programs, we'll find the right structure for your business.",
+      "tagline": "Powered by Mazak Capital Equipment Financing (MCEF)",
+      "description": "Through Mazak Capital Equipment Financing (MCEF), we offer flexible, timely, and competitive financing for companies of all sizes. As your authorized Mazak distributor, we provide seamless one-stop purchasing with direct access to delivery and installation schedules. MCEF approvals often come within 24 hours, and every financing program is customized to your specific needs — preserving your bank credit lines for operational growth.",
       "features": [
-        "Traditional equipment financing with competitive rates",
-        "Operating and capital lease programs",
-        "Deferred payment and seasonal payment structures",
-        "Trade-in evaluations on your existing equipment",
-        "Section 179 tax deduction guidance",
-        "Custom payment plans for multi-machine purchases"
+        "Quick approvals, often within 24 hours",
+        "Leasing programs and loan options",
+        "Section 179 tax deduction options",
+        "Customized programs tailored to your business",
+        "Preserves bank credit lines for operational growth",
+        "0% financing available on select Mazak models"
       ],
       "process": [
         { "step": "Consultation", "detail": "We discuss your budget, cash flow needs, and acquisition timeline." },
-        { "step": "Options Review", "detail": "Our team presents financing structures tailored to your situation." },
-        { "step": "Application", "detail": "Simple application process with fast credit decisions." },
-        { "step": "Acquisition", "detail": "Finalize terms and coordinate machine delivery." }
+        { "step": "Application", "detail": "Simple application through MCEF with fast credit decisions — often within 24 hours." },
+        { "step": "Custom Program", "detail": "MCEF builds a financing structure tailored to your situation — leasing, loans, or custom terms." },
+        { "step": "Acquisition", "detail": "Finalize terms and coordinate seamless machine delivery and installation." }
       ]
     }
   ]

@@ -308,10 +308,14 @@ const HomePage = ({ isVisible }) => {
               const count = machineData.machines.filter(m => m.category === cat.id).length;
               const categoryDescs = {
                 turning: "High-speed, high-precision CNC turning for production efficiency.",
+                swiss: "Swiss-type production turning for small, precise parts at high volume.",
+                verticalturning: "Heavy-duty vertical turning for large-diameter, heavy workpieces.",
                 vertical: "Rigid vertical machining centers for mold, die, and general machining.",
                 horizontal: "High-volume horizontal machining with pallet changers and automation.",
                 "5axis": "Simultaneous 5-axis contouring for the most complex geometries.",
                 multitasking: "Turn, mill, and drill in a single setup — eliminate multiple operations.",
+                "2dlaser": "Fiber laser flat sheet cutting from thin gauge to thick plate.",
+                "3dlaser": "Tube, pipe, and structural profile laser cutting at production speeds.",
               };
               return (
                 <Link

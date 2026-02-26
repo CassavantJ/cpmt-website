@@ -48,6 +48,14 @@ const IndustriesPage = ({ isVisible }) => {
       highlights: ["API standard compliance", "Large-part turning capacity", "Heavy-duty cutting performance", "Automation for lights-out operation"],
     },
     {
+      name: "Semiconductors",
+      icon: "🔬",
+      stat: "ISO 14644",
+      image: "/images/industries/semiconductors.png",
+      description: "Semiconductor manufacturing equipment demands ultra-precise components with mirror-like surface finishes and sub-micron tolerances. Our high-speed machining centers and Swiss-type turning machines produce the critical parts that keep fabs running — from vacuum chamber components to wafer handling assemblies.",
+      highlights: ["Ultra-precision surface finishes", "High-speed aluminum machining", "Cleanroom-compatible components", "Complex multi-feature parts in single setup"],
+    },
+    {
       name: "General Manufacturing",
       icon: "🏭",
       stat: "ISO 9001",
