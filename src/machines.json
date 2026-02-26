@@ -1,160 +1,6 @@
 {
   "machines": [
     {
-      "name": "INTEGREX i NEO",
-      "slug": "integrex-i-neo",
-      "manufacturer": "Mazak",
-      "category": "multitasking",
-      "type": "Multi-Tasking Machine",
-      "specs": "5-Axis, Φ600-670mm dia",
-      "speed": "12,000 RPM",
-      "image": "/images/machines/integrex-i-neo.webp",
-      "tagline": "The benchmark in multi-tasking performance",
-      "description": "The INTEGREX i NEO series combines full 5-axis milling and turning capabilities in a single setup, reducing cycle times and improving accuracy. Equipped with Mazak's latest SmoothAi CNC, it delivers intelligent machining with thermal compensation and vibration suppression.",
-      "features": ["Done-in-one machining", "SmoothAi CNC control", "Thermal Shield construction", "Automatic tool changer (up to 120 tools)"],
-      "specifications": {
-        "Max Turning Diameter": "Φ600–670mm",
-        "Max Turning Length": "1,524mm",
-        "Spindle Speed (Turning)": "3,300 RPM",
-        "Milling Spindle Speed": "12,000 RPM",
-        "Number of Axes": "5",
-        "Tool Magazine": "Up to 120 tools",
-        "CNC Control": "MAZATROL SmoothAi"
-      }
-    },
-    {
-      "name": "INTEGREX i-500",
-      "slug": "integrex-i-500",
-      "manufacturer": "Mazak",
-      "category": "multitasking",
-      "type": "Multi-Tasking Machine",
-      "specs": "Φ700mm dia, 1574mm length",
-      "speed": "10,000 RPM",
-      "image": "/images/machines/integrex-i-500.webp",
-      "tagline": "Large-capacity multi-tasking for demanding applications",
-      "description": "The INTEGREX i-500 is designed for large, complex workpieces that require full turning, milling, and 5-axis contouring in a single setup. Its robust construction and large machining envelope make it ideal for aerospace, energy, and heavy industry components.",
-      "features": ["Large machining envelope", "Full 5-axis simultaneous machining", "High-rigidity construction", "SmoothAi CNC control"],
-      "specifications": {
-        "Max Turning Diameter": "Φ700mm",
-        "Max Turning Length": "1,574mm",
-        "Spindle Speed (Turning)": "3,300 RPM",
-        "Milling Spindle Speed": "10,000 RPM",
-        "Number of Axes": "5",
-        "Tool Magazine": "Up to 120 tools",
-        "CNC Control": "MAZATROL SmoothAi"
-      }
-    },
-    {
-      "name": "INTEGREX j-200 NEO",
-      "slug": "integrex-j-200-neo",
-      "manufacturer": "Mazak",
-      "category": "multitasking",
-      "type": "Multi-Tasking Machine",
-      "specs": "Eco-Friendly, Φ500mm dia",
-      "speed": "12,000 RPM",
-      "image": "/images/machines/integrex-j-200-neo.webp",
-      "tagline": "Eco-friendly multi-tasking for the modern shop",
-      "description": "The INTEGREX j-200 NEO delivers done-in-one machining in a compact, energy-efficient package. Its smaller footprint and lower power consumption make it an excellent entry point into multi-tasking, without sacrificing capability or precision.",
-      "features": ["Compact footprint", "Energy-efficient design", "Full C-axis contouring", "SmoothEz CNC control"],
-      "specifications": {
-        "Max Turning Diameter": "Φ500mm",
-        "Max Turning Length": "914mm",
-        "Spindle Speed (Turning)": "4,000 RPM",
-        "Milling Spindle Speed": "12,000 RPM",
-        "Number of Axes": "4+1",
-        "Tool Magazine": "Up to 72 tools",
-        "CNC Control": "MAZATROL SmoothEz"
-      }
-    },
-    {
-      "name": "VARIAXIS i NEO",
-      "slug": "variaxis-i-neo",
-      "manufacturer": "Mazak",
-      "category": "5axis",
-      "type": "5-Axis Machining Center",
-      "specs": "BT40/BT50, Φ700-1000mm",
-      "speed": "12,000 RPM",
-      "image": "/images/machines/variaxis-i-neo.webp",
-      "tagline": "Versatile 5-axis machining for complex geometries",
-      "description": "The VARIAXIS i NEO delivers full simultaneous 5-axis machining with a fully supported trunnion table for superior rigidity. Its wide range of spindle and table options allows configuration for everything from aluminum aerospace parts to hardened steel mold work.",
-      "features": ["Full 5-axis simultaneous machining", "Fully supported trunnion table", "Multiple spindle options", "SmoothAi CNC control"],
-      "specifications": {
-        "Table Diameter": "Φ700–1,000mm",
-        "Spindle Taper": "BT40 / BT50",
-        "Spindle Speed": "12,000 RPM",
-        "Number of Axes": "5",
-        "Tool Magazine": "Up to 120 tools",
-        "Max Workpiece Weight": "Up to 1,200kg",
-        "CNC Control": "MAZATROL SmoothAi"
-      }
-    },
-    {
-      "name": "VARIAXIS C",
-      "slug": "variaxis-c",
-      "manufacturer": "Mazak",
-      "category": "5axis",
-      "type": "5-Axis Machining Center",
-      "specs": "Compact, BT40, Φ730-850mm",
-      "speed": "12,000 RPM",
-      "image": "/images/machines/variaxis-c.webp",
-      "tagline": "Compact 5-axis performance for smaller shops",
-      "description": "The VARIAXIS C brings full 5-axis capability to shops with limited floor space. Its compact design doesn't compromise on rigidity or accuracy, making it an ideal choice for medical, dental, and precision component manufacturers.",
-      "features": ["Compact footprint", "Full 5-axis simultaneous", "High-speed spindle options", "SmoothEz CNC control"],
-      "specifications": {
-        "Table Diameter": "Φ730–850mm",
-        "Spindle Taper": "BT40",
-        "Spindle Speed": "12,000 RPM",
-        "Number of Axes": "5",
-        "Tool Magazine": "Up to 60 tools",
-        "Max Workpiece Weight": "Up to 500kg",
-        "CNC Control": "MAZATROL SmoothEz"
-      }
-    },
-    {
-      "name": "VARIAXIS i-300 AWC",
-      "slug": "variaxis-i-300-awc",
-      "manufacturer": "Mazak",
-      "category": "5axis",
-      "type": "5-Axis Machining Center",
-      "specs": "HSK-A100, Φ350mm",
-      "speed": "12,000 RPM",
-      "image": "/images/machines/variaxis-i-300-awc.webp",
-      "tagline": "Automated 5-axis with built-in workpiece changer",
-      "description": "The VARIAXIS i-300 AWC features an integrated Auto Work Changer for unattended, lights-out production. Load up to 32 pallets and let the machine run — ideal for high-mix, low-volume production of complex 5-axis parts.",
-      "features": ["Auto Work Changer (up to 32 pallets)", "Lights-out production capability", "High-rigidity HSK spindle", "SmoothAi CNC control"],
-      "specifications": {
-        "Table Diameter": "Φ350mm",
-        "Spindle Taper": "HSK-A100",
-        "Spindle Speed": "12,000 RPM",
-        "Number of Axes": "5",
-        "Pallet Capacity": "Up to 32 pallets",
-        "Max Workpiece Weight": "Up to 250kg",
-        "CNC Control": "MAZATROL SmoothAi"
-      }
-    },
-    {
-      "name": "VORTEX i-V",
-      "slug": "vortex-i-v",
-      "manufacturer": "Mazak",
-      "category": "5axis",
-      "type": "5-Axis Vertical",
-      "specs": "Tilt Spindle, Φ1050-1700mm",
-      "speed": "10,000 RPM",
-      "image": "/images/machines/vortex-i-v.webp",
-      "tagline": "Tilt-spindle 5-axis for large vertical work",
-      "description": "The VORTEX i-V uses a tilt-spindle design rather than a tilting table, enabling 5-axis machining of large, heavy workpieces. Its vertical configuration is perfect for aerospace structural components, large molds, and energy sector parts.",
-      "features": ["Tilt-spindle B-axis design", "Large table for heavy workpieces", "High-torque spindle options", "SmoothAi CNC control"],
-      "specifications": {
-        "Table Size": "Φ1,050–1,700mm",
-        "Spindle Speed": "10,000 RPM",
-        "B-Axis Tilt Range": "+30° to -120°",
-        "Number of Axes": "5",
-        "Tool Magazine": "Up to 120 tools",
-        "Max Workpiece Weight": "Up to 2,000kg",
-        "CNC Control": "MAZATROL SmoothAi"
-      }
-    },
-    {
       "name": "QUICK TURN 250MY",
       "slug": "quick-turn-250my",
       "manufacturer": "Mazak",
@@ -373,6 +219,160 @@
         "Max Pallet Load": "3,000kg",
         "CNC Control": "MAZATROL SmoothAi"
       }
+    },
+    {
+      "name": "VARIAXIS i NEO",
+      "slug": "variaxis-i-neo",
+      "manufacturer": "Mazak",
+      "category": "5axis",
+      "type": "5-Axis Machining Center",
+      "specs": "BT40/BT50, Φ700-1000mm",
+      "speed": "12,000 RPM",
+      "image": "/images/machines/variaxis-i-neo.webp",
+      "tagline": "Versatile 5-axis machining for complex geometries",
+      "description": "The VARIAXIS i NEO delivers full simultaneous 5-axis machining with a fully supported trunnion table for superior rigidity. Its wide range of spindle and table options allows configuration for everything from aluminum aerospace parts to hardened steel mold work.",
+      "features": ["Full 5-axis simultaneous machining", "Fully supported trunnion table", "Multiple spindle options", "SmoothAi CNC control"],
+      "specifications": {
+        "Table Diameter": "Φ700–1,000mm",
+        "Spindle Taper": "BT40 / BT50",
+        "Spindle Speed": "12,000 RPM",
+        "Number of Axes": "5",
+        "Tool Magazine": "Up to 120 tools",
+        "Max Workpiece Weight": "Up to 1,200kg",
+        "CNC Control": "MAZATROL SmoothAi"
+      }
+    },
+    {
+      "name": "VARIAXIS C",
+      "slug": "variaxis-c",
+      "manufacturer": "Mazak",
+      "category": "5axis",
+      "type": "5-Axis Machining Center",
+      "specs": "Compact, BT40, Φ730-850mm",
+      "speed": "12,000 RPM",
+      "image": "/images/machines/variaxis-c.webp",
+      "tagline": "Compact 5-axis performance for smaller shops",
+      "description": "The VARIAXIS C brings full 5-axis capability to shops with limited floor space. Its compact design doesn't compromise on rigidity or accuracy, making it an ideal choice for medical, dental, and precision component manufacturers.",
+      "features": ["Compact footprint", "Full 5-axis simultaneous", "High-speed spindle options", "SmoothEz CNC control"],
+      "specifications": {
+        "Table Diameter": "Φ730–850mm",
+        "Spindle Taper": "BT40",
+        "Spindle Speed": "12,000 RPM",
+        "Number of Axes": "5",
+        "Tool Magazine": "Up to 60 tools",
+        "Max Workpiece Weight": "Up to 500kg",
+        "CNC Control": "MAZATROL SmoothEz"
+      }
+    },
+    {
+      "name": "VARIAXIS i-300 AWC",
+      "slug": "variaxis-i-300-awc",
+      "manufacturer": "Mazak",
+      "category": "5axis",
+      "type": "5-Axis Machining Center",
+      "specs": "HSK-A100, Φ350mm",
+      "speed": "12,000 RPM",
+      "image": "/images/machines/variaxis-i-300-awc.webp",
+      "tagline": "Automated 5-axis with built-in workpiece changer",
+      "description": "The VARIAXIS i-300 AWC features an integrated Auto Work Changer for unattended, lights-out production. Load up to 32 pallets and let the machine run — ideal for high-mix, low-volume production of complex 5-axis parts.",
+      "features": ["Auto Work Changer (up to 32 pallets)", "Lights-out production capability", "High-rigidity HSK spindle", "SmoothAi CNC control"],
+      "specifications": {
+        "Table Diameter": "Φ350mm",
+        "Spindle Taper": "HSK-A100",
+        "Spindle Speed": "12,000 RPM",
+        "Number of Axes": "5",
+        "Pallet Capacity": "Up to 32 pallets",
+        "Max Workpiece Weight": "Up to 250kg",
+        "CNC Control": "MAZATROL SmoothAi"
+      }
+    },
+    {
+      "name": "VORTEX i-V",
+      "slug": "vortex-i-v",
+      "manufacturer": "Mazak",
+      "category": "5axis",
+      "type": "5-Axis Vertical",
+      "specs": "Tilt Spindle, Φ1050-1700mm",
+      "speed": "10,000 RPM",
+      "image": "/images/machines/vortex-i-v.webp",
+      "tagline": "Tilt-spindle 5-axis for large vertical work",
+      "description": "The VORTEX i-V uses a tilt-spindle design rather than a tilting table, enabling 5-axis machining of large, heavy workpieces. Its vertical configuration is perfect for aerospace structural components, large molds, and energy sector parts.",
+      "features": ["Tilt-spindle B-axis design", "Large table for heavy workpieces", "High-torque spindle options", "SmoothAi CNC control"],
+      "specifications": {
+        "Table Size": "Φ1,050–1,700mm",
+        "Spindle Speed": "10,000 RPM",
+        "B-Axis Tilt Range": "+30° to -120°",
+        "Number of Axes": "5",
+        "Tool Magazine": "Up to 120 tools",
+        "Max Workpiece Weight": "Up to 2,000kg",
+        "CNC Control": "MAZATROL SmoothAi"
+      }
+    },
+    {
+      "name": "INTEGREX i NEO",
+      "slug": "integrex-i-neo",
+      "manufacturer": "Mazak",
+      "category": "multitasking",
+      "type": "Multi-Tasking Machine",
+      "specs": "5-Axis, Φ600-670mm dia",
+      "speed": "12,000 RPM",
+      "image": "/images/machines/integrex-i-neo.webp",
+      "tagline": "The benchmark in multi-tasking performance",
+      "description": "The INTEGREX i NEO series combines full 5-axis milling and turning capabilities in a single setup, reducing cycle times and improving accuracy. Equipped with Mazak's latest SmoothAi CNC, it delivers intelligent machining with thermal compensation and vibration suppression.",
+      "features": ["Done-in-one machining", "SmoothAi CNC control", "Thermal Shield construction", "Automatic tool changer (up to 120 tools)"],
+      "specifications": {
+        "Max Turning Diameter": "Φ600–670mm",
+        "Max Turning Length": "1,524mm",
+        "Spindle Speed (Turning)": "3,300 RPM",
+        "Milling Spindle Speed": "12,000 RPM",
+        "Number of Axes": "5",
+        "Tool Magazine": "Up to 120 tools",
+        "CNC Control": "MAZATROL SmoothAi"
+      }
+    },
+    {
+      "name": "INTEGREX i-500",
+      "slug": "integrex-i-500",
+      "manufacturer": "Mazak",
+      "category": "multitasking",
+      "type": "Multi-Tasking Machine",
+      "specs": "Φ700mm dia, 1574mm length",
+      "speed": "10,000 RPM",
+      "image": "/images/machines/integrex-i-500.webp",
+      "tagline": "Large-capacity multi-tasking for demanding applications",
+      "description": "The INTEGREX i-500 is designed for large, complex workpieces that require full turning, milling, and 5-axis contouring in a single setup. Its robust construction and large machining envelope make it ideal for aerospace, energy, and heavy industry components.",
+      "features": ["Large machining envelope", "Full 5-axis simultaneous machining", "High-rigidity construction", "SmoothAi CNC control"],
+      "specifications": {
+        "Max Turning Diameter": "Φ700mm",
+        "Max Turning Length": "1,574mm",
+        "Spindle Speed (Turning)": "3,300 RPM",
+        "Milling Spindle Speed": "10,000 RPM",
+        "Number of Axes": "5",
+        "Tool Magazine": "Up to 120 tools",
+        "CNC Control": "MAZATROL SmoothAi"
+      }
+    },
+    {
+      "name": "INTEGREX j-200 NEO",
+      "slug": "integrex-j-200-neo",
+      "manufacturer": "Mazak",
+      "category": "multitasking",
+      "type": "Multi-Tasking Machine",
+      "specs": "Eco-Friendly, Φ500mm dia",
+      "speed": "12,000 RPM",
+      "image": "/images/machines/integrex-j-200-neo.webp",
+      "tagline": "Eco-friendly multi-tasking for the modern shop",
+      "description": "The INTEGREX j-200 NEO delivers done-in-one machining in a compact, energy-efficient package. Its smaller footprint and lower power consumption make it an excellent entry point into multi-tasking, without sacrificing capability or precision.",
+      "features": ["Compact footprint", "Energy-efficient design", "Full C-axis contouring", "SmoothEz CNC control"],
+      "specifications": {
+        "Max Turning Diameter": "Φ500mm",
+        "Max Turning Length": "914mm",
+        "Spindle Speed (Turning)": "4,000 RPM",
+        "Milling Spindle Speed": "12,000 RPM",
+        "Number of Axes": "4+1",
+        "Tool Magazine": "Up to 72 tools",
+        "CNC Control": "MAZATROL SmoothEz"
+      }
     }
   ],
   "manufacturers": {
@@ -383,10 +383,10 @@
   },
   "categories": [
     { "id": "all", "label": "All Machines" },
-    { "id": "multitasking", "label": "Multi-Tasking" },
-    { "id": "5axis", "label": "5-Axis" },
     { "id": "turning", "label": "Turning" },
     { "id": "vertical", "label": "Vertical" },
-    { "id": "horizontal", "label": "Horizontal" }
+    { "id": "horizontal", "label": "Horizontal" },
+    { "id": "5axis", "label": "5-Axis" },
+    { "id": "multitasking", "label": "Multi-Tasking" }
   ]
 }

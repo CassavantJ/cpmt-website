@@ -43,7 +43,7 @@ const HomePage = ({ isVisible }) => {
   })();
   const services = serviceData.services;
   const categories = machineData.categories.filter(c => c.id !== "all");
-  const featuredMachine = machineData.machines[0]; // INTEGREX i NEO
+  const featuredMachine = machineData.machines.find(m => m.slug === "integrex-i-neo");
 
   // Get a representative machine image for each category
   const categoryImages = {};
@@ -307,11 +307,11 @@ const HomePage = ({ isVisible }) => {
             {categories.map((cat, i) => {
               const count = machineData.machines.filter(m => m.category === cat.id).length;
               const categoryDescs = {
-                multitasking: "Turn, mill, and drill in a single setup — eliminate multiple operations.",
-                "5axis": "Simultaneous 5-axis contouring for the most complex geometries.",
                 turning: "High-speed, high-precision CNC turning for production efficiency.",
                 vertical: "Rigid vertical machining centers for mold, die, and general machining.",
                 horizontal: "High-volume horizontal machining with pallet changers and automation.",
+                "5axis": "Simultaneous 5-axis contouring for the most complex geometries.",
+                multitasking: "Turn, mill, and drill in a single setup — eliminate multiple operations.",
               };
               return (
                 <Link
