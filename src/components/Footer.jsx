@@ -35,6 +35,7 @@ const Footer = () => {
         { label: "Support", to: "/support" },
         { label: "Contact", to: "/contact" },
         { label: "Request a Quote", to: "/contact" },
+        { label: "Line Card", to: "/line-card" },
       ],
     },
   ];
@@ -74,24 +75,29 @@ const Footer = () => {
               }}>
                 {col.title}
               </div>
-              {col.links.map((link) => (
-                <Link
-                  key={link.label}
-                  to={link.to}
-                  style={{
-                    display: "block",
-                    color: t.textMuted,
-                    textDecoration: "none",
-                    fontSize: 15,
-                    padding: "6px 0",
-                    transition: "color 0.2s",
-                  }}
-                  onMouseOver={(e) => e.target.style.color = t.textPrimary}
-                  onMouseOut={(e) => e.target.style.color = t.textMuted}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {col.links.map((link) => {
+                const style = {
+                  display: "block",
+                  color: t.textMuted,
+                  textDecoration: "none",
+                  fontSize: 15,
+                  padding: "6px 0",
+                  transition: "color 0.2s",
+                };
+                const handlers = {
+                  onMouseOver: (e) => e.target.style.color = t.textPrimary,
+                  onMouseOut: (e) => e.target.style.color = t.textMuted,
+                };
+                return link.external ? (
+                  <a key={link.label} href={link.to} target="_blank" rel="noopener noreferrer" style={style} {...handlers}>
+                    {link.label} ↓
+                  </a>
+                ) : (
+                  <Link key={link.label} to={link.to} style={style} {...handlers}>
+                    {link.label}
+                  </Link>
+                );
+              })}
             </div>
           ))}
         </div>
@@ -106,7 +112,7 @@ const Footer = () => {
           gap: 16,
         }}>
           <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 11, color: t.textSubtle, letterSpacing: 1 }}>
-            © 2026 CPMT. All rights reserved.
+            © 2026 Cassavant Precision Machine Tools, LLC. All rights reserved.
           </div>
         </div>
       </div>

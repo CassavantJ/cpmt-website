@@ -33,8 +33,8 @@ const ContactPage = ({ isVisible }) => {
 
             <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
               {[
-                { label: "Call Us", value: "(602) 555-0180", icon: "☎" },
-                { label: "Email", value: "sales@cpmtools.com", icon: "✉" },
+                { label: "Call Us", value: "(602) 487-4134", icon: "☎" },
+                { label: "Email", value: "sales@cpmtusa.com", icon: "✉" },
                 { label: "Visit", value: "Phoenix, AZ", icon: "◉" },
               ].map((info) => (
                 <div key={info.label} style={{ display: "flex", alignItems: "center", gap: 16 }}>

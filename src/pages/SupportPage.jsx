@@ -336,6 +336,55 @@ const SupportPage = ({ isVisible }) => {
         </div>
       </section>
 
+      {/* ==================== RESOURCES ==================== */}
+      <section style={{
+        padding: "0 clamp(24px, 5vw, 80px) clamp(60px, 8vw, 80px)",
+      }}>
+        <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
+          <div className="section-label">Resources</div>
+          <h2 style={{
+            fontSize: "clamp(22px, 3vw, 30px)",
+            fontWeight: 800,
+            letterSpacing: -1,
+            marginBottom: 20,
+          }}>
+            Downloads
+          </h2>
+          <a
+            href="/downloads/CPMT-Line-Card.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 12,
+              padding: "16px 32px",
+              borderRadius: 12,
+              border: `1px solid ${t.borderPrimary}`,
+              background: t.bgCard,
+              textDecoration: "none",
+              color: "inherit",
+              transition: "all 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.borderColor = "#C1203340";
+              e.currentTarget.style.transform = "translateY(-2px)";
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.borderColor = t.borderPrimary;
+              e.currentTarget.style.transform = "translateY(0)";
+            }}
+          >
+            <span style={{ fontSize: 28 }}>📄</span>
+            <div style={{ textAlign: "left" }}>
+              <div style={{ fontSize: 15, fontWeight: 600 }}>CPMT Line Card</div>
+              <div style={{ fontSize: 12, color: t.textTertiary }}>PDF — Products, services & industries overview</div>
+            </div>
+            <span style={{ color: "#C12033", fontSize: 18, marginLeft: 8 }}>↓</span>
+          </a>
+        </div>
+      </section>
+
       {/* ==================== CONTACT INFO BAND ==================== */}
       <section style={{
         padding: "clamp(60px, 8vw, 80px) clamp(24px, 5vw, 80px)",

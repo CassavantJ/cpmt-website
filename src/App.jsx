@@ -10,6 +10,7 @@ import MachineDetailPage from './pages/MachineDetailPage'
 import ServiceDetailPage from './pages/ServiceDetailPage'
 import SupportPage from './pages/SupportPage'
 import AboutPage from './pages/AboutPage'
+import LineCardPage from './pages/LineCardPage'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/support" element={<SupportPage isVisible={isVisible} />} />
             <Route path="/about" element={<AboutPage isVisible={isVisible} />} />
             <Route path="/contact" element={<ContactPage isVisible={isVisible} />} />
+            <Route path="/line-card" element={<LineCardPage />} />
           </Routes>
         )}
       </Layout>

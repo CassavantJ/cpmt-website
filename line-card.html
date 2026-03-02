@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPMT Line Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @page {
+      size: letter portrait;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 8.5in;
+      height: 11in;
+      margin: 0 auto;
+      padding: 0.5in 0.55in 0.4in;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 6px;
+      border-bottom: 3px solid #C12033;
+      margin-bottom: 26px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .header-logo {
+      height: 52px;
+      width: auto;
+    }
+
+    .header-text h1 {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .header-text .tagline {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #C12033;
+      margin-top: 22px;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 10px;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .header-right .website {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: #C12033;
+      letter-spacing: 0.5px;
+    }
+
+    /* Section titles */
+    .section-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 8px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #C12033;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+    }
+
+    /* Machine categories */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .category-card {
+      border: 1.5px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 10px 12px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .category-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2.5px;
+      background: linear-gradient(90deg, #C12033, #E8475A);
+    }
+
+    .category-img {
+      width: 70px;
+      height: 52px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .category-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .category-name {
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .category-models {
+      font-family: 'Space Mono', monospace;
+      font-size: 8px;
+      color: #888;
+      margin-bottom: 3px;
+    }
+
+    .category-machines {
+      font-size: 8.5px;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    /* Services */
+    .services-section {
+      margin-bottom: 28px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .service-item {
+      background: #f8f8f8;
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+
+    .service-name {
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .service-desc {
+      font-size: 9px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* Industries */
+    .industries-section {
+      margin-bottom: 28px;
+    }
+
+    .industries-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .industry-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #fff;
+      border: 1.5px solid #e5e5e5;
+      border-radius: 20px;
+      padding: 7px 14px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .industry-tag .badge {
+      font-family: 'Space Mono', monospace;
+      font-size: 8px;
+      color: #C12033;
+      background: rgba(193, 32, 51, 0.08);
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    /* Financing banner */
+    .financing-banner {
+      background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+      border-radius: 10px;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      margin-bottom: 28px;
+    }
+
+    .financing-banner h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .financing-banner p {
+      font-size: 10px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.5;
+    }
+
+    .financing-badge {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #E67225;
+      border: 1.5px solid rgba(230, 114, 37, 0.5);
+      padding: 6px 14px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid #e5e5e5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 9px;
+      color: #999;
+    }
+
+    .footer .mazak-badge {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    /* Print button - hidden when printing */
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #C12033;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(193, 32, 51, 0.3);
+    }
+
+    .print-btn:hover {
+      background: #a51b2c;
+    }
+
+    @media print {
+      .print-btn { display: none; }
+      body { background: #fff; }
+      .page { padding: 0.45in 0.5in 0.35in; }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">Save as PDF / Print</button>
+
+  <div class="page">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-left">
+        <img src="public/images/CPMTLogoDark.svg" alt="CPMT" class="header-logo">
+        <div class="header-text">
+          <h1>Cassavant Precision<br>Machine Tools</h1>
+          <div class="tagline">Authorized <img src="public/images/manufacturers/mazak-dark.svg" alt="Mazak" style="height: 13px; width: auto; vertical-align: middle; margin: 0 2px; position: relative; top: -2px;"> Distributor</div>
+        </div>
+      </div>
+      <div class="header-right" style="display: flex; align-items: flex-start; gap: 14px;">
+        <div>
+          <div class="website">cpmtusa.com</div>
+          (602) 487-4134<br>
+          sales@cpmtusa.com<br>
+          Phoenix, AZ
+        </div>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://cpmtusa.com" alt="QR Code" style="width: 68px; height: 68px;">
+      </div>
+    </div>
+
+    <!-- Machine Categories -->
+    <div class="section-title">Machine Categories</div>
+    <div class="categories-grid">
+      <div class="category-card">
+        <img src="public/images/machines/quick-turn-250my.webp" alt="Turning" class="category-img">
+        <div class="category-info">
+          <div class="category-name">Turning</div>
+          <div class="category-models">4 models</div>
+          <div class="category-machines">QUICK TURN 250MY, QT-PRIMOS, HQR NEO, and more</div>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="public/images/machines/syncrex-25-8.webp" alt="Swiss" class="category-img">
+        <div class="category-info">
+          <div class="category-name">Swiss</div>
+          <div class="category-models">3 models</div>
+          <div class="category-machines">SYNCREX 25/8, SYNCREX 32/9, SYNCREX 38/9X</div>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="public/images/machines/mega-turn-900.webp" alt="Vertical Turning" class="category-img">
+        <div class="category-info">
+          <div class="category-name">Vertical Turning</div>
+          <div class="category-models">3 models</div>
+          <div class="category-machines">MEGA TURN 500M, 900, 1600</div>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="public/images/machines/vcn-460.webp" alt="Vertical" class="category-img">
+        <div class="category-info">
+          <div class="category-name">Vertical</div>
+          <div class="category-models">3 models</div>
+          <div class="category-machines">VCN-460, VC-Ez IP, FJV</div>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="public/images/machines/hcn-5000s.webp" alt="Horizontal" class="category-img">
+        <div class="category-info">
+          <div class="category-name">Horizontal</div>
+          <div class="category-models">3 models</div>
+          <div class="category-machines">HCN-5000S, HCN-4000 NEO, FF-1250H</div>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="public/images/machines/variaxis-i-neo.webp" alt="5-Axis" class="category-img">
+        <div class="category-info">
+          <div class="category-name">5-Axis</div>
+          <div class="category-models">4 models</div>
+          <div class="category-machines">VARIAXIS i NEO, VARIAXIS C, i-300 AWC, VORTEX i-V</div>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="public/images/machines/integrex-i-neo.webp" alt="Multi-Tasking" class="category-img">
+        <div class="category-info">
+          <div class="category-name">Multi-Tasking</div>
+          <div class="category-models">3 models</div>
+          <div class="category-machines">INTEGREX i NEO, i-500, j-200 NEO</div>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="public/images/machines/optiplex-neo.webp" alt="2D Laser" class="category-img">
+        <div class="category-info">
+          <div class="category-name">2D Laser</div>
+          <div class="category-models">3 models</div>
+          <div class="category-machines">OPTIPLEX NEO, OPTIPLEX HP, OPTIPLEX Ez</div>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="public/images/machines/fg-400-neo.webp" alt="3D Laser" class="category-img">
+        <div class="category-info">
+          <div class="category-name">3D Laser</div>
+          <div class="category-models">3 models</div>
+          <div class="category-machines">FG-400 NEO, FT-150 NEO, FT-250</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="services-section">
+      <div class="section-title">Services</div>
+      <div class="services-grid">
+        <div class="service-item">
+          <div class="service-name">Machine Sales</div>
+          <div class="service-desc">New & pre-owned Mazak CNC machines with expert consultation</div>
+        </div>
+        <div class="service-item">
+          <div class="service-name">Turnkey Solutions</div>
+          <div class="service-desc">Complete project management from concept to production</div>
+        </div>
+        <div class="service-item">
+          <div class="service-name">Automation</div>
+          <div class="service-desc">Robotic loading, pallet systems, and lights-out manufacturing</div>
+        </div>
+        <div class="service-item">
+          <div class="service-name">Service & Parts</div>
+          <div class="service-desc">Factory-trained technicians, preventive maintenance, genuine parts</div>
+        </div>
+        <div class="service-item">
+          <div class="service-name">Engineering</div>
+          <div class="service-desc">Application engineering, process optimization, and programming</div>
+        </div>
+        <div class="service-item">
+          <div class="service-name">Financing</div>
+          <div class="service-desc">Leasing, loans, and custom programs through MCEF</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Industries -->
+    <div class="industries-section">
+      <div class="section-title">Industries Served</div>
+      <div class="industries-grid">
+        <div class="industry-tag">Aerospace <span class="badge">AS9100</span></div>
+        <div class="industry-tag">Automotive <span class="badge">IATF 16949</span></div>
+        <div class="industry-tag">Medical <span class="badge">ISO 13485</span></div>
+        <div class="industry-tag">Defense & Government <span class="badge">ITAR</span></div>
+        <div class="industry-tag">Energy & Oil/Gas <span class="badge">API</span></div>
+        <div class="industry-tag">Semiconductors <span class="badge">ISO 14644</span></div>
+        <div class="industry-tag">General Manufacturing <span class="badge">ISO 9001</span></div>
+      </div>
+    </div>
+
+    <!-- Financing Banner -->
+    <div class="financing-banner">
+      <div>
+        <h3><img src="public/images/manufacturers/mazak-light.svg" alt="Mazak" style="height: 16px; width: auto; vertical-align: middle; margin-right: 4px; position: relative; top: -2px;"> Capital Equipment Financing</h3>
+        <p>Flexible leasing, loans, and customized financing. Quick approvals — often within 24 hours.<br>0% financing available on select Mazak models. Preserves your bank credit lines.</p>
+      </div>
+      <div class="financing-badge">MCEF Partner</div>
+    </div>
+
+    <!-- Territory -->
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 28px;">
+      <div class="section-title" style="margin-bottom: 0; white-space: nowrap;">Territory</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <span style="font-size: 11px; font-weight: 600; background: #f8f8f8; border-radius: 20px; padding: 6px 14px;">Arizona</span>
+        <span style="font-size: 11px; font-weight: 600; background: #f8f8f8; border-radius: 20px; padding: 6px 14px;">New Mexico</span>
+        <span style="font-size: 11px; font-weight: 600; background: #f8f8f8; border-radius: 20px; padding: 6px 14px;">Clark County, NV</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div>&copy; 2026 Cassavant Precision Machine Tools, LLC &mdash; cpmtusa.com</div>
+      <div class="mazak-badge">Authorized <img src="public/images/manufacturers/mazak-dark.svg" alt="Mazak" style="height: 12px; width: auto; vertical-align: middle; margin: 0 3px; position: relative; top: -2px;"> Distributor</div>
+    </div>
+  </div>
+</body>
+</html>
