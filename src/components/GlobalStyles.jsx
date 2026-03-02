@@ -217,7 +217,7 @@ const GlobalStyles = () => {
       .brand-scroll {
         display: flex;
         gap: 60px;
-        animation: marquee 25s linear infinite;
+        animation: marquee 40s linear infinite;
         white-space: nowrap;
       }
 
