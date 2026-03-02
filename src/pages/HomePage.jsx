@@ -51,7 +51,7 @@ const HomePage = ({ isVisible }) => {
     if (!categoryImages[m.category]) categoryImages[m.category] = m.image;
   });
 
-  const brands = ["Authorized Mazak Distributor", "Sales & Service", "Turnkey Solutions", "Automation", "Multi-Tasking", "5-Axis", "Turning", "Machining Centers"];
+  const brands = ["Authorized Mazak Distributor", "Turning", "Swiss", "Vertical Turning", "Vertical Machining", "Horizontal Machining", "5-Axis", "Multi-Tasking", "2D Laser", "3D Laser", "Machine Sales", "Turnkey Solutions", "Automation", "Service & Parts", "Engineering", "Financing"];
 
   const stats = [
     { value: `${machineData.machines.length}+`, label: "Mazak Models" },
