@@ -350,10 +350,8 @@ const SupportPage = ({ isVisible }) => {
           }}>
             Downloads
           </h2>
-          <a
-            href="/downloads/CPMT-Line-Card.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/line-card"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -378,10 +376,10 @@ const SupportPage = ({ isVisible }) => {
             <span style={{ fontSize: 28 }}>📄</span>
             <div style={{ textAlign: "left" }}>
               <div style={{ fontSize: 15, fontWeight: 600 }}>CPMT Line Card</div>
-              <div style={{ fontSize: 12, color: t.textTertiary }}>PDF — Products, services & industries overview</div>
+              <div style={{ fontSize: 12, color: t.textTertiary }}>Products, services & industries overview</div>
             </div>
-            <span style={{ color: "#C12033", fontSize: 18, marginLeft: 8 }}>↓</span>
-          </a>
+            <span style={{ color: "#C12033", fontSize: 18, marginLeft: 8 }}>→</span>
+          </Link>
         </div>
       </section>
 
