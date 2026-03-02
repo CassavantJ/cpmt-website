@@ -54,9 +54,9 @@ const HomePage = ({ isVisible }) => {
   const brands = ["Authorized Mazak Distributor", "Sales & Service", "Turnkey Solutions", "Automation", "Multi-Tasking", "5-Axis", "Turning", "Machining Centers"];
 
   const stats = [
-    { value: "17+", label: "Mazak Models" },
+    { value: `${machineData.machines.length}+`, label: "Mazak Models" },
     { value: "100%", label: "Dedicated Service" },
-    { value: "5", label: "Machine Categories" },
+    { value: String(categories.length), label: "Machine Categories" },
     { value: "24/7", label: "Service Support" },
   ];
 
@@ -201,26 +201,35 @@ const HomePage = ({ isVisible }) => {
 
           <div style={{
             display: "flex",
-            justifyContent: "center",
-            gap: "clamp(24px, 5vw, 64px)",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "clamp(20px, 3vw, 32px)",
             marginTop: 80,
-            flexWrap: "wrap",
             animation: "fadeUp 0.8s ease-out 1s both",
           }}>
-            {stats.map((s, i) => (
-              <div key={i} className="stat-block">
-                <div style={{
-                  fontFamily: "'Space Mono', monospace",
-                  fontSize: "clamp(30px, 4vw, 44px)",
-                  fontWeight: 700,
-                  color: "#C12033",
-                  marginBottom: 4,
-                }}>
-                  {s.value}
-                </div>
-                <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", letterSpacing: 1, textTransform: "uppercase", fontFamily: "'Space Mono', monospace" }}>
-                  {s.label}
-                </div>
+            {[stats.slice(0, 3), stats.slice(3)].map((row, ri) => (
+              <div key={ri} style={{
+                display: "flex",
+                justifyContent: "center",
+                gap: "clamp(40px, 8vw, 100px)",
+                ...(ri === 0 ? { paddingLeft: "clamp(20px, 4vw, 50px)" } : {}),
+              }}>
+                {row.map((s, i) => (
+                  <div key={i} className="stat-block" style={{ textAlign: "center" }}>
+                    <div style={{
+                      fontFamily: "'Space Mono', monospace",
+                      fontSize: "clamp(30px, 4vw, 44px)",
+                      fontWeight: 700,
+                      color: "#C12033",
+                      marginBottom: 4,
+                    }}>
+                      {s.value}
+                    </div>
+                    <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", letterSpacing: 1, textTransform: "uppercase", fontFamily: "'Space Mono', monospace" }}>
+                      {s.label}
+                    </div>
+                  </div>
+                ))}
               </div>
             ))}
           </div>
