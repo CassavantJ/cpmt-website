@@ -10,6 +10,10 @@ import MachineDetailPage from './pages/MachineDetailPage'
 import ServiceDetailPage from './pages/ServiceDetailPage'
 import SupportPage from './pages/SupportPage'
 import AboutPage from './pages/AboutPage'
+import MachineCategoryPage from './pages/MachineCategoryPage'
+import MachinesCategoryLandingPage from './pages/MachinesCategoryLandingPage'
+import AutomationPage from './pages/AutomationPage'
+import AutomationDetailPage from './pages/AutomationDetailPage'
 import LineCardPage from './pages/LineCardPage'
 
 function App() {
@@ -19,8 +23,12 @@ function App() {
         {({ isVisible }) => (
           <Routes>
             <Route path="/" element={<HomePage isVisible={isVisible} />} />
-            <Route path="/machines" element={<MachinesPage isVisible={isVisible} />} />
+            <Route path="/machines" element={<MachinesCategoryLandingPage isVisible={isVisible} />} />
+            <Route path="/machines/inventory" element={<MachinesPage isVisible={isVisible} />} />
+            <Route path="/machines/category/:categoryId" element={<MachineCategoryPage />} />
             <Route path="/machines/:manufacturer/:slug" element={<MachineDetailPage />} />
+            <Route path="/automation" element={<AutomationPage isVisible={isVisible} />} />
+            <Route path="/automation/:slug" element={<AutomationDetailPage />} />
             <Route path="/services" element={<ServicesPage isVisible={isVisible} />} />
             <Route path="/services/:slug" element={<ServiceDetailPage />} />
             <Route path="/industries" element={<IndustriesPage isVisible={isVisible} />} />

@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.05 }
     );
 
     // Small delay to let page content render before observing
@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
       background: t.bgMain,
       color: t.textPrimary,
       minHeight: "100vh",
-      overflow: "hidden",
+      overflowX: "hidden",
       transition: "background 0.3s ease, color 0.3s ease",
     }}>
       <GlobalStyles />

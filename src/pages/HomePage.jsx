@@ -51,7 +51,7 @@ const HomePage = ({ isVisible }) => {
     if (!categoryImages[m.category]) categoryImages[m.category] = m.image;
   });
 
-  const brands = ["Authorized Mazak Distributor", "Turning", "Swiss", "Vertical Turning", "Vertical Machining", "Horizontal Machining", "5-Axis", "Multi-Tasking", "2D Laser", "3D Laser", "Machine Sales", "Turnkey Solutions", "Automation", "Service & Parts", "Engineering", "Financing"];
+  const brands = ["Authorized Mazak Distributor", "Turning", "Swiss", "Vertical Turning", "Vertical Machining", "Horizontal Machining", "5-Axis", "Multi-Tasking", "2D Laser", "3D Laser", "Machine Sales", "Turnkey Solutions", "Automation", "Service & Parts", "Engineering", "Financing", "GSA Contract Holder"];
 
   const stats = [
     { value: `${machineData.machines.length}+`, label: "Mazak Models" },
@@ -178,7 +178,7 @@ const HomePage = ({ isVisible }) => {
             margin: "0 auto 44px",
             animation: "fadeUp 0.8s ease-out 0.6s both",
           }}>
-            Your authorized Mazak distributor. Sales, service, automation, and engineering excellence.
+            Your authorized <img src={manufacturers.Mazak?.logoDark} alt="Mazak" style={{ height: "0.80em", verticalAlign: "middle", display: "inline", margin: "0 2px", position: "relative", top: "-2px" }} /> distributor. Sales, service, automation, and engineering excellence.
           </p>
 
           <div style={{
@@ -315,20 +315,9 @@ const HomePage = ({ isVisible }) => {
           <div className="category-grid">
             {categories.map((cat, i) => {
               const count = machineData.machines.filter(m => m.category === cat.id).length;
-              const categoryDescs = {
-                turning: "High-speed, high-precision CNC turning for production efficiency.",
-                swiss: "Swiss-type production turning for small, precise parts at high volume.",
-                verticalturning: "Heavy-duty vertical turning for large-diameter, heavy workpieces.",
-                vertical: "Rigid vertical machining centers for mold, die, and general machining.",
-                horizontal: "High-volume horizontal machining with pallet changers and automation.",
-                "5axis": "Simultaneous 5-axis contouring for the most complex geometries.",
-                multitasking: "Turn, mill, and drill in a single setup — eliminate multiple operations.",
-                "2dlaser": "Fiber laser flat sheet cutting from thin gauge to thick plate.",
-                "3dlaser": "Tube, pipe, and structural profile laser cutting at production speeds.",
-              };
               return (
                 <Link
-                  to={`/machines?category=${cat.id}`}
+                  to={`/machines/category/${cat.id}`}
                   key={cat.id}
                   className="category-card"
                   onMouseEnter={() => setHoveredCategory(i)}
@@ -418,7 +407,7 @@ const HomePage = ({ isVisible }) => {
                       margin: 0,
                       flex: 1,
                     }}>
-                      {categoryDescs[cat.id]}
+                      {cat.description}
                     </p>
                     <div style={{
                       display: "flex",

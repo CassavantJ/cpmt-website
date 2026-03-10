@@ -1,0 +1,2311 @@
+{
+  "categories": [
+    {
+      "id": "machining",
+      "label": "Machining Center Automation",
+      "description": "Pallet systems, robotic cells, and work changers for horizontal, vertical, 5-axis, and multi-tasking machines."
+    },
+    {
+      "id": "turning",
+      "label": "Turning Center Automation",
+      "description": "Gantry loaders, bar feeders, and robotic systems for CNC turning centers and multi-tasking machines."
+    },
+    {
+      "id": "laser",
+      "label": "Laser Automation",
+      "description": "Sheet loading, unloading, sorting, and storage systems for 2D and 3D laser cutting machines."
+    },
+    {
+      "id": "peripheral",
+      "label": "Peripheral Equipment",
+      "description": "Tool storage, coolant delivery, and transport systems that extend machining capability and uptime."
+    }
+  ],
+  "products": [
+    {
+      "name": "PALLETECH System",
+      "slug": "palletech",
+      "category": "machining",
+      "highlight": "Up to 3-level storage",
+      "tagline": "Flexible manufacturing system for multi-machine automation",
+      "description": "Flexible manufacturing system with automated pallet transfer and centralized scheduling. Integrates horizontal, 5-axis, and multi-tasking machines into a single production cell with up to 3 storage levels.",
+      "fullDescription": "The PALLETECH System is Mazak's flagship flexible manufacturing system, connecting multiple machine tools into a unified, automated production cell. Available in 1, 2, or 3-level configurations, it integrates horizontal machining centers, 5-axis machines, and multi-tasking machines with automated pallet storage and transfer. The PMC NEO cell controller provides centralized scheduling with week-ahead simulation capability, optimizing machine utilization and enabling extended periods of unmanned operation.",
+      "features": [
+        "1, 2, or 3-level pallet configurations",
+        "Connects multiple machine types in one cell",
+        "PMC NEO software with week-ahead simulation",
+        "Uninterruptible power supply & RAID backup"
+      ],
+      "details": [
+        {
+          "label": "System Configurations",
+          "items": [
+            "1-Level: Single-tier pallet storage for compact installations",
+            "2-Level: Dual-tier storage for increased capacity without expanding footprint",
+            "3-Level: Maximum storage density for high-volume production cells"
+          ]
+        },
+        {
+          "label": "Software & Control",
+          "items": [
+            "PMC NEO cell controller with centralized scheduling",
+            "Smooth Simulation for week-ahead production planning",
+            "Real-time monitoring and production tracking",
+            "Uninterruptible power supply for data protection",
+            "RAID HDD duplication for system redundancy"
+          ]
+        },
+        {
+          "label": "Compatible Machines",
+          "items": [
+            "HCN horizontal machining centers",
+            "VARIAXIS 5-axis machining centers",
+            "INTEGREX multi-tasking machines",
+            "Multiple machine types in a single cell"
+          ]
+        }
+      ],
+      "specifications": {
+        "Configurations": "1-level, 2-level, 3-level",
+        "Machine integration": "Horizontal, 5-axis, multi-tasking",
+        "Cell controller": "PMC NEO",
+        "Planning software": "Smooth Simulation",
+        "Data protection": "UPS + RAID HDD"
+      },
+      "images": [
+        "/images/automation/palletech.webp",
+        "/images/automation/palletech-2.webp",
+        "/images/automation/palletech-3.jpeg"
+      ],
+      "sections": [
+        {
+          "title": "Flexible System Expansion",
+          "description": "You can choose the optimal size of the PALLETECH MANUFACTURING CELL (1-level), PALLETECH HIGH RISE SYSTEM (2-level), or PALLETECH HIGH RISE SYSTEM (3-level) based on your current production volume and budget. Once installed, it can be expanded as needed to accommodate growing production volumes.",
+          "image": "/images/automation/palletech-expansion.webp"
+        },
+        {
+          "title": "Different Types of Machine Tools Can Also Be Incorporated",
+          "description": "A horizontal machining center, simultaneous 5-axis machining center, and multi-tasking machine can be integrated into one system.",
+          "image": "/images/automation/palletech-machines.jpeg"
+        },
+        {
+          "group": "PMC NEO",
+          "title": "PMC NEO",
+          "description": "PMC NEO is software that automatically operates and manages Mazak's flexible manufacturing system PALLETECH System. With Smooth Simulation, you can check machining progress and tool resources for up to one week in advance during automatic operation, enabling long-term unmanned operation.",
+          "image": "/images/automation/palletech-pmc-neo.webp"
+        },
+        {
+          "group": "PMC NEO",
+          "title": "Smooth Simulation",
+          "description": "Simulation can be performed for up to one week during automatic operation. Easy tool preparation makes production output easy to predict. It is also possible to level out the machine load."
+        },
+        {
+          "group": "PMC NEO",
+          "title": "Scheduling",
+          "description": "PMC NEO can be operated according to your production style; schedules based on part numbers that allow for flexible production, or schedules based on simple pallet numbers. It is also possible to operate production that combine multiple part numbers, or complete all the steps one item at a time."
+        },
+        {
+          "group": "PMC NEO",
+          "title": "Server PC Maintenance",
+          "description": "It comes standard with an uninterruptible power supply for unexpected power outages, as well as HDD duplication using RAID. This helps reduce the risk of PC downtime."
+        },
+        {
+          "group": "PMC NEO",
+          "title": "Home Screen",
+          "description": "The basic screen allows you to see the system status at a glance, and has a similar design with MAZATROL SmoothCNC."
+        },
+        {
+          "group": "PMC NEO",
+          "title": "Connectivity",
+          "description": "It can also be monitored from an office PC connected via LAN."
+        },
+        {
+          "group": "PMC NEO",
+          "title": "Performance Tracking",
+          "description": "Various performance data is output in a variety of graphs. This makes it easier for administrators to analyze operation."
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "MAZATEC SMS",
+      "slug": "mazatec-sms",
+      "category": "machining",
+      "highlight": "Up to 15 machines",
+      "tagline": "Large-scale smart manufacturing system",
+      "description": "Large-scale smart manufacturing system combining up to 15 machine tools, 8 loading stations, and 240 warehouse shelves with stacker crane transport and centralized management.",
+      "fullDescription": "The MAZATEC SMS (Smart Manufacturing System) is Mazak's most comprehensive automation solution, designed for large-scale production environments requiring maximum flexibility and throughput. The system integrates up to 15 machine tools and 8 loading stations with 240 warehouse shelves in up to 6 customizable size configurations. A stacker crane transports pallets between machines, loading stations, and warehouse storage, while the centralized management system synchronizes fixture and material pallets for seamless production flow.",
+      "features": [
+        "Up to 15 machines & 8 loading stations",
+        "240 warehouse shelves with 6 size configurations",
+        "Stacker crane pallet transport",
+        "Higher-level management system integration"
+      ],
+      "details": [
+        {
+          "label": "System Capacity",
+          "items": [
+            "Up to 15 CNC machine tools in a single system",
+            "Up to 8 loading stations for parallel setup operations",
+            "240 warehouse shelves for material and fixture storage",
+            "Up to 6 customizable shelf size configurations"
+          ]
+        },
+        {
+          "label": "Material Handling",
+          "items": [
+            "Stacker crane for automated pallet transport",
+            "Synchronized fixture and material pallet management",
+            "Automatic routing between machines, loading, and storage",
+            "Priority-based scheduling for urgent orders"
+          ]
+        },
+        {
+          "label": "Integration",
+          "items": [
+            "Higher-level ERP/MES system integration",
+            "Centralized production management",
+            "Real-time machine status monitoring",
+            "Production data logging and analysis"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "title": "MAZATEC SMS Processing Management System",
+          "description": "The machining management control software lets you create operation data, check operation status, and monitor machining progress. Based on the PALLETECH System's Smooth PMC, it has been developed to also manage material pallets. In automatic operation, the fixture pallet and material pallet are synchronized at the setup station.",
+          "image": "/images/automation/mazatec-sms-pmc.jpeg"
+        }
+      ],
+      "specifications": {
+        "Max. machine tools": "15",
+        "Max. loading stations": "8",
+        "Warehouse shelves": "240",
+        "Shelf configurations": "Up to 6 sizes",
+        "Transport method": "Stacker crane"
+      },
+      "images": [
+        "/images/automation/mazatec-sms.jpeg"
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "MPP (Multi Pallet Pool)",
+      "slug": "mpp",
+      "category": "machining",
+      "highlight": "Up to 24 pallets",
+      "tagline": "Compact multi-level pallet stocker for high-mix production",
+      "description": "Compact multi-level pallet stocker for small-lot, high-mix production. Available in 6 to 24 pallet configurations for VARIAXIS and HCN series machines, expandable after installation.",
+      "fullDescription": "The MPP (Multi Pallet Pool) is a compact, multi-level pallet stocker designed for small-lot, high-mix production environments. Available in configurations from 6 to 24 pallets, it seamlessly integrates with VARIAXIS i-series and HCN horizontal machining centers. The Smooth MPP software provides simulation capability, work instruction displays, and performance tracking to maximize machine utilization. The system can be expanded after initial installation, allowing manufacturers to scale automation as production demands grow.",
+      "features": [
+        "6 to 24 pallet configurations",
+        "Smooth MPP software with simulation",
+        "Work instruction displays & performance tracking",
+        "Post-installation expandability"
+      ],
+      "details": [
+        {
+          "label": "Configurations",
+          "items": [
+            "VARIAXIS i-series: 6PC, 12PC, 18PC configurations",
+            "HCN models: 10PC, 16PC, 24PC configurations",
+            "Expandable after initial installation",
+            "Multi-level compact storage design"
+          ]
+        },
+        {
+          "label": "Software Features",
+          "items": [
+            "Smooth MPP management software",
+            "Production simulation capability",
+            "Work instruction displays for operators",
+            "Performance tracking and reporting"
+          ]
+        },
+        {
+          "label": "Compatible Machines",
+          "items": [
+            "VARIAXIS i-series 5-axis machines",
+            "HCN horizontal machining centers"
+          ]
+        }
+      ],
+      "specifications": {
+        "Pallet capacity": "6 to 24 pallets",
+        "VARIAXIS configs": "6PC, 12PC, 18PC",
+        "HCN configs": "10PC, 16PC, 24PC",
+        "Software": "Smooth MPP",
+        "Expandable": "Yes, post-installation"
+      },
+      "images": [
+        "/images/automation/mpp.webp"
+      ],
+      "sections": [
+        {
+          "title": "MPP 6PC, 12PC, 18PC Type",
+          "description": "Compact multi-level pallet stocker configurations designed for VARIAXIS i-series 5-axis machining centers. Available in 6, 12, and 18 pallet configurations to match your production volume requirements.",
+          "image": "/images/automation/mpp-6-12-18.webp"
+        },
+        {
+          "title": "Minimum Floor Space Requirements",
+          "description": "Uses the same production system as Mazak's automation system (PALLETECH system) for reduced floor space.",
+          "image": "/images/automation/mpp-floorspace.webp",
+          "imageCaption": "VARIAXIS i-700 NEO (120-tool magazine).\nLeft: 2-level 12PC stocker system. Right: MPP(12PC).\nA: 7587 mm, B: 8946 mm, C: 67.87 m², D: 4217 mm, E: 8969 mm, F: 37.82 m²"
+        },
+        {
+          "title": "Expandable Pallet Stocker",
+          "description": "6, 12, and 18 pallet storage capacities are available after initial machine installation. For VARIAXIS i series (excluding i-800NEO), MPP can be installed after delivery of the stand-alone machine. MPP installation preparation (single table) is required.",
+          "image": "/images/automation/mpp-expandable.webp",
+          "imageCaption": "A: 6PC (3 pallets x 2 levels), B: 12PC (6 pallets x 2 levels), C: 18PC (6 pallets x 3 levels)"
+        },
+        {
+          "title": "Transportable Workpiece Specifications",
+          "table": {
+            "headers": [
+              "Model",
+              "Pallet Size",
+              "Transport Weight",
+              "Max. Workpiece Size"
+            ],
+            "rows": [
+              [
+                "VARIAXIS i-600 NEO",
+                "400 × 400 mm (15.75\" × 15.75\")",
+                "400 kg (661 lbs)",
+                "Φ600 × 425 mm (Φ23.62\" × 16.73\")"
+              ],
+              [
+                "VARIAXIS i-700 NEO",
+                "500 × 500 mm (19.69\" × 19.69\")",
+                "600 kg (1323 lbs)",
+                "Φ730 × 500 mm (Φ28.74\" × 19.69\")"
+              ],
+              [
+                "VARIAXIS i-700T",
+                "Φ610 mm (Φ24.02\")",
+                "600 kg (1323 lbs)",
+                "Φ730 × 500 mm (Φ28.74\" × 19.69\")"
+              ],
+              [
+                "VARIAXIS i-800 NEO",
+                "500 × 500 mm (19.69\" × 19.69\")",
+                "700 kg (1543 lbs)",
+                "Φ730 × 500 mm (Φ28.74\" × 19.69\")"
+              ],
+              [
+                "VARIAXIS C-600",
+                "500 × 500 mm (19.69\" × 19.69\")",
+                "500 kg (1102 lbs)",
+                "Φ730 × 450 mm (Φ28.74\" × 17.72\")"
+              ],
+              [
+                "VARIAXIS C-700",
+                "500 × 500 mm (19.69\" × 19.69\")",
+                "600 kg (1323 lbs)",
+                "Φ730 × 500 mm (Φ28.74\" × 19.69\")"
+              ],
+              [
+                "HCR-5000S",
+                "500 × 500 mm (19.69\" × 19.69\")",
+                "500 kg (1102 lbs)",
+                "Φ700 × 643.6 mm (Φ27.56\" × 25.34\")"
+              ],
+              [
+                "HCN-4000 NEO",
+                "400 × 400 mm (15.75\" × 15.75\")",
+                "400 kg (661 lbs)",
+                "Φ630 × 900 mm (Φ24.80\" × 35.43\")"
+              ],
+              [
+                "HCN-5000 NEO",
+                "500 × 500 mm (19.69\" × 19.69\")",
+                "700 kg (1543 lbs)",
+                "Φ800 × 1000 mm (Φ31.50\" × 39.37\")"
+              ],
+              [
+                "HCN-5000/50",
+                "500 × 500 mm (19.69\" × 19.69\")",
+                "700 kg (1543 lbs)",
+                "Φ800 × 1000 mm (Φ31.50\" × 39.37\")"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "MPP 10PC, 16PC, 24PC Type",
+          "description": "Multi-level pallet stocker configurations designed for HCN horizontal machining centers. Some models are not compatible with 24PC.",
+          "image": "/images/automation/mpp-10-16-24.webp"
+        },
+        {
+          "title": "Minimum Floor Space Requirements",
+          "description": "Uses the same production system as Mazak's automation system (PALLETECH system) for reduced floor space.",
+          "image": "/images/automation/mpp-floorspace-2.webp",
+          "imageCaption": "VARIAXIS i-700 NEO (120-tool magazine). \nLeft: 2-level 12PC stocker system. Right: MPP(12PC). \nA: 7587 mm, B: 8946 mm, C: 67.87 m², D: 4217 mm, E: 8969 mm, F: 37.82 m²"
+        },
+        {
+          "title": "Expandable Pallet Stocker",
+          "description": "6, 12, and 18 pallet storage capacities are available after initial machine installation. For VARIAXIS i series (excluding i-800NEO), MPP can be installed after delivery of the stand-alone machine. MPP installation preparation (single table) is required.",
+          "image": "/images/automation/mpp-expandable-2.webp",
+          "imageCaption": "A: 6PC (3 pallets x 2 levels), B: 12PC (6 pallets x 2 levels), C: 18PC (6 pallets x 3 levels)"
+        },
+        {
+          "title": "Transportable Workpiece Specifications (HCN Series)",
+          "table": {
+            "headers": [
+              "Model",
+              "Pallet Size",
+              "Transport Weight",
+              "Max. Workpiece Size"
+            ],
+            "rows": [
+              [
+                "HCN-4000 NEO (10PC, 16PC)",
+                "400 × 400 mm (15.75\" × 15.75\")",
+                "400 kg (661 lbs)",
+                "Φ630 × 900 mm (Φ24.80\" × 35.43\")"
+              ],
+              [
+                "HCN-5000 NEO (10PC, 16PC)",
+                "500 × 500 mm (19.69\" × 19.69\")",
+                "700 kg (1543 lbs)",
+                "Φ800 × 1000 mm (Φ31.50\" × 39.37\")"
+              ],
+              [
+                "HCN-5000/50 (10PC, 16PC)",
+                "500 × 500 mm (19.69\" × 19.69\")",
+                "700 kg (1543 lbs)",
+                "Φ800 × 1000 mm (Φ31.50\" × 39.37\")"
+              ],
+              [
+                "HCN-5000 NEO (24PC)",
+                "500 × 500 mm (19.69\" × 19.69\")",
+                "700 kg (1543 lbs)",
+                "Φ800 × 700 mm (1st/2nd level)\nΦ800 × 1000 mm (3rd level)"
+              ]
+            ]
+          }
+        },
+        {
+          "group": "Smooth MPP Software",
+          "title": "Smooth MPP Software",
+          "description": "Smooth MPP is software that automatically operates and manages MPP. You can create operation data, check schedule progress and operation status on the display screen of the machine's CNC operation panel. The use of a touch panel allows for intuitive operation. You can also view the operation status on your office PC, tablet, or smartphone by connecting to the local internet.",
+          "image": "/images/automation/mpp-smooth-software.webp"
+        },
+        {
+          "group": "Smooth MPP Software",
+          "title": "Understanding the Situation at a Glance",
+          "description": "It visually displays the status of the system and process progress. This makes it easier to monitor system operation.",
+          "image": "/images/automation/mpp-status-display.webp"
+        },
+        {
+          "group": "Smooth MPP Software",
+          "title": "Simulation",
+          "description": "Simulations based on actual machine data allow for quick and easy optimization of system operation plans in advance. It displays a list of tools missing for automatic operation, tools that will not be used, and a forecast of the time and number of workpieces that will be completed.",
+          "image": "/images/automation/mpp-simulation.webp"
+        },
+        {
+          "group": "Smooth MPP Software",
+          "title": "Display Work Instructions on Time",
+          "description": "The system supports the operator's work by displaying work instructions at the loading station and a screen that prompts the operator to prepare missing tools.",
+          "image": "/images/automation/mpp-work-instructions.webp"
+        },
+        {
+          "group": "Smooth MPP Software",
+          "title": "Various Performance Displays",
+          "description": "Various performance data is output in a variety of graphs, making it easier for system administrators to analyze operations.",
+          "image": "/images/automation/mpp-performance.webp"
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "AWC (Auto Work Changer)",
+      "slug": "awc",
+      "category": "machining",
+      "highlight": "Up to 40 positions",
+      "tagline": "Automated work stocker for continuous unmanned machining",
+      "description": "Material handling system with integrated work stocker for continuous unmanned machining. Supports up to 40 work positions with Smooth AWC scheduling software.",
+      "fullDescription": "The AWC (Auto Work Changer) is an automated material handling system with an integrated work stocker that enables continuous unmanned machining. With expandable capacity from 32 to 40 work stocker positions, it handles workpieces up to 143 lbs and dimensions up to 13.78\" diameter by 12.40\" height. The Smooth AWC software, operated through a 19-inch touch panel, provides scheduling and sequencing capability for high-mix production environments.",
+      "features": [
+        "Max. transportable weight: 143 lbs",
+        "32 or 40 selectable work stockers",
+        "Smooth AWC software with 19\" touch panel",
+        "Compact integrated design"
+      ],
+      "details": [
+        {
+          "label": "Workpiece Capacity",
+          "items": [
+            "Maximum transportable weight: 143 lbs",
+            "Maximum workpiece dimensions: Φ13.78\" × H12.40\"",
+            "Expandable from 32 to 40 work stocker positions"
+          ]
+        },
+        {
+          "label": "Software & Control",
+          "items": [
+            "Smooth AWC scheduling software",
+            "19-inch touch panel interface",
+            "Production sequencing and scheduling",
+            "Real-time status monitoring"
+          ]
+        }
+      ],
+      "specifications": {
+        "Max. workpiece weight": "143 lbs",
+        "Max. workpiece size": "Φ13.78\" × H12.40\"",
+        "Work stockers": "32 or 40 positions",
+        "Software": "Smooth AWC",
+        "Interface": "19\" touch panel"
+      },
+      "images": [
+        "/images/automation/awc.webp"
+      ],
+      "sections": [
+        {
+          "title": "Selectable Work Stocker",
+          "description": "After the initial installation, the work stocker can be expanded from 32 to 40 work stockers, depending on the production situation.",
+          "image": "/images/automation/awc-stocker.webp"
+        },
+        {
+          "group": "Setup Management & Automatic Operation Software: Smooth AWC",
+          "title": "Smooth AWC",
+          "description": "Smooth AWC is a setup management and automatic operation software for the VARIAXIS i-300 AWC incorporated in the CNC system, MAZATROL SmoothAi.",
+          "image": "/images/automation/awc-smooth.webp"
+        },
+        {
+          "group": "Setup Management & Automatic Operation Software: Smooth AWC",
+          "title": "19-inch Touch Panel",
+          "description": "The 19-inch touch panel allows for intuitive operation and clear display of the overall AWC system status."
+        },
+        {
+          "group": "Setup Management & Automatic Operation Software: Smooth AWC",
+          "title": "Flexible Workholding",
+          "description": "Easy operation even when machining different workpieces with the same fixture on the work holder."
+        },
+        {
+          "group": "Setup Management & Automatic Operation Software: Smooth AWC",
+          "title": "Operator Instructions",
+          "description": "During automatic operation, the operator can be instructed on work setup by switching the CNC screen."
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "Pallet Changer",
+      "slug": "pallet-changer",
+      "category": "machining",
+      "highlight": "Up to 6 pallets",
+      "tagline": "Quick pallet exchange for continuous machining",
+      "description": "Rotary-type system for quick pallet exchanges, allowing setup on one pallet while the other is machining. Available in multi-pallet configurations for extended automated operation.",
+      "fullDescription": "The Pallet Changer is a rotary-type system that enables quick pallet exchanges, allowing operators to set up workpieces on one pallet while machining continues on another. Available in configurations up to 6 pallets, the system significantly extends automated operation periods and reduces machine idle time between jobs. The rotary exchange mechanism handles heavy workpieces with precision positioning for consistent accuracy.",
+      "features": [
+        "Up to 6-pallet configuration",
+        "Setup during active machining",
+        "Rotary exchange mechanism",
+        "Extended unmanned operation"
+      ],
+      "details": [
+        {
+          "label": "System Features",
+          "items": [
+            "Rotary-type pallet exchange mechanism",
+            "Up to 6-pallet configuration available",
+            "Simultaneous setup and machining operations",
+            "Heavy workpiece handling capability",
+            "Precision pallet positioning for accuracy"
+          ]
+        }
+      ],
+      "specifications": {
+        "Max. pallets": "6",
+        "Exchange type": "Rotary",
+        "Setup mode": "During active machining"
+      },
+      "images": [
+        "/images/automation/pallet-changer.jpeg"
+      ],
+      "sections": [
+        {
+          "title": "6-Pallet Changer",
+          "description": "Set up multiple workpieces for automatic operation over extended periods of time.",
+          "image": "/images/automation/pallet-changer-6.webp"
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "MA (Mill Assist)",
+      "slug": "mill-assist",
+      "category": "machining",
+      "highlight": "No teaching required",
+      "tagline": "Robotic workpiece transport with conversational programming",
+      "description": "Robotic workpiece transport system with conversational software that eliminates robot teaching. Enables unmanned nighttime operation where a single operator manages multiple machines.",
+      "fullDescription": "The MA (Mill Assist) is a robotic workpiece transport system designed around easy-to-operate conversational software that completely eliminates the need for robot teaching. Using Smooth MILL ASSIST software, operators program automation tasks through simple conversational dialogs rather than complex robot programming. This enables unmanned nighttime operation and allows a single operator to manage multiple machines during manned shifts, dramatically increasing productivity.",
+      "features": [
+        "No robot teaching required",
+        "Smooth MILL ASSIST conversational software",
+        "Single operator manages multiple machines",
+        "Unmanned nighttime operation capable"
+      ],
+      "details": [
+        {
+          "label": "Software",
+          "items": [
+            "Smooth MILL ASSIST conversational programming",
+            "No robot teaching or programming required",
+            "Simple dialog-based operation setup",
+            "Integrated with MAZATROL CNC control"
+          ]
+        },
+        {
+          "label": "Operation Modes",
+          "items": [
+            "Unmanned nighttime operation",
+            "Single operator managing multiple machines",
+            "Automatic workpiece loading and unloading",
+            "Continuous production cycles"
+          ]
+        }
+      ],
+      "specifications": {
+        "Software": "Smooth MILL ASSIST",
+        "Robot teaching": "Not required",
+        "Operation": "Unmanned capable"
+      },
+      "images": [
+        "/images/automation/mill-assist.webp"
+      ],
+      "sections": [
+        {
+          "title": "Smooth MILL ASSIST",
+          "description": "The software is easy to operate through a conversational interface. You just need to input the material and the finished product shape. No robot teaching is required. Easy operation by simply turning on automatic operation for each lot.",
+          "image": "/images/automation/mill-assist-smooth.webp"
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "Mazak AUTO FLEX CELL",
+      "slug": "auto-flex-cell",
+      "category": "turning",
+      "highlight": "Variable-mix production",
+      "tagline": "Flexible robotic cell for variable-mix, variable-volume production",
+      "description": "Robotic cell system for variable-mix, variable-volume production with expandable architecture. Includes customizable stockers for hands, chuck jaws, special tools, and workpieces.",
+      "fullDescription": "The Mazak AUTO FLEX CELL is a flexible robotic cell system designed for variable-mix, variable-volume production environments. Its expandable architecture adapts to changing production requirements with customizable stockers for robotic hands, chuck jaws, special tools, and workpieces. The Smooth RCC software enables autonomous operation with resource checking that prevents stoppages due to missing components, ensuring continuous production flow.",
+      "features": [
+        "Smooth RCC autonomous operation software",
+        "Customizable stocker configurations",
+        "Resource checking prevents stoppages",
+        "Expandable cell architecture"
+      ],
+      "details": [
+        {
+          "label": "Stocker Options",
+          "items": [
+            "Robotic hand stocker for automatic gripper changes",
+            "Chuck jaw stocker for automatic jaw changes",
+            "Special tool stocker for auxiliary operations",
+            "Work stocker for workpiece buffering"
+          ]
+        },
+        {
+          "label": "Software & Automation",
+          "items": [
+            "Smooth RCC autonomous operation software",
+            "Automatic resource checking before each cycle",
+            "Prevention of stoppages from missing components",
+            "Production scheduling and sequencing"
+          ]
+        }
+      ],
+      "specifications": {
+        "Software": "Smooth RCC",
+        "Stocker types": "Hand, chuck jaw, tool, work",
+        "Architecture": "Expandable",
+        "Resource checking": "Automatic"
+      },
+      "images": [
+        "/images/automation/auto-flex-cell.webp"
+      ],
+      "sections": [
+        {
+          "group": "Stocker Options",
+          "groupDescription": true,
+          "description": "Selectable by shape, weight, and type of workpiece. Stockers can also be customized according to the production type."
+        },
+        {
+          "group": "Stocker Options",
+          "groupLayout": "grid",
+          "title": "Robotic Hand Stocker",
+          "image": "/images/automation/auto-flex-cell-hand.webp"
+        },
+        {
+          "group": "Stocker Options",
+          "title": "Chuck Jaw Stocker",
+          "image": "/images/automation/auto-flex-cell-jaw.webp"
+        },
+        {
+          "group": "Stocker Options",
+          "title": "Special Tool Stocker",
+          "image": "/images/automation/auto-flex-cell-tool.webp"
+        },
+        {
+          "group": "Stocker Options",
+          "title": "Work Stocker",
+          "image": "/images/automation/auto-flex-cell-work.webp"
+        },
+        {
+          "group": "Smooth RCC",
+          "title": "Smooth RCC",
+          "description": "Smooth RCC (Robot Cell Controller) is software for automatic operation and management of robot cells. It enables high-mix, low-volume production using robot cells. You can create operation data of the robot cell, check the schedule progress and operation status. In addition, the shortage of tools and tools that have reached the end of their life are displayed before operation, so that machine stoppages can be prevented during unmanned operation.",
+          "image": "/images/automation/auto-flex-cell-smooth-rcc.webp"
+        },
+        {
+          "group": "Smooth RCC",
+          "title": "Resource Check",
+          "description": "Smooth RCC prompts preparation by displaying programs and tools that are missing due to resource checks against the machining schedule entered before machining. During automated operation, real-time tool simulation is performed to display missing and life-saving tools, and to inform you of tools that need to be prepared.",
+          "image": "/images/automation/auto-flex-cell-resource-check.webp"
+        },
+        {
+          "group": "Smooth RCC",
+          "title": "Robot Setup Assist",
+          "description": "By inputting the length and diameter of the material and the information of the robot hand on MAZATROL SmoothAi, it is an interactive function that can be easily set to automatically generate an operation program without the teaching work of the machine. Robot Setup Assist is an optional feature of MAZATROL SmoothAi.",
+          "image": "/images/automation/auto-flex-cell-robot-setup.webp"
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "TA (TURN ASSIST)",
+      "slug": "turn-assist",
+      "category": "turning",
+      "highlight": "3 model sizes",
+      "tagline": "Integrated robot automation for turning centers",
+      "description": "Integrated automation unit with industrial robot and stocker that eliminates robot teaching. Multi-layer stacking enables extended unmanned operation with specialized configurations for shaft workpieces.",
+      "fullDescription": "The TA (TURN ASSIST) is an integrated automation unit combining an industrial robot, stocker, and system software into a complete package for turning center automation. Available in three models — TA-12/200, TA-20/270, and TA-35/270 — it eliminates robot teaching through Smooth TURN ASSIST conversational software. Multi-layer stacking capability enables extended unmanned operation periods, and specialized configurations handle shaft workpieces alongside standard chuck-type parts.",
+      "features": [
+        "Models: TA-12/200, TA-20/270, TA-35/270",
+        "Smooth TURN ASSIST conversational software",
+        "Multi-layer stacking for extended runs",
+        "Shaft workpiece configurations available"
+      ],
+      "details": [
+        {
+          "label": "Models",
+          "items": [
+            "TA-12/200: Compact unit for smaller turning centers",
+            "TA-20/270: Mid-range unit for standard turning operations",
+            "TA-35/270: Large unit for heavy-duty turning applications"
+          ]
+        },
+        {
+          "label": "Capabilities",
+          "items": [
+            "Integrated industrial robot with stocker",
+            "Smooth TURN ASSIST conversational software",
+            "Multi-layer stacking for maximum part buffering",
+            "Shaft workpiece handling configurations",
+            "No robot teaching required"
+          ]
+        }
+      ],
+      "specifications": {
+        "Models": "TA-12/200, TA-20/270, TA-35/270",
+        "Software": "Smooth TURN ASSIST",
+        "Robot teaching": "Not required",
+        "Stacking": "Multi-layer"
+      },
+      "images": [
+        "/images/automation/turn-assist.webp"
+      ],
+      "sections": [
+        {
+          "title": "Balancing Safety and Excellent Workability",
+          "description": "If a person is detected in the system area during TA system operation, the robot operation will be stopped or slowed down. There is no need to install the safety guard on the front and right side face of the system, improving workability such as setup and maintenance.",
+          "image": "/images/automation/turn-assist-safety.webp"
+        },
+        {
+          "group": "System Components",
+          "groupLayout": "grid",
+          "title": "Automate the Process from Material Delivery to Finished Products",
+          "description": "Consists of an industrial robot, stocker, and Smooth TURN ASSIST (system software).",
+          "image": "/images/automation/turn-assist-system.webp"
+        },
+        {
+          "group": "System Components",
+          "title": "Stocker",
+          "description": "The stocker can be stacked in multiple layers of materials and finished products, enabling automatic operation for a long time.",
+          "image": "/images/automation/turn-assist-stocker.jpeg"
+        },
+        {
+          "group": "Selectable Options",
+          "groupLayout": "grid",
+          "title": "TA-12/200",
+          "image": "/images/automation/turn-assist-ta12.webp"
+        },
+        {
+          "group": "Selectable Options",
+          "title": "TA-20/270",
+          "image": "/images/automation/turn-assist-ta20.webp"
+        },
+        {
+          "group": "Selectable Options",
+          "title": "TA-35/270",
+          "image": "/images/automation/turn-assist-ta35.webp"
+        },
+        {
+          "title": "Specifications",
+          "table": {
+            "headers": [
+              "",
+              "",
+              "TA-12/200",
+              "TA-20/270",
+              "TA-35/270"
+            ],
+            "rows": [
+              [
+                "Workpiece",
+                "Max. workpiece diameter",
+                "Φ7.87\"",
+                "Φ10.63\"",
+                "Φ10.63\""
+              ],
+              [
+                "Workpiece",
+                "Max. workpiece weight",
+                "15 lbs (8 lbs × 2)",
+                "31 lbs (15 lbs × 2)",
+                "57 lbs (29 lbs × 2)"
+              ],
+              [
+                "Size of TA unit",
+                "Width × depth × height",
+                "58.62\" × 57.48\" × 96.69\"",
+                "75.59\" × 57.48\" × 96.69\"",
+                "75.59\" × 57.48\" × 96.69\""
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Compatible with Shaft Workpiece Delivery",
+          "description": "Consists of 4 robot jaw gripper for shaft workpiece, workstand for stocker, and Smooth TURN ASSIST (system software).",
+          "image": "/images/automation/turn-assist-shaft.jpeg"
+        },
+        {
+          "title": "Shaft Workpiece Specifications",
+          "table": {
+            "headers": [
+              "",
+              "TA-20/270",
+              "TA-35/270"
+            ],
+            "rows": [
+              [
+                "Material diameter",
+                "Φ0.39\" - Φ3.15\"",
+                "Φ0.39\" - Φ3.15\""
+              ],
+              [
+                "Material length",
+                "7.87\" - 31.50\"",
+                "7.87\" - 31.50\""
+              ],
+              [
+                "Maximum weight",
+                "31 lbs (not unbalanced)",
+                "55 lbs (not unbalanced)"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Smooth TURN ASSIST",
+          "description": "Easy operation by just entering the material and the shape of the finished product. Even if you do not have expertise in robot operation, you can intuitively and easily set up with the system software (Smooth TURN ASSIST) built into the CNC. From the material, outside diameter of the finished product, length and amount input to Smooth TURN ASSIST, installation instructions for the positioning guide bar of the stocker unit and instructions for installing jaws for the robot arm are displayed on the screen. In addition, the height position of the material is set automatically.",
+          "image": "/images/automation/turn-assist-smooth.webp"
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "Gantry Loader",
+      "slug": "gantry-loader",
+      "category": "turning",
+      "highlight": "Teaching-less design",
+      "tagline": "High-speed overhead workpiece loading system",
+      "description": "Teaching-less overhead loading system for high-speed, precision workpiece replacement. Includes working hand and work conveyor with support for two-unit machine connections.",
+      "fullDescription": "The Gantry Loader is a teaching-less overhead loading system designed for high-speed, precision workpiece replacement on turning centers. The system includes a working hand and work conveyor as standard, with the overhead design saving valuable floor space. For increased throughput, the system supports two-unit machine connections, enabling a single gantry loader to service two turning centers in sequence.",
+      "features": [
+        "Teaching-less design",
+        "High-speed workpiece exchange",
+        "Work conveyor included",
+        "Two-machine connection support"
+      ],
+      "details": [
+        {
+          "label": "System Features",
+          "items": [
+            "Teaching-less design eliminates complex programming",
+            "Overhead configuration saves floor space",
+            "High-speed loading and unloading cycles",
+            "Included working hand and work conveyor",
+            "Two-unit machine connection for expanded capacity"
+          ]
+        }
+      ],
+      "specifications": {
+        "Design": "Overhead gantry",
+        "Programming": "Teaching-less",
+        "Machine connections": "1 or 2 machines",
+        "Includes": "Working hand + work conveyor"
+      },
+      "images": [
+        "/images/automation/gantry-loader.webp"
+      ],
+      "sections": [
+        {
+          "group": "Example Machines",
+          "groupLayout": "grid",
+          "title": "MULTIPLEX W-200Y + Gantry Loader",
+          "image": "/images/automation/gantry-loader-multiplex.webp"
+        },
+        {
+          "group": "Example Machines",
+          "title": "INTEGREX i-200H ST + Gantry Loader",
+          "image": "/images/automation/gantry-loader-integrex.webp"
+        },
+        {
+          "title": "Two-Unit Connection",
+          "description": "QUICK TURN 200MA + QUICK TURN 100MS\n\nMultiple machines can be connected with a single gantry loader. Depending on the target workpiece, it is also possible to incorporate and arrange material conveyors, finished product conveyors, reversing tables, measuring units, etc. between each process. This system is often used in mass production.",
+          "image": "/images/automation/gantry-loader-two-unit.webp"
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "Bar Feeder",
+      "slug": "bar-feeder",
+      "category": [
+        "turning",
+        "peripheral"
+      ],
+      "highlight": "Flexible bar handling",
+      "tagline": "Automated bar stock material supply system",
+      "description": "Material supply system for bar stock materials supporting various bar types and quantities. Optional scheduling function enables high-mix, low-volume and set production runs.",
+      "fullDescription": "The Bar Feeder is a dedicated material supply system designed for automated bar stock feeding on turning centers. Supporting various bar types and quantities through a standard interface compatible with domestic and overseas bar feeders, it enables continuous production without operator intervention. An optional scheduling function supports both high-mix, low-volume production and set-quantity production runs.",
+      "features": [
+        "Handles various bar types & quantities",
+        "Standard interface compatibility",
+        "Optional scheduling function",
+        "High-mix, low-volume capable"
+      ],
+      "details": [
+        {
+          "label": "System Features",
+          "items": [
+            "Simple design for bar stock materials",
+            "Compatible with various domestic and overseas bar feeders",
+            "Standard interface for easy integration",
+            "Optional scheduling for mixed-volume production",
+            "Continuous unattended operation"
+          ]
+        }
+      ],
+      "specifications": {
+        "Material type": "Bar stock",
+        "Interface": "Standard (domestic & overseas)",
+        "Scheduling": "Optional",
+        "Operation": "Continuous unattended"
+      },
+      "images": [
+        "/images/automation/bar-feeder.webp"
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "Ez LOADER",
+      "slug": "ez-loader",
+      "category": [
+        "machining",
+        "turning"
+      ],
+      "highlight": "2 models available",
+      "tagline": "Compact collaborative robot with vision sensors",
+      "description": "Compact collaborative robot automation using vision sensors and dedicated software. Available in two models for different workpiece weights, compatible with turning centers and machining centers.",
+      "fullDescription": "The Ez LOADER is a compact collaborative robot automation system that uses vision sensors and dedicated software for flexible workpiece handling. Available in two models — the Ez LOADER 20 (22 lbs max) and Ez LOADER 30 (46 lbs max) — it is compatible with multi-tasking machines, turning centers, and vertical machining centers. The collaborative robot design allows operation alongside human workers, and an optional measuring unit integration enables in-process quality verification.",
+      "features": [
+        "Ez LOADER 20: max 22 lbs workpiece",
+        "Ez LOADER 30: max 46 lbs workpiece",
+        "Vision sensor integration",
+        "Measuring unit option available"
+      ],
+      "details": [
+        {
+          "label": "Models",
+          "items": [
+            "Ez LOADER 20: Maximum workpiece weight 22 lbs",
+            "Ez LOADER 30: Maximum workpiece weight 46 lbs (single-handed)"
+          ]
+        },
+        {
+          "label": "Features",
+          "items": [
+            "Collaborative robot for safe human coexistence",
+            "Vision sensor for part identification and positioning",
+            "Optional measuring unit for in-process inspection",
+            "Compatible with turning centers, VMCs, and multi-tasking machines"
+          ]
+        }
+      ],
+      "specifications": {
+        "Ez LOADER 20 capacity": "22 lbs max",
+        "Ez LOADER 30 capacity": "46 lbs max",
+        "Sensors": "Vision system",
+        "Optional": "Measuring unit integration"
+      },
+      "images": [
+        "/images/automation/ez-loader.webp"
+      ],
+      "sections": [
+        {
+          "group": "Models",
+          "title": "Ez LOADER 20",
+          "description": "Maximum workpiece weight: 22 lbs",
+          "image": "/images/automation/ez-loader-20.webp"
+        },
+        {
+          "group": "Models",
+          "title": "Ez LOADER 30",
+          "description": "Maximum workpiece weight: 46 lbs*\n* Single-handed",
+          "image": "/images/automation/ez-loader-30.webp"
+        },
+        {
+          "title": "Ez LOADER 20 + Measuring Unit",
+          "description": "This system combines Ez LOADER with a measuring unit. By automatically reflecting the measurement results in tool offset, measuring errors during unmanned operation can be prevented. This system also includes boxing of finished products using the Ez LOADER.",
+          "image": "/images/automation/ez-loader-measuring.webp"
+        },
+        {
+          "group": "Ez LOADER APP",
+          "groupDescription": true,
+          "description": "Dedicated application for collaborative robot cells operated by MAZATROL. The software is easy to operate through a conversational interface — includes a robot arm, a vision sensor, and dedicated software. Compatible with Mazak's small and medium-sized multi-tasking machines, CNC turning centers, and vertical machining centers."
+        },
+        {
+          "group": "Ez LOADER APP",
+          "groupLayout": "grid",
+          "title": "Machining Program Link",
+          "description": "Select the work number and the program will be automatically generated.",
+          "image": "/images/automation/ez-loader-app-step1.webp"
+        },
+        {
+          "group": "Ez LOADER APP",
+          "title": "Conversational Data Entry",
+          "description": "Set the parameters for the collaborative robot and the workpiece to be processed.",
+          "image": "/images/automation/ez-loader-app-step2.webp"
+        },
+        {
+          "group": "Ez LOADER APP",
+          "title": "Continuous Machining of High-Mix Workpieces",
+          "description": "Enter the number of workpieces to be machined. The automatic setup function allows high-mix production.",
+          "image": "/images/automation/ez-loader-app-step3.webp"
+        },
+        {
+          "group": "Ez LOADER APP",
+          "title": "Operation Monitoring",
+          "description": "Once the materials are placed on the pallet, automatic operation begins. You can also check the status while it is running.",
+          "image": "/images/automation/ez-loader-app-step4.webp"
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "LASER FLEX",
+      "slug": "laser-flex",
+      "category": "laser",
+      "highlight": "Up to 3 lasers",
+      "tagline": "High-throughput automation for laser production environments",
+      "description": "High-throughput automation system for production environments with independent load/unload functions. Supports up to 3 laser machines with expandable tower storage and optional SOFT TOUCH belt system.",
+      "fullDescription": "The LASER FLEX is a high-throughput automation system designed for production environments requiring maximum sheet-to-sheet cutting productivity. With independent load and unload functions using suction cup loading and clamshell fork unloading, it services up to 3 laser machines simultaneously. An optional SOFT TOUCH belt system on unload forks prevents workpiece scratching, while expandable tower systems increase capacity. Cart systems and conveyors enable continuous workpiece separation and pallet loading.",
+      "features": [
+        "Services up to 3 laser machines",
+        "Suction cup loading / clamshell fork unloading",
+        "Optional SOFT TOUCH belt for scratch prevention",
+        "Cart & conveyor part separation systems"
+      ],
+      "details": [
+        {
+          "label": "Loading & Unloading",
+          "items": [
+            "Suction cup loading system",
+            "Clamshell fork unloading system",
+            "Optional SOFT TOUCH belt to prevent scratching",
+            "Independent load/unload functions"
+          ]
+        },
+        {
+          "label": "System Options",
+          "items": [
+            "Expandable tower storage systems",
+            "Cart systems for workpiece separation",
+            "Conveyor integration for continuous flow",
+            "Automatic part separation and pallet loading",
+            "Compatible with automated storage/retrieval systems"
+          ]
+        }
+      ],
+      "specifications": {
+        "Machines serviced": "Up to 3",
+        "Max. sheet (3015)": "120\" × 60\"",
+        "Max. sheet (4220)": "160\" × 80\"",
+        "Max. thickness": "1\"",
+        "Pallet capacity (3015)": "6,614 lbs",
+        "Pallet capacity (4220)": "6,614–11,023 lbs",
+        "Cycle time": "< 60 sec (3015) / < 80 sec (4220)"
+      },
+      "images": [
+        "/images/automation/laser-flex.webp"
+      ],
+      "sections": [
+        {
+          "title": "Automation Specifications",
+          "table": {
+            "headers": [
+              "Format",
+              "3015",
+              "4220"
+            ],
+            "rows": [
+              [
+                "Number of machines serviced",
+                "Up to 3",
+                "Up to 3"
+              ],
+              [
+                "Maximum sheet size",
+                "120\" × 60\"",
+                "160\" × 80\""
+              ],
+              [
+                "Maximum sheet thickness",
+                "1\"",
+                "1\""
+              ],
+              [
+                "Maximum pallet capacity",
+                "6,614 lbs",
+                "6,614 lbs or 11,023 lbs"
+              ],
+              [
+                "Number of shelves",
+                "Customizable to ceiling height",
+                "Customizable to ceiling height"
+              ],
+              [
+                "Material stack height",
+                "3.54\" standard (customizable)",
+                "2.36\" standard (customizable)"
+              ],
+              [
+                "Loading type",
+                "Suction cups",
+                "Suction cups"
+              ],
+              [
+                "Unloading type",
+                "Rake",
+                "Rake"
+              ],
+              [
+                "Load/unload cycle time",
+                "Under 60 seconds\n(based on one laser configuration)",
+                "Under 80 seconds\n(based on one laser configuration)"
+              ],
+              [
+                "Connections to AS/R",
+                "Yes",
+                "Yes"
+              ]
+            ]
+          }
+        }
+      ],
+      "configurationExamples": [
+        {
+          "label": "LF 3015 ONE LASER (LUL)",
+          "image": "/images/automation/laser-flex-1laser-lul.webp"
+        },
+        {
+          "label": "LF 3015 ONE LASER + ONE TOWER",
+          "image": "/images/automation/laser-flex-1laser-1tower.webp"
+        },
+        {
+          "label": "LF 3015 TWO LASERS + TWO TOWERS + UL CART",
+          "image": "/images/automation/laser-flex-2laser-2tower-ulcart-a.webp"
+        },
+        {
+          "label": "LF 3015 TWO LASERS + TWO TOWERS + UL CART",
+          "image": "/images/automation/laser-flex-2laser-2tower-ulcart-b.webp"
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "M-SERIES",
+      "slug": "m-series",
+      "category": "laser",
+      "highlight": "Highly customizable",
+      "tagline": "Flexible small-footprint laser automation",
+      "description": "Flexible automation with a small footprint and highly customizable configurations. Available in 3015 and 4220 formats with MCS, MST, and MDT configurations for up to 3 laser machines.",
+      "fullDescription": "The M-Series is a flexible laser automation solution with a small footprint and highly customizable configurations. Available in 3015, 4020, and reverse flow setups, it services up to 3 laser machines per system. Three primary configurations — MCS (one laser), MST (one laser/one tower), and MDT (two lasers/two towers) — accommodate a wide range of production requirements. Peripheral options include conveyors, over/under carts, and labelers for comprehensive material flow management.",
+      "features": [
+        "3015 & 4220 format options",
+        "Up to 3 machines per system",
+        "< 60 sec load/unload cycle (single laser)",
+        "Conveyor, cart & labeler peripherals"
+      ],
+      "details": [
+        {
+          "label": "Configurations",
+          "items": [
+            "MCS: Single laser machine configuration",
+            "MST: One laser with one storage tower",
+            "MDT: Two lasers with two storage towers",
+            "Reverse flow option available"
+          ]
+        },
+        {
+          "label": "Peripheral Options",
+          "items": [
+            "Conveyors for material transport",
+            "Over/under cart systems",
+            "Labeling systems for part identification",
+            "Automated storage/retrieval integration",
+            "Part separation and pallet loading"
+          ]
+        }
+      ],
+      "specifications": {
+        "Machines serviced": "Up to 3",
+        "Max. sheet (3015)": "120\" × 60\"",
+        "Max. sheet (4220)": "160\" × 80\"",
+        "Max. thickness": "1\"",
+        "Pallet capacity (3015)": "6,614 lbs",
+        "Pallet capacity (4220)": "11,023 lbs",
+        "Cycle time": "< 60 sec (3015) / < 80 sec (4220)",
+        "Configurations": "MCS, MST, MDT"
+      },
+      "images": [
+        "/images/automation/m-series.webp"
+      ],
+      "sections": [
+        {
+          "title": "Automation Specifications",
+          "table": {
+            "headers": [
+              "Format",
+              "3015",
+              "4220"
+            ],
+            "rows": [
+              [
+                "Number of machines serviced",
+                "Up to 3",
+                "Up to 3"
+              ],
+              [
+                "Maximum sheet size",
+                "120\" × 60\"",
+                "160\" × 80\""
+              ],
+              [
+                "Maximum sheet thickness",
+                "1\"",
+                "1\""
+              ],
+              [
+                "Maximum pallet capacity",
+                "6,614 lbs",
+                "11,023 lbs"
+              ],
+              [
+                "Number of shelves",
+                "Customizable to ceiling height",
+                "Customizable to ceiling height"
+              ],
+              [
+                "Material stack height",
+                "1.89\" raw / 3.54\" UL (customizable)",
+                "1.89\" raw / 2.36\" UL (customizable)"
+              ],
+              [
+                "Loading type",
+                "Suction cups",
+                "Suction cups"
+              ],
+              [
+                "Unloading type",
+                "Rake",
+                "Rake"
+              ],
+              [
+                "Load/unload cycle time",
+                "Under 60 seconds\n(based on one-laser configuration)",
+                "Under 80 seconds\n(based on one-laser configuration)"
+              ],
+              [
+                "Connections to AS/R",
+                "Yes",
+                "Yes"
+              ]
+            ]
+          }
+        }
+      ],
+      "configurationExamples": [
+        {
+          "label": "MCS 3015 ONE LASER (LUL)",
+          "image": "/images/automation/m-series-mcs-1laser-lul.webp"
+        },
+        {
+          "label": "MST 3015 ONE LASER ONE TOWER",
+          "image": "/images/automation/m-series-mst-1laser-1tower.webp"
+        },
+        {
+          "label": "MDT 3015 2 LASER 2 TOWERS",
+          "image": "/images/automation/m-series-mdt-2laser-2towers.webp"
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "EXTENSIBLE MANUFACTURING CELL",
+      "slug": "extensible-manufacturing-cell",
+      "category": "laser",
+      "highlight": "Up to 4 lasers",
+      "tagline": "Modular FMS system for scalable laser production",
+      "description": "Modular FMS system with a building-block approach that enables future growth. Expandable from 1 to 4 laser machines with tower storage units.",
+      "fullDescription": "The EXTENSIBLE MANUFACTURING CELL (EMC) is a modular FMS system that utilizes a building-block approach for scalable laser automation. Starting with a single machine configuration, it can grow to accommodate up to 4 laser machines with tower storage units as production demands increase. The rugged design ensures extended production life, and suction cup loading with rake-style unloading provides reliable material handling across all configurations.",
+      "features": [
+        "Expandable from 1 to 4 machines",
+        "90–270 sec cycle time by config",
+        "Max sheet: 120\" × 60\"",
+        "Modular building-block design"
+      ],
+      "details": [
+        {
+          "label": "Scalability",
+          "items": [
+            "Start with 1 laser machine",
+            "Expand up to 4 machines within a single cell",
+            "Add tower storage units as needed",
+            "Modular building-block architecture"
+          ]
+        },
+        {
+          "label": "Material Handling",
+          "items": [
+            "Suction cup loading system",
+            "Rake-style unloading system",
+            "90-second cycle for single machine",
+            "Up to 270-second cycle for full 4-machine config"
+          ]
+        }
+      ],
+      "specifications": {
+        "Machines serviced": "1 to 4",
+        "Max. sheet size": "120\" × 60\"",
+        "Max. thickness": "1\"",
+        "Pallet capacity": "6,614 lbs",
+        "Material stack height": "3.54\"",
+        "Cycle time": "90–270 sec (by configuration)",
+        "Format": "3015"
+      },
+      "images": [
+        "/images/automation/extensible-manufacturing-cell.webp"
+      ],
+      "sections": [
+        {
+          "title": "Specifications",
+          "table": {
+            "headers": [
+              "Format",
+              "EMC 3015 one laser (LUL)",
+              "EMC 3015 one laser + one tower",
+              "EMC 3015 two lasers + two towers",
+              "EMC 3015 two lasers + two towers + UL tower"
+            ],
+            "rows": [
+              [
+                "Number of machines serviced",
+                "1",
+                "1",
+                "2",
+                "2"
+              ],
+              [
+                "Maximum sheet size",
+                "120\" × 60\"",
+                "120\" × 60\"",
+                "120\" × 60\"",
+                "120\" × 60\""
+              ],
+              [
+                "Maximum sheet thickness",
+                "1\"",
+                "1\"",
+                "1\"",
+                "1\""
+              ],
+              [
+                "Maximum pallet capacity",
+                "6,614 lbs",
+                "6,614 lbs",
+                "6,614 lbs",
+                "6,614 lbs"
+              ],
+              [
+                "Number of shelves",
+                "n/a",
+                "10",
+                "20 (loading)",
+                "30 (20 load, 10 unload)"
+              ],
+              [
+                "Material stack height",
+                "3.54\"",
+                "3.54\"",
+                "3.54\"",
+                "3.54\""
+              ],
+              [
+                "Loading type",
+                "Suction cups",
+                "Suction cups",
+                "Suction cups",
+                "Suction cups"
+              ],
+              [
+                "Unloading type",
+                "Rake",
+                "Rake",
+                "Rake",
+                "Rake"
+              ],
+              [
+                "Load/unload cycle time",
+                "90 seconds",
+                "90 seconds",
+                "270 seconds",
+                "270 seconds"
+              ],
+              [
+                "Connection to AS/R",
+                "No",
+                "No",
+                "No",
+                "No"
+              ]
+            ]
+          }
+        }
+      ],
+      "configurationExamples": [
+        {
+          "label": "EMC 3015 ONE LASER",
+          "image": "/images/automation/emc-1laser.webp"
+        },
+        {
+          "label": "EMC 3015 ONE LASER + ONE TOWER",
+          "image": "/images/automation/emc-1laser-1tower.webp"
+        },
+        {
+          "label": "EMC 3015 TWO LASERS + TWO TOWERS",
+          "image": "/images/automation/emc-2laser-2towers.webp"
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "QUICK CELL",
+      "slug": "quick-cell",
+      "category": "laser",
+      "highlight": "60-sec cycle time",
+      "tagline": "Compact economical automation for laser job shops",
+      "description": "Compact, economical automation cell for job shops. Available with pallet changer extension or 6, 10, or 14-level storage shelves with independent load/unload mechanisms.",
+      "fullDescription": "The QUICK CELL 3015 is a compact automation cell designed for fabrication job shops seeking economical entry into laser automation. Featuring rugged construction and innovative design, it delivers high performance with a 60-second load/unload cycle across all configurations. Available with a pallet changer extension or 6, 10, or 14-level storage shelves, independent load and unload drive mechanisms reduce material changeover times. A built-in scheduling unit simplifies planning.",
+      "features": [
+        "60-second load/unload cycle",
+        "6, 10, or 14-level shelf options",
+        "Independent load/unload drives",
+        "Integrated scheduling unit"
+      ],
+      "details": [
+        {
+          "label": "Configurations",
+          "items": [
+            "Pallet changer extension option",
+            "6-level storage shelf configuration",
+            "10-level storage shelf configuration",
+            "14-level storage shelf configuration",
+            "All configs maintain identical performance"
+          ]
+        },
+        {
+          "label": "Material Handling",
+          "items": [
+            "Independent load and unload drive mechanisms",
+            "Suction cup loading system",
+            "Rake-style unloading system",
+            "Reduced material changeover times"
+          ]
+        }
+      ],
+      "specifications": {
+        "Max. sheet size": "120\" × 60\"",
+        "Max. thickness": "1\"",
+        "Pallet capacity": "6,614 lbs",
+        "Material stack height": "3.54\"",
+        "Cycle time": "60 sec",
+        "Shelf options": "6, 10, or 14 levels",
+        "Machines serviced": "1"
+      },
+      "images": [
+        "/images/automation/quick-cell.webp"
+      ],
+      "sections": [
+        {
+          "title": "Configuration Examples",
+          "bullets": [
+            "QUICK CELL 3015 with Pallet Changer Extension",
+            "QUICK CELL 3015 with 6 Level Stocker",
+            "QUICK CELL 3015 with 10 Level Stocker",
+            "QUICK CELL 3015 with 14 Level Stocker"
+          ]
+        },
+        {
+          "title": "Specifications",
+          "table": {
+            "headers": [
+              "Format",
+              "QUICK CELL 3015\nwith Pallet Changer Extension",
+              "QUICK CELL 3015\nwith 6 Level Stocker",
+              "QUICK CELL 3015\nwith 10 Level Stocker",
+              "QUICK CELL 3015\nwith 14 Level Stocker"
+            ],
+            "rows": [
+              [
+                "Number of machines serviced",
+                "1",
+                "1",
+                "1",
+                "1"
+              ],
+              [
+                "Maximum sheet size",
+                "120\" × 60\"",
+                "120\" × 60\"",
+                "120\" × 60\"",
+                "120\" × 60\""
+              ],
+              [
+                "Maximum sheet thickness",
+                "1\"",
+                "1\"",
+                "1\"",
+                "1\""
+              ],
+              [
+                "Maximum pallet capacity",
+                "6,614 lbs",
+                "6,614 lbs",
+                "6,614 lbs",
+                "6,614 lbs"
+              ],
+              [
+                "Number of shelves",
+                "n/a",
+                "6",
+                "10",
+                "14"
+              ],
+              [
+                "Material stack height",
+                "3.54\"",
+                "3.54\"",
+                "3.54\"",
+                "3.54\""
+              ],
+              [
+                "Loading type",
+                "Suction cups",
+                "Suction cups",
+                "Suction cups",
+                "Suction cups"
+              ],
+              [
+                "Unloading type",
+                "Rake",
+                "Rake",
+                "Rake",
+                "Rake"
+              ],
+              [
+                "Load/unload cycle time",
+                "60 seconds",
+                "60 seconds",
+                "60 seconds",
+                "60 seconds"
+              ],
+              [
+                "Connection to AS/R",
+                "n/a",
+                "n/a",
+                "n/a",
+                "n/a"
+              ]
+            ]
+          }
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "Ez COMPACT",
+      "slug": "ez-compact",
+      "category": "laser",
+      "highlight": "Space-efficient",
+      "tagline": "Expandable 2D automation for space-constrained shops",
+      "description": "Space-efficient 2D automation for job shops with limited floor space. Expandable from single to multi-tower configurations with automatic part separation and reverse flow support.",
+      "fullDescription": "The Ez COMPACT is a space-efficient 2D automation solution designed for job shops with limited floor space. Its expandable architecture grows from a single material tower to multi-tower configurations as production needs increase. Cut parts automatically return to storage towers, and suction cup loading with rake-based unloading handles sheets up to 1\" thick. Adjustable shelf configurations accommodate different facility ceiling heights, and reverse flow configurations are supported.",
+      "features": [
+        "3015 & 4220 format options",
+        "Expandable tower storage",
+        "~120 sec cycle (3015) / ~180 sec (4220)",
+        "Adjustable shelf heights to match ceiling"
+      ],
+      "details": [
+        {
+          "label": "System Features",
+          "items": [
+            "Expandable from single to multi-tower",
+            "Automatic part separation capability",
+            "Reverse flow configuration supported",
+            "Adjustable shelf heights for ceiling clearance",
+            "Cut parts return to storage automatically"
+          ]
+        },
+        {
+          "label": "Material Handling",
+          "items": [
+            "Suction cup loading system",
+            "Rake-based unloading system",
+            "Material stack height: 3.94\"–11.81\" (adjustable)"
+          ]
+        }
+      ],
+      "specifications": {
+        "Max. sheet (3015)": "122\" × 62\"",
+        "Max. sheet (4220)": "164\" × 82\"",
+        "Max. thickness": "1\"",
+        "Pallet capacity": "6,614 lbs",
+        "Stack height": "3.94\"–11.81\" (adjustable)",
+        "Cycle time": "~120 sec (3015) / ~180 sec (4220)",
+        "Machines serviced": "1"
+      },
+      "images": [
+        "/images/automation/ez-compact.webp"
+      ],
+      "sections": [
+        {
+          "title": "Specifications",
+          "table": {
+            "headers": [
+              "Format",
+              "3015",
+              "4220"
+            ],
+            "rows": [
+              [
+                "Number of machines serviced",
+                "1",
+                "1"
+              ],
+              [
+                "Maximum sheet size",
+                "122\" × 62\"",
+                "164\" × 82\""
+              ],
+              [
+                "Maximum sheet thickness",
+                "1\"",
+                "1\""
+              ],
+              [
+                "Maximum pallet capacity",
+                "6,614 lbs",
+                "6,614 lbs"
+              ],
+              [
+                "Number of shelves",
+                "Customizable to ceiling height",
+                "Customizable to ceiling height"
+              ],
+              [
+                "Material stack height",
+                "From 3.94\" to 11.81\" (customizable)",
+                "From 3.94\" to 11.81\" (customizable)"
+              ],
+              [
+                "Loading type",
+                "Suction cups",
+                "Suction cups"
+              ],
+              [
+                "Unloading type",
+                "Rake",
+                "Rake"
+              ],
+              [
+                "Load/unload cycle time",
+                "Around 120 seconds\n(depends on the machine height)",
+                "Around 180 seconds\n(depends on the machine height)"
+              ],
+              [
+                "Connections to AS/R",
+                "No",
+                "No"
+              ]
+            ]
+          }
+        }
+      ],
+      "configurationExamples": [
+        {
+          "label": "Ez COMPACT SINGLE TOWER",
+          "image": "/images/automation/ez-compact-single-tower.webp"
+        },
+        {
+          "label": "Ez COMPACT SINGLE TOWER + PARTS CART",
+          "image": "/images/automation/ez-compact-single-tower-cart.webp"
+        },
+        {
+          "label": "Ez COMPACT DUAL TOWER",
+          "image": "/images/automation/ez-compact-dual-tower.webp"
+        },
+        {
+          "label": "Ez COMPACT DUAL TOWER + PARTS CART",
+          "image": "/images/automation/ez-compact-dual-tower-cart.webp"
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "C-SERIES",
+      "slug": "c-series",
+      "category": "laser",
+      "highlight": "Ultra-compact",
+      "tagline": "Ultra-compact load/unload system for tight spaces",
+      "description": "Ultra-compact load/unload system ideal for placement along walls or in tight floor spaces. Available in lateral (CSL) and frontal (CSF) configurations.",
+      "fullDescription": "The C-Series is an ultra-compact load/unload automation system designed for job shops with minimal available floor space. Ideal for placement along walls or in narrow areas, it is available in two configurations: CSL (lateral) and CSF (frontal) to match facility layouts. The dual pallet system — one raw material, one finished — enables continuous production with 60-second (3015) or 80-second (4220) load/unload cycles.",
+      "features": [
+        "Lateral & frontal configurations",
+        "60 sec cycle (3015) / 80 sec (4220)",
+        "Dual pallet: 1 raw + 1 finished",
+        "Wall-mountable compact design"
+      ],
+      "details": [
+        {
+          "label": "Configurations",
+          "items": [
+            "CSL: Lateral configuration for side-wall placement",
+            "CSF: Frontal configuration for front-access layouts",
+            "3015 and 4220 format options"
+          ]
+        },
+        {
+          "label": "Material Handling",
+          "items": [
+            "Dual pallet system: 1 raw material + 1 finished",
+            "Suction cup loading system",
+            "Rake-style unloading system",
+            "Continuous production capable"
+          ]
+        }
+      ],
+      "specifications": {
+        "Max. sheet (3015)": "120\" × 60\"",
+        "Max. sheet (4220)": "160\" × 80\"",
+        "Max. thickness": "1\"",
+        "Pallet capacity": "6,614 lbs",
+        "Shelves": "1 raw + 1 finished",
+        "Cycle time": "60 sec (3015) / 80 sec (4220)",
+        "Machines serviced": "1",
+        "Configurations": "CSL (lateral), CSF (frontal)"
+      },
+      "images": [
+        "/images/automation/c-series.webp"
+      ],
+      "sections": [
+        {
+          "title": "Automation Specifications",
+          "table": {
+            "headers": [
+              "Format",
+              "3015",
+              "4220"
+            ],
+            "rows": [
+              [
+                "Number of machines serviced",
+                "1",
+                "1"
+              ],
+              [
+                "Maximum sheet size",
+                "120\" × 60\"",
+                "160\" × 80\""
+              ],
+              [
+                "Maximum sheet thickness",
+                "1\"",
+                "1\""
+              ],
+              [
+                "Maximum pallet capacity",
+                "6,614 lbs",
+                "6,614 lbs"
+              ],
+              [
+                "Number of shelves",
+                "1 raw and 1 finished",
+                "1 raw and 1 finished"
+              ],
+              [
+                "Material stack height",
+                "3.35\" / 3.54\"",
+                "1.89\" / 2.36\""
+              ],
+              [
+                "Loading type",
+                "Suction cups",
+                "Suction cups"
+              ],
+              [
+                "Unloading type",
+                "Rake",
+                "Rake"
+              ],
+              [
+                "Load/unload cycle time",
+                "60 seconds",
+                "80 seconds"
+              ],
+              [
+                "Connections to AS/R",
+                "No",
+                "No"
+              ]
+            ]
+          }
+        }
+      ],
+      "configurationExamples": [
+        {
+          "label": "CSL 3015 ONE LASER (LUL - LATERAL)",
+          "image": "/images/automation/c-series-csl-lateral.webp"
+        },
+        {
+          "label": "CSF 3015 ONE LASER (LUL - FRONT)",
+          "image": "/images/automation/c-series-csf-front.webp"
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "SMART CELL",
+      "slug": "smart-cell",
+      "category": "laser",
+      "highlight": "Robotic sorting",
+      "tagline": "6-axis robotic part sorting and handling system",
+      "description": "Robotic sorting system using a 6-axis industrial robot with customizable grippers. Sorts laser-cut parts, loads raw material, and removes scrap automatically.",
+      "fullDescription": "The SMART CELL is a robotic sorting system that uses a 6-axis industrial robot to sort laser-cut parts, load raw material, and remove scrap automatically. Available in three models — GP225, GP400, and GP600 — with customizable magnetic or suction cup grippers for different part types. The compact, modular design integrates with other Mazak automation systems for comprehensive unattended production.",
+      "features": [
+        "6-axis industrial robot",
+        "Magnetic or suction cup grippers",
+        "3 models: GP225, GP400, GP600",
+        "Automatic part sorting & pallet loading"
+      ],
+      "details": [
+        {
+          "label": "Models",
+          "items": [
+            "GP225: Max sheet 120\" × 60\", max part weight 264 lbs, 80 sec cycle",
+            "GP400: Max sheet 130\" × 65\", max part weight 551 lbs, 90 sec cycle",
+            "GP600: Max sheet 130\" × 65\", max part weight 992 lbs, 90 sec cycle"
+          ]
+        },
+        {
+          "label": "Gripper Options",
+          "items": [
+            "Magnetic grippers for ferrous materials",
+            "Suction cup grippers for non-ferrous and finished surfaces",
+            "Customizable for specific part geometries"
+          ]
+        }
+      ],
+      "specifications": {
+        "GP225 max part": "264 lbs",
+        "GP400 max part": "551 lbs",
+        "GP600 max part": "992 lbs",
+        "Max. sheet (GP225)": "120\" × 60\"",
+        "Max. sheet (GP400/600)": "130\" × 65\"",
+        "Cycle time": "80–90 sec",
+        "Pallet size": "40\" × 48\" (US standard)"
+      },
+      "images": [
+        "/images/automation/smart-cell.webp"
+      ],
+      "sections": [
+        {
+          "title": "Specifications",
+          "table": {
+            "headers": [
+              "Format",
+              "SMART CELL GP225",
+              "SMART CELL GP400",
+              "SMART CELL GP600"
+            ],
+            "rows": [
+              [
+                "Number of machines serviced",
+                "1",
+                "1",
+                "1"
+              ],
+              [
+                "Maximum sheet size",
+                "120\" × 60\"",
+                "130\" × 65\"",
+                "130\" × 65\""
+              ],
+              [
+                "Maximum sheet thickness",
+                "0.2\"",
+                "3015: 0.39\" / 4220: 0.27\"",
+                "3015: 0.62\" / 4220: 0.39\""
+              ],
+              [
+                "Loading type",
+                "Suction cups",
+                "Suction cup",
+                "Suction cup"
+              ],
+              [
+                "Unloading type",
+                "Rake",
+                "Rake",
+                "Rake"
+              ],
+              [
+                "Load/unload cycle time",
+                "80 seconds",
+                "90 seconds",
+                "90 seconds"
+              ],
+              [
+                "Connection to AS/R",
+                "Yes",
+                "Yes",
+                "Yes"
+              ],
+              [
+                "Gripper type",
+                "Suction/Magnetic",
+                "Suction/Magnetic",
+                "Suction/Magnetic"
+              ],
+              [
+                "Maximum part weight",
+                "264 lbs",
+                "551 lbs",
+                "992 lbs"
+              ],
+              [
+                "Maximum pallet unload height",
+                "23.62\"",
+                "23.62\"",
+                "23.62\""
+              ],
+              [
+                "Unload Pallet Dimensions",
+                "US standard 40\" × 48\"",
+                "US standard 40\" × 48\"",
+                "US standard 40\" × 48\""
+              ]
+            ]
+          }
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "Automated Storage / Retrieval",
+      "slug": "automated-storage-retrieval",
+      "category": "laser",
+      "highlight": "Vertical storage",
+      "tagline": "Vertical material storage and inventory management",
+      "description": "Vertical material storage system that maximizes floor space and maintains computerized inventory. Supports cutting, bending, welding, and finishing operations with automated material transport.",
+      "fullDescription": "The Automated Storage/Retrieval (AS/R) system maximizes floor space by storing sheet materials vertically with computerized inventory management. Automated conveyors and robotic handlers transport materials to the manufacturing floor, reducing manual labor and enabling efficient material flow through cutting, bending, welding, and finishing operations. The system integrates with LASER FLEX, EMC, and other Mazak automation cells, accommodating 2412, 3015, and 4020 sheet sizes.",
+      "features": [
+        "Vertical storage optimization",
+        "Computerized inventory management",
+        "Conveyor & robotic handler transport",
+        "Integrates with LASER FLEX, EMC & more"
+      ],
+      "details": [
+        {
+          "label": "Storage & Retrieval",
+          "items": [
+            "Vertical material storage for maximum floor space utilization",
+            "Computerized inventory tracking across production stages",
+            "Automated conveyors for material transport",
+            "Robotic handlers for sheet delivery"
+          ]
+        },
+        {
+          "label": "Integration",
+          "items": [
+            "Compatible with LASER FLEX systems",
+            "Compatible with Extensible Manufacturing Cells",
+            "Accommodates 2412, 3015, and 4020 sheet sizes",
+            "Supports cutting, bending, welding, and finishing workflows"
+          ]
+        }
+      ],
+      "specifications": {
+        "Sheet formats": "2412, 3015, 4020",
+        "Storage type": "Vertical",
+        "Inventory": "Computerized tracking",
+        "Transport": "Conveyors & robotic handlers"
+      },
+      "images": [
+        "/images/automation/automated-storage-retrieval.webp"
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "ADDITIONAL PRODUCTIVITY SOLUTIONS",
+      "slug": "additional-productivity-solutions",
+      "category": "laser",
+      "highlight": "Modular add-ons",
+      "tagline": "Modular components to extend automation range and efficiency",
+      "description": "Modular components that extend application range, improve throughput, and boost efficiency in laser automation cells. Includes conveyors, carts, sorting systems, and storage towers.",
+      "fullDescription": "Additional Productivity Solutions are modular components designed to extend the application range, improve throughput, and boost efficiency of laser automation cells. These common components — including conveyors, over/under carts, descending scissor tables, labelers, unload towers, and part sorting systems — can be combined with any Mazak laser automation system to create a comprehensive, tailored production workflow.",
+      "features": [
+        "Belt & metal-type conveyors",
+        "Over/under carts (3,000–5,000 kg)",
+        "4 & 8-pallet unload towers",
+        "Labeler & part sorting systems"
+      ],
+      "details": [
+        {
+          "label": "Conveyors",
+          "items": [
+            "Belt-type conveyors for single sheet unloading up to 5mm thickness",
+            "Metal-type conveyors for thicker material (over 5mm)",
+            "Immediate access to cut sheets outside the safety fence",
+            "Safe progression to subsequent production processes"
+          ]
+        },
+        {
+          "label": "Carts & Tables",
+          "items": [
+            "Over/under carts in 3,000 kg and 5,000 kg capacities",
+            "Immediate operator access to hot jobs post-cutting",
+            "Unattended stacking of cut sheets",
+            "Descending scissor tables (3,000 kg and 5,000 kg) that lower after each sheet unload"
+          ]
+        },
+        {
+          "label": "Towers & Sorting",
+          "items": [
+            "4-pallet unload tower for unattended stacking with gate access and forklift removal",
+            "8-pallet unload tower (dual 4-pallet towers) for increased capacity",
+            "Part sorting systems for automatic part separation and pallet loading",
+            "Labeler with Zebra inkjet printer for part identification with optional barcode"
+          ]
+        }
+      ],
+      "specifications": {
+        "Conveyor types": "Belt (≤5mm) / Metal (>5mm)",
+        "Cart capacity": "3,000 kg / 5,000 kg",
+        "Scissor table capacity": "3,000 kg / 5,000 kg",
+        "Unload tower options": "4-pallet / 8-pallet (dual 4)",
+        "Labeler": "Zebra inkjet, B&W + optional barcode"
+      },
+      "images": [
+        "/images/automation/additional-productivity-solutions.webp"
+      ],
+      "sections": [
+        {
+          "group": "Solutions",
+          "groupDescription": true,
+          "description": "Modular components that extend application range, improve throughput, and boost efficiency in laser automation cells."
+        },
+        {
+          "group": "Solutions",
+          "title": "Conveyors",
+          "description": "Conveyors are available in belt type for single sheet unloading of up to 5mm thick material and metal type for thicker material over 5mm. It allows for immediate access to a cut sheet outside of the safety fence and permits you to safely move on to the next process in your production."
+        },
+        {
+          "group": "Solutions",
+          "title": "Over/Under Carts",
+          "description": "Carts are available in 3,000 kg and 5,000 kg capacities. They enable the operator to access a hot job immediately after the laser-cut or provide the ability to stack cut sheets in unattended operation."
+        },
+        {
+          "group": "Solutions",
+          "title": "Descending Scissor Table",
+          "description": "Scissor tables allow stacking of laser-cut sheets by lowering the table height after each sheet is unloaded. They are available in 3,000 kg and 5,000 kg capacities."
+        },
+        {
+          "group": "Solutions",
+          "title": "Labeller",
+          "description": "A simple labeling function is available using a Zebra inkjet printer for easy part sorting after the laser-cut operation. The unit offers black & white print only with capability to print simple geometry and bar code printing as an option."
+        },
+        {
+          "group": "Solutions",
+          "title": "4-Pallet Unload Tower",
+          "description": "A mini unload tower equipped with 4 buffer unload pallets for unattended operation can stack completed work sheets. The operator can remove an unload pallet stacked with cut sheets by opening the tower gate and picking up the pallet with a forklift."
+        },
+        {
+          "group": "Solutions",
+          "title": "8-Pallet Unload Tower",
+          "description": "A mini unload tower with 2 x 4-pallet towers on both sides of the unload lifter provides more cut sheet stacking capacity."
+        },
+        {
+          "group": "Solutions",
+          "title": "Part Sorting Systems",
+          "description": "Mazak automation can be designed to incorporate systems to separate parts and automatically load them onto pallets in production environments."
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "TOOLTECH",
+      "slug": "tooltech",
+      "category": "peripheral",
+      "highlight": "206 tools",
+      "tagline": "High-capacity compact automated tool magazine",
+      "description": "Compact automated tool magazine storing 206 tools in the footprint of a 120-tool chain magazine. Supports large tools up to 14.17\" diameter, 39.37\" length, and 88 lbs with off-machine cart loading.",
+      "fullDescription": "TOOLTECH is a compact automated tool magazine that stores 206 tools in the same footprint as a conventional 120-tool chain magazine. It supports large tools up to 14.17\" diameter, 39.37\" length, and 88 lbs, making it suitable for complex multi-operation machining. The magazine is expandable by 70 additional tools with a 49.61\" rear extension, and a dedicated tool cart enables safe off-machine tool loading and unloading.",
+      "features": [
+        "206-tool capacity in compact footprint",
+        "Max tool: 14.17\" dia. × 39.37\" × 88 lbs",
+        "Expandable by 70 tools with rear extension",
+        "Safe off-machine tool cart loading"
+      ],
+      "details": [
+        {
+          "label": "Capacity",
+          "items": [
+            "206-tool standard capacity",
+            "Expandable by 70 tools with 49.61\" rear extension",
+            "Equivalent footprint to 120-tool chain magazine"
+          ]
+        },
+        {
+          "label": "Tool Specifications",
+          "items": [
+            "Maximum tool diameter: 14.17\"",
+            "Maximum tool length: 39.37\"",
+            "Maximum tool weight: 88 lbs",
+            "Tool cart for safe off-machine loading/unloading"
+          ]
+        }
+      ],
+      "specifications": {
+        "Standard capacity": "206 tools",
+        "Expansion": "+70 tools (49.61\" rear extension)",
+        "Max. tool diameter": "14.17\"",
+        "Max. tool length": "39.37\"",
+        "Max. tool weight": "88 lbs"
+      },
+      "images": [
+        "/images/automation/tooltech.webp"
+      ],
+      "sections": [
+        {
+          "title": "Large Tools Storage",
+          "bullets": [
+            "Large tools that previously required manual loading can now be handled by the automatic tool changer",
+            "Max. tool diameter Φ14.17\", max. tool length 39.37\", max. tool weight 88 lbs, max. tool moment 59 ft·lbs (support from machine side needed)",
+            "88 lbs tools can easily be loaded with the heavy tool fixture"
+          ]
+        },
+        {
+          "title": "Extensibility",
+          "bullets": [
+            "70 tools can be added by the 49.61\" extension at the rear of the magazine",
+            "TOOLTECH magazine can be expanded after initial installation"
+          ]
+        },
+        {
+          "title": "Tool Cart",
+          "bullets": [
+            "Tools can be easily loaded by directly inserting the tools into the tool dock",
+            "Loading/unloading tools outside the magazine ensures safe setup operation",
+            "Tool carts make it easy to move between multiple rack magazines on machines"
+          ],
+          "image": "/images/automation/tooltech-cart.webp"
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "TOOL HIVE",
+      "slug": "tool-hive",
+      "category": "peripheral",
+      "highlight": "Faster tool changes",
+      "tagline": "Optimized flexible tool storage with pre-positioning",
+      "description": "Flexible tool storage with an optimized shifter mechanism that pre-positions the next tool to minimize wait time and reduce non-cutting time during exchanges.",
+      "fullDescription": "The TOOL HIVE is a flexible tool storage system with an optimized shifter mechanism that pre-positions the next needed tool to minimize wait time during tool changes. Its reduced footprint compared to previous designs makes it suitable for shops with space constraints, while the intelligent pre-positioning significantly decreases non-cutting time and improves overall machining cycle efficiency.",
+      "features": [
+        "Reduced footprint vs. previous designs",
+        "Pre-positioning shifter mechanism",
+        "Minimized non-cutting time",
+        "Flexible tool organization"
+      ],
+      "details": [
+        {
+          "label": "Key Advantages",
+          "items": [
+            "Shifter mechanism pre-positions next tool before exchange",
+            "Reduced footprint compared to previous generation",
+            "Decreased non-cutting time during tool changes",
+            "Flexible organization accommodates various tool sizes"
+          ]
+        }
+      ],
+      "specifications": {
+        "Pre-positioning": "Automatic shifter mechanism",
+        "Footprint": "Reduced vs. previous designs"
+      },
+      "images": [
+        "/images/automation/tool-hive.webp"
+      ],
+      "sections": [
+        {
+          "title": "Flexible System Expansion",
+          "description": "By changing the mechanical layout between the TOOL HIVE and the automatic tool changer of the machining center, the overall length of the TOOL HIVE is smaller than the previous system design. This reduces the amount of floor space required for the rear part of the machine. The new shifter mechanism has reduced tool waiting time by its ability to position the tool to be used after the next tool. As a result, non-cutting-time is minimized by reducing waiting time when tools are changed which have individual short machining cycle times.",
+          "image": "/images/automation/tool-hive-expansion.webp"
+        },
+        {
+          "group": "Tool Change Process",
+          "groupLayout": "grid",
+          "title": "Step 1",
+          "image": "/images/automation/tool-hive-step1.webp"
+        },
+        {
+          "group": "Tool Change Process",
+          "title": "Step 2",
+          "image": "/images/automation/tool-hive-step2.webp"
+        },
+        {
+          "group": "Tool Change Process",
+          "title": "Step 3",
+          "image": "/images/automation/tool-hive-step3.webp"
+        },
+        {
+          "group": "Tool Change Process",
+          "title": "Step 4",
+          "image": "/images/automation/tool-hive-step4.webp"
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "Tool Transport System",
+      "slug": "tool-transport",
+      "category": "peripheral",
+      "highlight": "Multi-machine sharing",
+      "tagline": "Automated inter-machine tool transfer system",
+      "description": "Automated inter-machine tool transfer for multi-machine cells. Centralized tool storage eliminates processing stoppages due to tool shortages during long unmanned runs.",
+      "fullDescription": "The Tool Transport System automates tool transfer between machines in multi-machine cells, eliminating processing stoppages caused by tool shortages during long unmanned runs. With centralized tool storage and setup, tools are automatically delivered to machines based on the machining schedule. The system integrates with PALLETECH manufacturing cells to enable true lights-out operation where both workpieces and tools are managed automatically.",
+      "features": [
+        "Automatic inter-machine tool transfer",
+        "Eliminates tool shortage stoppages",
+        "Centralized tool setup & storage",
+        "PALLETECH system integration"
+      ],
+      "details": [
+        {
+          "label": "System Features",
+          "items": [
+            "Automatic tool transfer between machines per schedule",
+            "Centralized tool storage and setup area",
+            "Eliminates processing stoppages from tool shortages",
+            "Enables long-term unmanned operation",
+            "Integrates with PALLETECH manufacturing cells"
+          ]
+        }
+      ],
+      "specifications": {
+        "Transfer": "Automatic per machining schedule",
+        "Storage": "Centralized",
+        "Integration": "PALLETECH system"
+      },
+      "images": [
+        "/images/automation/tool-transport.webp"
+      ],
+      "sections": [
+        {
+          "title": "System Overview",
+          "bullets": [
+            "By synchronizing with the automatic operation within the PALLETECH system, it is possible to collect tools that have reached the end of their tool life or are broken, and to prepare necessary tools in advance.",
+            "Special tools are also shared among multiple machines. The number of duplicate tools can be reduced."
+          ],
+          "image": "/images/automation/tool-transport-diagram.webp",
+          "imageCaption": "1: Tool magazine  2: Tool transport loader  3: Tool stocker"
+        }
+      ],
+      "manufacturer": "Mazak"
+    },
+    {
+      "name": "Mazak SUPERFLOW",
+      "slug": "superflow",
+      "category": "peripheral",
+      "highlight": "High-pressure coolant",
+      "tagline": "High-pressure coolant delivery system",
+      "description": "High-pressure coolant delivery system that reaches tool tips normally unreachable by standard coolant. Prevents chip buildup, tool damage, and coolant evaporation with M-code controlled pressure.",
+      "fullDescription": "The Mazak SUPERFLOW is a high-pressure coolant delivery system that directs coolant to tool tips at pressures unreachable by standard coolant systems. This efficient chip removal prevents tool damage and extends tool life, while the high-pressure delivery prevents coolant evaporation for optimal thermal management. Pressure is adjustable via M-code control, allowing automatic pressure changes between operations within a single program.",
+      "features": [
+        "High-pressure delivery to tool tips",
+        "Efficient chip removal & tool protection",
+        "Prevents coolant evaporation",
+        "M-code controlled pressure adjustment"
+      ],
+      "details": [
+        {
+          "label": "Key Advantages",
+          "items": [
+            "Reaches tool tips unreachable by standard coolant",
+            "Efficient chip removal prevents tool damage",
+            "High-pressure delivery prevents coolant evaporation",
+            "M-code controlled for automatic pressure adjustment",
+            "Extended tool life through optimal cooling"
+          ]
+        }
+      ],
+      "specifications": {
+        "Delivery": "High-pressure to tool tips",
+        "Control": "M-code pressure adjustment",
+        "Chip removal": "Enhanced efficiency"
+      },
+      "images": [
+        "/images/automation/superflow.webp"
+      ],
+      "manufacturer": "Mazak"
+    }
+  ]
+}

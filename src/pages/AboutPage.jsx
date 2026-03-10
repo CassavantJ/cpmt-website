@@ -35,12 +35,14 @@ const AboutPage = ({ isVisible }) => {
   ];
 
   const strengths = [
+    { label: "Woman-Owned Business", desc: "Proudly woman-owned and operated, bringing diverse leadership and a partnership-first approach to the CNC industry." },
     { label: "Authorized Mazak Distributor", desc: "Factory-backed sales, service, and parts for the full Mazak product line." },
     { label: "Factory-Trained Technicians", desc: "Our service team is certified by Mazak to handle everything from routine PM to complex repairs." },
     { label: "Application Engineering", desc: "Dedicated engineers who analyze your parts and processes to recommend the optimal machine and tooling." },
     { label: "Turnkey Solutions", desc: "From machine selection to installation, tooling, fixturing, programming, and operator training." },
     { label: "Automation Integration", desc: "Robot loading, bar feeders, pallet changers, and custom automation to maximize your throughput." },
     { label: "24/7 Service Support", desc: "Emergency breakdown response and remote diagnostics to minimize your downtime." },
+    { label: "GSA Contract Holder", desc: "Approved GSA contractor, making it easy for federal and government agencies to purchase Mazak CNC equipment and services." },
   ];
 
   return (
@@ -93,7 +95,7 @@ const AboutPage = ({ isVisible }) => {
             margin: "0 auto 36px",
             animation: "fadeUp 0.8s ease-out 0.6s both",
           }}>
-            Cassavant Precision Machine Tools is your authorized Mazak distributor — delivering world-class CNC machines, engineering expertise, and dedicated service to manufacturers who demand the best.
+            Cassavant Precision Machine Tools is a woman-owned, authorized Mazak distributor — delivering world-class CNC machines, engineering expertise, and dedicated service to manufacturers who demand the best.
           </p>
           <div style={{
             display: "flex",
@@ -155,7 +157,7 @@ const AboutPage = ({ isVisible }) => {
                 color: t.textSecondary,
                 lineHeight: 1.8,
               }}>
-                As an authorized Mazak distributor, we bring the full power of Mazak's world-leading CNC technology to your shop floor, backed by our own team of factory-trained engineers and technicians who understand the demands of modern manufacturing.
+                As a woman-owned business and authorized Mazak distributor, we bring the full power of Mazak's world-leading CNC technology to your shop floor, backed by our own team of factory-trained engineers and technicians who understand the demands of modern manufacturing.
               </p>
             </div>
 
@@ -167,8 +169,8 @@ const AboutPage = ({ isVisible }) => {
             }}>
               {[
                 { value: "100%", label: "Mazak Authorized" },
+                { value: "WBE", label: "Woman-Owned Business" },
                 { value: "24/7", label: "Service Support" },
-                { value: "Full", label: "Turnkey Solutions" },
                 { value: "Expert", label: "Application Engineering" },
               ].map((stat) => (
                 <div key={stat.label} style={{
@@ -428,6 +430,88 @@ const AboutPage = ({ isVisible }) => {
                   <div style={{ fontSize: 14, color: t.textTertiary, lineHeight: 1.6 }}>
                     {item.desc}
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== TERRITORY ==================== */}
+      <section id="territory" data-animate style={{
+        padding: "clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px)",
+        background: t.bgSection,
+      }}>
+        <div style={{
+          maxWidth: 1600,
+          margin: "0 auto",
+          opacity: isVisible("territory") ? 1 : 0,
+          transform: isVisible("territory") ? "translateY(0)" : "translateY(40px)",
+          transition: "all 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
+        }}>
+          <div style={{ textAlign: "center", marginBottom: 48 }}>
+            <div className="section-label">Our Territory</div>
+            <h2 style={{
+              fontSize: "clamp(30px, 4vw, 48px)",
+              fontWeight: 800,
+              letterSpacing: -1.5,
+            }}>
+              Where We <span style={{ color: "#C12033" }}>Serve</span>
+            </h2>
+            <p style={{
+              fontSize: 17,
+              color: t.textSecondary,
+              lineHeight: 1.7,
+              maxWidth: 620,
+              margin: "16px auto 0",
+            }}>
+              We provide Mazak CNC machine sales, service, and support across the following territories.
+            </p>
+          </div>
+
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
+            gap: 20,
+            maxWidth: 1100,
+            margin: "0 auto",
+          }}>
+            {[
+              { region: "Arizona", detail: "Statewide" },
+              { region: "New Mexico", detail: "Statewide" },
+              { region: "Southern California", detail: "Regional" },
+              { region: "Clark County, NV", detail: "Las Vegas metro area" },
+              { region: "El Paso, TX", detail: "El Paso County" },
+            ].map((territory, i) => (
+              <div
+                key={territory.region}
+                style={{
+                  padding: "28px 24px",
+                  borderRadius: 14,
+                  border: `1px solid ${t.borderPrimary}`,
+                  background: t.bgCard,
+                  textAlign: "center",
+                  opacity: isVisible("territory") ? 1 : 0,
+                  transform: isVisible("territory") ? "translateY(0)" : "translateY(20px)",
+                  transition: `all 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.1}s`,
+                }}
+              >
+                <div style={{
+                  fontSize: 20,
+                  fontWeight: 700,
+                  letterSpacing: -0.3,
+                  marginBottom: 6,
+                }}>
+                  {territory.region}
+                </div>
+                <div style={{
+                  fontSize: 13,
+                  color: t.textTertiary,
+                  fontFamily: "'Space Mono', monospace",
+                  letterSpacing: 1,
+                  textTransform: "uppercase",
+                }}>
+                  {territory.detail}
                 </div>
               </div>
             ))}

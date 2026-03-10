@@ -15,7 +15,29 @@
       "Bash(gh auth status:*)",
       "Bash(git --version:*)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(where:*)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" auth status)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" repo create cpmt-website --public --source=. --remote=origin --push)",
+      "Bash(npm run dev:*)",
+      "WebFetch(domain:www.dn-solutions.com)",
+      "Bash(ls:*)",
+      "Bash(git push:*)",
+      "Bash(dir:*)",
+      "WebFetch(domain:www.mazakusa.com)",
+      "WebFetch(domain:www.mazakoptonics.com)",
+      "WebFetch(domain:www.mazak.com.cn)",
+      "WebFetch(domain:www.mazakcorp.com)",
+      "WebFetch(domain:www.mazakeu.co.uk)",
+      "WebFetch(domain:www.mazakeu.com)",
+      "WebFetch(domain:capitalmachine.com)",
+      "Bash(python3:*)",
+      "Bash(grep -oP '\"\"image\"\":\\\\s*\"\"/images/machines/\\\\K[^\"\"]+' src/machines.json)",
+      "Bash(grep '\"\"image\"\":' src/machines.json)",
+      "Bash(node -e \":*)",
+      "Bash(pip list)",
+      "Bash(python -m pip list)"
     ]
   }
 }

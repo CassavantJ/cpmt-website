@@ -25,19 +25,29 @@
       width: 8.5in;
       height: 11in;
       margin: 0 auto;
-      padding: 0.5in 0.55in 0.4in;
+      padding: 0.4in 0.5in 0.3in;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
     }
 
     /* Header */
     .header {
+      padding-bottom: 0;
+      margin-bottom: 16px;
+    }
+
+    .header-row {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       padding-bottom: 6px;
+    }
+
+    .header-banner {
+      padding-bottom: 6px;
+      margin-top: 6px;
       border-bottom: 3px solid #C12033;
-      margin-bottom: 26px;
     }
 
     .header-left {
@@ -58,13 +68,13 @@
       line-height: 1.1;
     }
 
-    .header-text .tagline {
+    .tagline {
       font-family: 'Space Mono', monospace;
       font-size: 9px;
       letter-spacing: 2.5px;
       text-transform: uppercase;
       color: #C12033;
-      margin-top: 22px;
+      text-align: center;
     }
 
     .header-right {
@@ -89,7 +99,7 @@
       letter-spacing: 3px;
       text-transform: uppercase;
       color: #C12033;
-      margin-bottom: 10px;
+      margin-bottom: 7px;
       font-weight: 700;
     }
 
@@ -103,20 +113,27 @@
     /* Machine categories */
     .categories-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 10px;
-      margin-bottom: 28px;
+      margin-bottom: 18px;
     }
 
     .category-card {
       border: 1.5px solid #e5e5e5;
       border-radius: 8px;
-      padding: 10px 12px;
+      padding: 14px 14px;
       position: relative;
       overflow: hidden;
       display: flex;
-      gap: 10px;
+      gap: 12px;
       align-items: center;
+    }
+
+    .category-img {
+      width: 68px;
+      height: 50px;
+      object-fit: contain;
+      flex-shrink: 0;
     }
 
     .category-card::before {
@@ -129,52 +146,38 @@
       background: linear-gradient(90deg, #C12033, #E8475A);
     }
 
-    .category-img {
-      width: 70px;
-      height: 52px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-
     .category-info {
       flex: 1;
       min-width: 0;
     }
 
     .category-name {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
-      margin-bottom: 2px;
+      margin-bottom: 3px;
     }
 
     .category-models {
       font-family: 'Space Mono', monospace;
-      font-size: 8px;
+      font-size: 9px;
       color: #888;
-      margin-bottom: 3px;
-    }
-
-    .category-machines {
-      font-size: 8.5px;
-      color: #555;
-      line-height: 1.4;
     }
 
     /* Services */
     .services-section {
-      margin-bottom: 28px;
+      margin-bottom: 12px;
     }
 
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
+      gap: 6px;
     }
 
     .service-item {
       background: #f8f8f8;
       border-radius: 8px;
-      padding: 12px 14px;
+      padding: 7px 10px;
     }
 
     .service-name {
@@ -191,7 +194,7 @@
 
     /* Industries */
     .industries-section {
-      margin-bottom: 28px;
+      margin-bottom: 10px;
     }
 
     .industries-grid {
@@ -207,8 +210,8 @@
       background: #fff;
       border: 1.5px solid #e5e5e5;
       border-radius: 20px;
-      padding: 7px 14px;
-      font-size: 11px;
+      padding: 4px 10px;
+      font-size: 10px;
       font-weight: 600;
     }
 
@@ -226,12 +229,12 @@
     .financing-banner {
       background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
       border-radius: 10px;
-      padding: 18px 24px;
+      padding: 12px 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       color: #fff;
-      margin-bottom: 28px;
+      margin-bottom: 10px;
     }
 
     .financing-banner h3 {
@@ -304,7 +307,7 @@
     @media print {
       .print-btn { display: none; }
       body { background: #fff; }
-      .page { padding: 0.45in 0.5in 0.35in; }
+      .page { padding: 0.35in 0.45in 0.25in; }
     }
   </style>
 </head>
@@ -314,21 +317,25 @@
   <div class="page">
     <!-- Header -->
     <div class="header">
-      <div class="header-left">
-        <img src="public/images/CPMTLogoDark.svg" alt="CPMT" class="header-logo">
-        <div class="header-text">
-          <h1>Cassavant Precision<br>Machine Tools</h1>
-          <div class="tagline">Authorized <img src="public/images/manufacturers/mazak-dark.svg" alt="Mazak" style="height: 13px; width: auto; vertical-align: middle; margin: 0 2px; position: relative; top: -2px;"> Distributor</div>
+      <div class="header-row">
+        <div class="header-left">
+          <img src="public/images/CPMTLogoDark.svg" alt="CPMT" class="header-logo">
+          <div class="header-text">
+            <h1>Cassavant Precision<br>Machine Tools</h1>
+          </div>
+        </div>
+        <div class="header-right" style="display: flex; align-items: flex-start; gap: 14px;">
+          <div>
+            <div class="website">cpmtusa.com</div>
+            (602) 487-4134<br>
+            sales@cpmtusa.com<br>
+            Phoenix, AZ
+          </div>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://cpmtusa.com" alt="QR Code" style="width: 68px; height: 68px;">
         </div>
       </div>
-      <div class="header-right" style="display: flex; align-items: flex-start; gap: 14px;">
-        <div>
-          <div class="website">cpmtusa.com</div>
-          (602) 487-4134<br>
-          sales@cpmtusa.com<br>
-          Phoenix, AZ
-        </div>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://cpmtusa.com" alt="QR Code" style="width: 68px; height: 68px;">
+      <div class="header-banner">
+        <div class="tagline">Authorized <img src="public/images/manufacturers/mazak-dark.svg" alt="Mazak" style="height: 13px; width: auto; vertical-align: middle; margin: 0 2px; position: relative; top: -2px;"> Distributor &nbsp;&bull;&nbsp; Woman-Owned &nbsp;&bull;&nbsp; GSA Contract Holder</div>
       </div>
     </div>
 
@@ -336,75 +343,138 @@
     <div class="section-title">Machine Categories</div>
     <div class="categories-grid">
       <div class="category-card">
-        <img src="public/images/machines/quick-turn-250my.webp" alt="Turning" class="category-img">
+        <img src="public/images/machines/quick-turn.webp" alt="Turning" class="category-img">
         <div class="category-info">
           <div class="category-name">Turning</div>
-          <div class="category-models">4 models</div>
-          <div class="category-machines">QUICK TURN 250MY, QT-PRIMOS, HQR NEO, and more</div>
+          <div class="category-models">68 models</div>
         </div>
       </div>
       <div class="category-card">
-        <img src="public/images/machines/syncrex-25-8.webp" alt="Swiss" class="category-img">
+        <img src="public/images/machines/syncrex.webp" alt="Swiss" class="category-img">
         <div class="category-info">
           <div class="category-name">Swiss</div>
-          <div class="category-models">3 models</div>
-          <div class="category-machines">SYNCREX 25/8, SYNCREX 32/9, SYNCREX 38/9X</div>
+          <div class="category-models">20 models</div>
         </div>
       </div>
       <div class="category-card">
-        <img src="public/images/machines/mega-turn-900.webp" alt="Vertical Turning" class="category-img">
+        <img src="public/images/machines/mega-turn.webp" alt="Vertical Turning" class="category-img">
         <div class="category-info">
           <div class="category-name">Vertical Turning</div>
-          <div class="category-models">3 models</div>
-          <div class="category-machines">MEGA TURN 500M, 900, 1600</div>
+          <div class="category-models">14 models</div>
         </div>
       </div>
       <div class="category-card">
-        <img src="public/images/machines/vcn-460.webp" alt="Vertical" class="category-img">
+        <img src="public/images/machines/vc-ez.webp" alt="Vertical Machining" class="category-img">
         <div class="category-info">
-          <div class="category-name">Vertical</div>
-          <div class="category-models">3 models</div>
-          <div class="category-machines">VCN-460, VC-Ez IP, FJV</div>
+          <div class="category-name">Vertical Machining</div>
+          <div class="category-models">38 models</div>
         </div>
       </div>
       <div class="category-card">
-        <img src="public/images/machines/hcn-5000s.webp" alt="Horizontal" class="category-img">
+        <img src="public/images/machines/hcn.webp" alt="Horizontal Machining" class="category-img">
         <div class="category-info">
-          <div class="category-name">Horizontal</div>
-          <div class="category-models">3 models</div>
-          <div class="category-machines">HCN-5000S, HCN-4000 NEO, FF-1250H</div>
+          <div class="category-name">Horizontal Machining</div>
+          <div class="category-models">24 models</div>
         </div>
       </div>
       <div class="category-card">
         <img src="public/images/machines/variaxis-i-neo.webp" alt="5-Axis" class="category-img">
         <div class="category-info">
           <div class="category-name">5-Axis</div>
-          <div class="category-models">4 models</div>
-          <div class="category-machines">VARIAXIS i NEO, VARIAXIS C, i-300 AWC, VORTEX i-V</div>
+          <div class="category-models">39 models</div>
         </div>
       </div>
       <div class="category-card">
         <img src="public/images/machines/integrex-i-neo.webp" alt="Multi-Tasking" class="category-img">
         <div class="category-info">
           <div class="category-name">Multi-Tasking</div>
-          <div class="category-models">3 models</div>
-          <div class="category-machines">INTEGREX i NEO, i-500, j-200 NEO</div>
+          <div class="category-models">88 models</div>
         </div>
       </div>
       <div class="category-card">
         <img src="public/images/machines/optiplex-neo.webp" alt="2D Laser" class="category-img">
         <div class="category-info">
           <div class="category-name">2D Laser</div>
-          <div class="category-models">3 models</div>
-          <div class="category-machines">OPTIPLEX NEO, OPTIPLEX HP, OPTIPLEX Ez</div>
+          <div class="category-models">11 models</div>
         </div>
       </div>
       <div class="category-card">
         <img src="public/images/machines/fg-400-neo.webp" alt="3D Laser" class="category-img">
         <div class="category-info">
           <div class="category-name">3D Laser</div>
+          <div class="category-models">2 models</div>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="public/images/machines/ft-150-neo.webp" alt="Tube & Pipe Laser" class="category-img">
+        <div class="category-info">
+          <div class="category-name">Tube & Pipe Laser</div>
           <div class="category-models">3 models</div>
-          <div class="category-machines">FG-400 NEO, FT-150 NEO, FT-250</div>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="public/images/machines/vc-500a-5x-am-hwd.webp" alt="Additive Manufacturing" class="category-img">
+        <div class="category-info">
+          <div class="category-name">Additive Manufacturing</div>
+          <div class="category-models">1 model</div>
+        </div>
+      </div>
+      <div class="category-card">
+        <img src="public/images/machines/fsw-460v.webp" alt="Friction Stir Welding" class="category-img">
+        <div class="category-info">
+          <div class="category-name">Friction Stir Welding</div>
+          <div class="category-models">1 model</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Automation Solutions -->
+    <div class="section-title">Automation Solutions</div>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 16px;">
+      <div style="border: 1.5px solid #e5e5e5; border-radius: 8px; overflow: hidden; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 2.5px; background: linear-gradient(90deg, #C12033, #E8475A);"></div>
+        <div style="padding: 8px 6px; display: flex; align-items: center; justify-content: center; height: 52px;">
+          <img src="public/images/automation/palletech-line-card-nobg.webp" alt="PALLETECH" style="max-width: 100%; max-height: 44px; object-fit: contain;">
+        </div>
+        <div style="padding: 4px 8px 7px; border-top: 1px solid #f0f0f0;">
+          <div class="category-name">PALLETECH System</div>
+          <div class="category-models">Flexible multi-machine automation</div>
+        </div>
+      </div>
+      <div style="border: 1.5px solid #e5e5e5; border-radius: 8px; overflow: hidden; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 2.5px; background: linear-gradient(90deg, #C12033, #E8475A);"></div>
+        <div style="padding: 8px 6px; display: flex; align-items: center; justify-content: center; height: 52px;">
+          <img src="public/images/automation/mpp-line-card-nobg.webp" alt="MPP" style="max-width: 100%; max-height: 44px; object-fit: contain;">
+        </div>
+        <div style="padding: 4px 8px 7px; border-top: 1px solid #f0f0f0;">
+          <div class="category-name">MPP (Multi Pallet Pool)</div>
+          <div class="category-models">Compact multi-level pallet stocker</div>
+        </div>
+      </div>
+      <div style="border: 1.5px solid #e5e5e5; border-radius: 8px; overflow: hidden; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 2.5px; background: linear-gradient(90deg, #C12033, #E8475A);"></div>
+        <div style="padding: 8px 6px; display: flex; align-items: center; justify-content: center; height: 52px;">
+          <img src="public/images/automation/ma-line-card-nobg.png" alt="Mill Assist" style="max-width: 100%; max-height: 44px; object-fit: contain;">
+        </div>
+        <div style="padding: 4px 8px 7px; border-top: 1px solid #f0f0f0;">
+          <div class="category-name">MA (Mill Assist)</div>
+          <div class="category-models">Robotic workpiece transport</div>
+        </div>
+      </div>
+      <div style="border: 1.5px solid #e5e5e5; border-radius: 8px; overflow: hidden; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 2.5px; background: linear-gradient(90deg, #C12033, #E8475A);"></div>
+        <div style="padding: 8px 6px; display: flex; align-items: center; justify-content: center; height: 52px;">
+          <img src="public/images/automation/ez-loader-line-card-nobg.webp" alt="Ez LOADER" style="max-width: 100%; max-height: 44px; object-fit: contain;">
+        </div>
+        <div style="padding: 4px 8px 7px; border-top: 1px solid #f0f0f0;">
+          <div class="category-name">Ez LOADER</div>
+          <div class="category-models">Compact collaborative robot</div>
+        </div>
+      </div>
+      <div style="border: 1.5px dashed #ccc; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div>
+          <div style="font-size: 12px; font-weight: 700; color: #C12033;">+ More Solutions</div>
+          <div style="font-family: 'Space Mono', monospace; font-size: 8px; color: #888;">Laser, turning, & peripheral</div>
         </div>
       </div>
     </div>
@@ -418,20 +488,20 @@
           <div class="service-desc">New & pre-owned Mazak CNC machines with expert consultation</div>
         </div>
         <div class="service-item">
-          <div class="service-name">Turnkey Solutions</div>
-          <div class="service-desc">Complete project management from concept to production</div>
-        </div>
-        <div class="service-item">
           <div class="service-name">Automation</div>
           <div class="service-desc">Robotic loading, pallet systems, and lights-out manufacturing</div>
+        </div>
+        <div class="service-item">
+          <div class="service-name">Engineering</div>
+          <div class="service-desc">Application engineering, process optimization, and programming</div>
         </div>
         <div class="service-item">
           <div class="service-name">Service & Parts</div>
           <div class="service-desc">Factory-trained technicians, preventive maintenance, genuine parts</div>
         </div>
         <div class="service-item">
-          <div class="service-name">Engineering</div>
-          <div class="service-desc">Application engineering, process optimization, and programming</div>
+          <div class="service-name">Turnkey Solutions</div>
+          <div class="service-desc">Complete project management from concept to production</div>
         </div>
         <div class="service-item">
           <div class="service-name">Financing</div>
@@ -464,12 +534,14 @@
     </div>
 
     <!-- Territory -->
-    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 28px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 8px;">
       <div class="section-title" style="margin-bottom: 0; white-space: nowrap;">Territory</div>
       <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-        <span style="font-size: 11px; font-weight: 600; background: #f8f8f8; border-radius: 20px; padding: 6px 14px;">Arizona</span>
-        <span style="font-size: 11px; font-weight: 600; background: #f8f8f8; border-radius: 20px; padding: 6px 14px;">New Mexico</span>
-        <span style="font-size: 11px; font-weight: 600; background: #f8f8f8; border-radius: 20px; padding: 6px 14px;">Clark County, NV</span>
+        <span style="font-size: 10px; font-weight: 600; background: #f8f8f8; border-radius: 20px; padding: 5px 12px;">Arizona</span>
+        <span style="font-size: 10px; font-weight: 600; background: #f8f8f8; border-radius: 20px; padding: 5px 12px;">New Mexico</span>
+        <span style="font-size: 10px; font-weight: 600; background: #f8f8f8; border-radius: 20px; padding: 5px 12px;">Southern California</span>
+        <span style="font-size: 10px; font-weight: 600; background: #f8f8f8; border-radius: 20px; padding: 5px 12px;">Clark County, NV</span>
+        <span style="font-size: 10px; font-weight: 600; background: #f8f8f8; border-radius: 20px; padding: 5px 12px;">El Paso, TX</span>
       </div>
     </div>
 

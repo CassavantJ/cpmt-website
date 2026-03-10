@@ -9,11 +9,11 @@ const Footer = () => {
       title: "Machines",
       links: [
         { label: "All Machines", to: "/machines" },
-        { label: "Multi-Tasking", to: "/machines" },
-        { label: "5-Axis", to: "/machines" },
-        { label: "Turning Centers", to: "/machines" },
-        { label: "Vertical Centers", to: "/machines" },
-        { label: "Horizontal Centers", to: "/machines" },
+        { label: "Multi-Tasking", to: "/machines/category/multitasking" },
+        { label: "5-Axis", to: "/machines/category/5axis" },
+        { label: "Turning Centers", to: "/machines/category/turning" },
+        { label: "Vertical Centers", to: "/machines/category/vertical" },
+        { label: "Horizontal Centers", to: "/machines/category/horizontal" },
       ],
     },
     {
@@ -21,7 +21,7 @@ const Footer = () => {
       links: [
         { label: "Machine Sales", to: "/services/machine-sales" },
         { label: "Turnkey Solutions", to: "/services/turnkey-solutions" },
-        { label: "Automation", to: "/services/automation" },
+        { label: "Automation", to: "/automation" },
         { label: "Service & Parts", to: "/services/service-and-parts" },
         { label: "Engineering", to: "/services/engineering" },
         { label: "Financing", to: "/services/financing" },
@@ -59,7 +59,7 @@ const Footer = () => {
               </Link>
             </div>
             <p style={{ color: t.textMuted, fontSize: 14, lineHeight: 1.7, maxWidth: 280 }}>
-              Your authorized Mazak distributor for CNC machine tools, automation, and manufacturing solutions.
+              Your authorized Mazak distributor for CNC machine tools, automation, and manufacturing solutions. GSA contract holder.
             </p>
           </div>
 
