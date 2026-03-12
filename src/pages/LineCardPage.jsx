@@ -4,15 +4,18 @@ const LineCardPage = () => {
   const { t } = useTheme();
 
   const categories = [
-    { name: "Turning", models: "4 models", machines: "QUICK TURN 250MY, QT-PRIMOS, HQR NEO, and more", img: "/images/machines/quick-turn-250my.webp" },
-    { name: "Swiss", models: "3 models", machines: "SYNCREX 25/8, SYNCREX 32/9, SYNCREX 38/9X", img: "/images/machines/syncrex-25-8.webp" },
-    { name: "Vertical Turning", models: "3 models", machines: "MEGA TURN 500M, 900, 1600", img: "/images/machines/mega-turn-900.webp" },
-    { name: "Vertical", models: "3 models", machines: "VCN-460, VC-Ez IP, FJV", img: "/images/machines/vcn-460.webp" },
-    { name: "Horizontal", models: "3 models", machines: "HCN-5000S, HCN-4000 NEO, FF-1250H", img: "/images/machines/hcn-5000s.webp" },
-    { name: "5-Axis", models: "4 models", machines: "VARIAXIS i NEO, VARIAXIS C, i-300 AWC, VORTEX i-V", img: "/images/machines/variaxis-i-neo.webp" },
-    { name: "Multi-Tasking", models: "3 models", machines: "INTEGREX i NEO, i-500, j-200 NEO", img: "/images/machines/integrex-i-neo.webp" },
-    { name: "2D Laser", models: "3 models", machines: "OPTIPLEX NEO, OPTIPLEX HP, OPTIPLEX Ez", img: "/images/machines/optiplex-neo.webp" },
-    { name: "3D Laser", models: "3 models", machines: "FG-400 NEO, FT-150 NEO, FT-250", img: "/images/machines/fg-400-neo.webp" },
+    { name: "Turning", models: "68 models", img: "/images/machines/quick-turn.webp" },
+    { name: "Swiss", models: "20 models", img: "/images/machines/syncrex.webp" },
+    { name: "Vertical Turning", models: "14 models", img: "/images/machines/mega-turn.webp" },
+    { name: "Vertical Machining", models: "38 models", img: "/images/machines/vc-ez.webp" },
+    { name: "Horizontal Machining", models: "24 models", img: "/images/machines/hcn.webp" },
+    { name: "5-Axis", models: "39 models", img: "/images/machines/variaxis-i-neo.webp" },
+    { name: "Multi-Tasking", models: "88 models", img: "/images/machines/integrex-i-neo.webp" },
+    { name: "2D Laser", models: "11 models", img: "/images/machines/optiplex-neo.webp" },
+    { name: "3D Laser", models: "2 models", img: "/images/machines/fg-400-neo.webp" },
+    { name: "Tube & Pipe Laser", models: "3 models", img: "/images/machines/ft-150-neo.webp" },
+    { name: "Additive Manufacturing", models: "1 model", img: "/images/machines/vc-500a-5x-am-hwd.webp" },
+    { name: "Friction Stir Welding", models: "1 model", img: "/images/machines/fsw-460v.webp" },
   ];
 
   const services = [
@@ -34,7 +37,14 @@ const LineCardPage = () => {
     { name: "General Manufacturing", badge: "ISO 9001" },
   ];
 
-  const territories = ["Arizona", "New Mexico", "Clark County, NV"];
+  const automationSolutions = [
+    { name: "PALLETECH System", desc: "Flexible multi-machine automation", img: "/images/automation/palletech-line-card-nobg.webp" },
+    { name: "MPP (Multi Pallet Pool)", desc: "Compact multi-level pallet stocker", img: "/images/automation/mpp-line-card-nobg.webp" },
+    { name: "MA (Mill Assist)", desc: "Robotic workpiece transport", img: "/images/automation/ma-line-card-nobg.png" },
+    { name: "Ez LOADER", desc: "Compact collaborative robot", img: "/images/automation/ez-loader-line-card-nobg.webp" },
+  ];
+
+  const territories = ["Arizona", "New Mexico", "Southern California", "Clark County, NV", "El Paso, TX"];
 
   return (
     <>
@@ -91,40 +101,40 @@ const LineCardPage = () => {
           margin: "0 auto",
         }}>
           {/* Header */}
-          <div style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-start",
-            paddingBottom: 8,
-            borderBottom: "3px solid #C12033",
-            marginBottom: 28,
-          }}>
-            <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
-              <img src="/images/CPMTLogoDark.svg" alt="CPMT" style={{ height: 52, width: "auto" }} />
-              <div>
+          <div style={{ marginBottom: 28 }}>
+            <div style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-start",
+              paddingBottom: 6,
+            }}>
+              <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
+                <img src="/images/CPMTLogoDark.svg" alt="CPMT" style={{ height: 52, width: "auto" }} />
                 <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: -0.5, lineHeight: 1.1 }}>
                   Cassavant Precision<br />Machine Tools
                 </div>
-                <div style={{
-                  fontFamily: "'Space Mono', monospace",
-                  fontSize: 9,
-                  letterSpacing: 2.5,
-                  textTransform: "uppercase",
-                  color: "#C12033",
-                  marginTop: 22,
-                }}>
-                  Authorized <img src="/images/manufacturers/mazak-dark.svg" alt="Mazak" style={{ height: 13, width: "auto", verticalAlign: "middle", margin: "0 2px", position: "relative", top: -2 }} /> Distributor
+              </div>
+              <div style={{ display: "flex", alignItems: "flex-start", gap: 14, textAlign: "right", fontSize: 10, color: "#555", lineHeight: 1.7 }}>
+                <div>
+                  <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 11, fontWeight: 700, color: "#C12033", letterSpacing: 0.5 }}>cpmtusa.com</div>
+                  (602) 487-4134<br />
+                  sales@cpmtusa.com<br />
+                  Phoenix, AZ
                 </div>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://cpmtusa.com" alt="QR Code" style={{ width: 68, height: 68 }} />
               </div>
             </div>
-            <div style={{ display: "flex", alignItems: "flex-start", gap: 14, textAlign: "right", fontSize: 10, color: "#555", lineHeight: 1.7 }}>
-              <div>
-                <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 11, fontWeight: 700, color: "#C12033", letterSpacing: 0.5 }}>cpmtusa.com</div>
-                (602) 487-4134<br />
-                sales@cpmtusa.com<br />
-                Phoenix, AZ
+            <div style={{ paddingBottom: 6, marginTop: 6, borderBottom: "3px solid #C12033" }}>
+              <div style={{
+                fontFamily: "'Space Mono', monospace",
+                fontSize: 9,
+                letterSpacing: 2.5,
+                textTransform: "uppercase",
+                color: "#C12033",
+                textAlign: "center",
+              }}>
+                Authorized <img src="/images/manufacturers/mazak-dark.svg" alt="Mazak" style={{ height: 13, width: "auto", verticalAlign: "middle", margin: "0 2px", position: "relative", top: -2 }} /> Distributor &nbsp;&bull;&nbsp; Woman-Owned &nbsp;&bull;&nbsp; GSA Contract Holder
               </div>
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://cpmtusa.com" alt="QR Code" style={{ width: 68, height: 68 }} />
             </div>
           </div>
 
@@ -132,27 +142,63 @@ const LineCardPage = () => {
           <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 8, letterSpacing: 3, textTransform: "uppercase", color: "#C12033", marginBottom: 10, fontWeight: 700 }}>
             Machine Categories
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, marginBottom: 28 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10, marginBottom: 28 }}>
             {categories.map((cat) => (
               <div key={cat.name} style={{
                 border: "1.5px solid #e5e5e5",
                 borderRadius: 8,
-                padding: "10px 12px",
+                padding: "14px 14px",
                 position: "relative",
                 overflow: "hidden",
                 display: "flex",
-                gap: 10,
+                gap: 12,
                 alignItems: "center",
               }}>
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2.5, background: "linear-gradient(90deg, #C12033, #E8475A)" }} />
-                <img src={cat.img} alt={cat.name} style={{ width: 70, height: 52, objectFit: "contain", flexShrink: 0 }} />
+                <img src={cat.img} alt={cat.name} style={{ width: 68, height: 50, objectFit: "contain", flexShrink: 0 }} />
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontSize: 12, fontWeight: 700, marginBottom: 2 }}>{cat.name}</div>
-                  <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 8, color: "#888", marginBottom: 3 }}>{cat.models}</div>
-                  <div style={{ fontSize: 8.5, color: "#555", lineHeight: 1.4 }}>{cat.machines}</div>
+                  <div style={{ fontSize: 13, fontWeight: 700, marginBottom: 3 }}>{cat.name}</div>
+                  <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 9, color: "#888" }}>{cat.models}</div>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Automation Solutions */}
+          <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 8, letterSpacing: 3, textTransform: "uppercase", color: "#C12033", marginBottom: 10, fontWeight: 700 }}>
+            Automation Solutions
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 8, marginBottom: 28 }}>
+            {automationSolutions.map((item) => (
+              <div key={item.name} style={{
+                border: "1.5px solid #e5e5e5",
+                borderRadius: 8,
+                overflow: "hidden",
+                position: "relative",
+              }}>
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2.5, background: "linear-gradient(90deg, #C12033, #E8475A)" }} />
+                <div style={{ padding: "8px 6px", display: "flex", alignItems: "center", justifyContent: "center", height: 52 }}>
+                  <img src={item.img} alt={item.name} style={{ maxWidth: "100%", maxHeight: 44, objectFit: "contain" }} />
+                </div>
+                <div style={{ padding: "4px 8px 7px", borderTop: "1px solid #f0f0f0" }}>
+                  <div style={{ fontSize: 13, fontWeight: 700, marginBottom: 3 }}>{item.name}</div>
+                  <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 9, color: "#888" }}>{item.desc}</div>
+                </div>
+              </div>
+            ))}
+            <div style={{
+              border: "1.5px dashed #ccc",
+              borderRadius: 8,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center",
+            }}>
+              <div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "#C12033" }}>+ More Solutions</div>
+                <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 8, color: "#888" }}>Laser, turning, & peripheral</div>
+              </div>
+            </div>
           </div>
 
           {/* Services */}
