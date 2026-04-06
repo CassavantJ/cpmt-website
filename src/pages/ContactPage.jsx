@@ -4,6 +4,27 @@ import { useTheme } from "../contexts/ThemeContext";
 const ContactPage = ({ isVisible }) => {
   const { t } = useTheme();
   const [contactForm, setContactForm] = useState({ name: "", email: "", phone: "", message: "", interest: "general" });
+  const [submitState, setSubmitState] = useState("idle"); // idle | sending | sent | error
+
+  const handleSubmit = async () => {
+    if (!contactForm.name || !contactForm.email || !contactForm.message) {
+      alert("Please fill in your name, email, and message.");
+      return;
+    }
+    setSubmitState("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(contactForm),
+      });
+      if (!res.ok) throw new Error("Failed to send");
+      setSubmitState("sent");
+      setContactForm({ name: "", email: "", phone: "", message: "", interest: "general" });
+    } catch {
+      setSubmitState("error");
+    }
+  };
 
   return (
     <section id="contact" data-animate style={{
@@ -122,9 +143,19 @@ const ContactPage = ({ isVisible }) => {
                 onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
               />
             </div>
-            <button className="cta-primary" style={{ width: "100%", justifyContent: "center" }}>
-              Submit Inquiry →
+            <button
+              className="cta-primary"
+              style={{ width: "100%", justifyContent: "center", opacity: submitState === "sending" ? 0.6 : 1 }}
+              onClick={handleSubmit}
+              disabled={submitState === "sending"}
+            >
+              {submitState === "sending" ? "Sending..." : submitState === "sent" ? "Sent Successfully ✓" : "Submit Inquiry →"}
             </button>
+            {submitState === "error" && (
+              <p style={{ color: "#C12033", fontSize: 14, marginTop: 12, textAlign: "center" }}>
+                Something went wrong. Please try again or email us directly.
+              </p>
+            )}
           </div>
         </div>
       </div>
